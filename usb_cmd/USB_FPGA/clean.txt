@@ -1,0 +1,2 @@
+rem clean:
+	del program* parout* netlist* fpga_map* fpga_par* load* smart* xlnx_auto_0_xdb xst

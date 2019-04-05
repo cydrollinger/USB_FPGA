@@ -1,0 +1,51 @@
+
+----------------------------------
+|  P a r t i t i o n    F a i l  |
+----------------------------------
+
+There are 94 outputs and 2 inputs not partitioned
+Output: clk_enable output<0> output<1> output<2> output<3> output<4> output<5> output<6> output<7> N_PZ_725 
+        N_PZ_730 N_PZ_731 N_PZ_732 N_PZ_733 N_PZ_734 N_PZ_800 N_PZ_828 N_PZ_831 N_PZ_838 N_PZ_844 N_PZ_846 
+        N_PZ_847 N_PZ_872 N_PZ_877 N_PZ_879 address<0> address<1> address<2> address<3> address<4> address<5> 
+        address<6> address<7> instruction<0> instruction<10> instruction<11> instruction<12> instruction<13> 
+        instruction<15> processor/ALU_result<7> processor/T_state processor/arithmetic_carry 
+        processor/arithmetic_group/add_sub_module/carry_chain<1> 
+        processor/arithmetic_group/add_sub_module/carry_chain<3> 
+        processor/arithmetic_group/add_sub_module/carry_chain<5> 
+        processor/arithmetic_group/add_sub_module/half_addsub<1> processor/arithmetic_result<0> 
+        processor/arithmetic_result<1> processor/arithmetic_result<2> processor/arithmetic_result<3> 
+        processor/arithmetic_result<4> processor/arithmetic_result<5> processor/arithmetic_result<6> 
+        processor/arithmetic_result<7> processor/basic_control/reset_delay1 processor/carry_flag 
+        processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7> 
+        processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0> 
+        processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7> processor/internal_reset 
+        processor/logical_result<0> processor/logical_result<1> processor/logical_result<2> 
+        processor/logical_result<3> processor/logical_result<4> processor/logical_result<5> 
+        processor/logical_result<6> processor/logical_result<7> 
+        processor/reg_and_flag_enables/arith_or_logical_valid 
+        processor/reg_and_flag_enables/register_write_valid 
+        processor/reg_and_flag_enables/returni_or_shift_valid processor/shift_and_rotate_carry 
+        processor/shift_and_rotate_result<0> processor/shift_and_rotate_result<1> 
+        processor/shift_and_rotate_result<2> processor/shift_and_rotate_result<3> 
+        processor/shift_and_rotate_result<4> processor/shift_and_rotate_result<5> 
+        processor/shift_and_rotate_result<6> processor/shift_and_rotate_result<7> write_strobe
+Input: clk reset
+0 Group(s)
+
+----------------- B l o c k 0 ------------------
+----------------- B l o c k 1 ------------------
+----------------- B l o c k 2 ------------------
+----------------- B l o c k 3 ------------------

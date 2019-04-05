@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Cpld" num="1007" delta="unknown" >Removing unused input(s) &apos;<arg fmt="%s" index="1">FPGA_CSO_B</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="warning" file="Cpld" num="1007" delta="unknown" >Removing unused input(s) &apos;<arg fmt="%s" index="1">FPGA_INITB</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="warning" file="Cpld" num="1007" delta="unknown" >Removing unused input(s) &apos;<arg fmt="%s" index="1">FPGA_prog_B</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="warning" file="Cpld" num="1007" delta="unknown" >Removing unused input(s) &apos;<arg fmt="%s" index="1">mclk</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="warning" file="Cpld" num="829" delta="unknown" >Signal &apos;<arg fmt="%s" index="1">FPGA_cclk_MC.TRST</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">GND</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Cpld" num="829" delta="unknown" >Signal &apos;<arg fmt="%s" index="1">FPGA_MOSI_MC.TRST</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">GND</arg>&apos;.
+</msg>
+
+</messages>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20091008;19283900">
+	<META NAME="CHANGED" CONTENT="20091008;19361800">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=RIGHT>May 27, 2009</P>
+<P><FONT SIZE=5 STYLE="font-size: 20pt"><B>DEVELOPMENT:</B></FONT></P>
+<P><B>USB Powered And Configurable Field Programmable Gate Array:</B></P>
+<P><FONT SIZE=5 STYLE="font-size: 20pt"><B>Configurations:</B></FONT></P>
+<P><B>JTAG</B></P>
+<P>The jtag chain is always available despite the mode settings as
+stated in data sheet of the FPGA <A HREF="../../../../web_fpga/Docs/pdf/ds312_3E.pdf">DS312</A>
+on page 101. The chain consists of the CPLD, XC2C64A VQ100, and then
+the FPGA, XC3S250E VQ100. The SPI flash can be included on the chain
+via Impact, <A HREF="../../../../web_fpga/Docs/xapp/xapp974.pdf">XAPP974</A>.</P>
+<P><B>Slave Parallel</B></P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/ds312_3E.pdf">DS312</A> pg.
+95</P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/DS_FT245R-1.pdf">DS_FT245R</A></P>
+<P>The slave parallel mode as described in  <A HREF="../../../../web_fpga/Docs/pdf/ds312_3E.pdf">DS312</A>
+on pg. 95 shows a memory configuration source in figure 62. The
+memory configuration source is handled by a PC, FTDI driver, USB,
+FT245R chip, and the CPLD. This is a seamless transition after the
+CPLD is configured via the JTAG chain.</P>
+<P><B>SPI Serial Flash</B></P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp974.pdf">XAPP974</A></P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/ds312_3E.pdf">DS312</A> pg.
+75</P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/M25P16.pdf">M25P16</A></P>
+<P ALIGN=JUSTIFY>Once the programming of the SPI Flash via the
+indirect method on the JTAG chain has been completed the FPGA can
+come up in a stand alone operation. Only power is required. It is
+most probable that a the FPGA can be configured through the USB to
+allow programming of the SPI flash although this has not been
+attempted.</P>
+<P><FONT SIZE=5 STYLE="font-size: 20pt"><B>Documents:</B></FONT></P>
+<P><B>Data Sheets:</B></P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/ds312_3E.pdf">DS312</A> 
+</P>
+<P STYLE="margin-left: 1in">Xilinx Spartan 3E FPGA</P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/ds311.pdf">DS311</A></P>
+<P STYLE="margin-left: 1in">Xilinx CoolRunner II CPLD 
+</P>
+<P><A HREF="../../../../web_fpga/Docs/pdf/DS_FT245R-1.pdf">DS_FT245R</A>
+(FTDI)</P>
+<P STYLE="margin-left: 1in">FTDI FT245R USB Translator</P>
+<P><B>Application Notes:</B></P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp058.pdf">XAPP058</A></P>
+<P STYLE="margin-left: 1in">In system programming (ISP) of FPGA with
+microcontroller</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp104.pdf">XAPP104</A></P>
+<P STYLE="margin-left: 1in">JTAG ISP checklist</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp453.pdf">XAPP453</A></P>
+<P STYLE="margin-left: 1in">3.3V configuration for Spartan-3 FPGA</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp489.pdf">XAPP489</A></P>
+<P STYLE="margin-left: 1in">Four and Six layer, high-speed pcb design
+</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp501.pdf">XAPP501</A></P>
+<P STYLE="margin-left: 1in">Configuration quick start guidlines</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp502.pdf">XAPP502</A></P>
+<P STYLE="margin-left: 1in">Slave serial or SelectMap Mode fpga
+configuration&nbsp; 
+</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp623.pdf">XAPP623</A></P>
+<P STYLE="margin-left: 1in">Power Distribution System design (PDS)
+decoupling capacitance</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp951.pdf">XAPP951</A></P>
+<P STYLE="margin-left: 1in">Configuring FPGA with SPI</P>
+<P><A HREF="../../../../web_fpga/Docs/xapp/xapp974.pdf">XAPP974</A></P>
+<P STYLE="margin-left: 1in">Indirect programming of SPI serial flash
+proms with Spartan-3A SPGAs</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>

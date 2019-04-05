@@ -1,0 +1,3 @@
+MODULE demo_tb
+SUBMODULE demo
+INSTANCE UUT

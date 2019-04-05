@@ -1,0 +1,36 @@
+Release 11.1 ngdbuild L.33 (nt)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\11.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise FPGA.ise
+-intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-4 FPGA.ngc FPGA.ngd
+
+Reading NGO file "C:/Documents and Settings/FPGA/FPGA.ngc" ...
+Reading in constraint information from 'fpga.ucf'...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+Checking Partitions ...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 78600 kilobytes
+
+Writing NGD file "FPGA.ngd" ...
+Total REAL time to NGDBUILD completion:  9 sec
+Total CPU time to NGDBUILD completion:   6 sec
+
+Writing NGDBUILD log file "FPGA.bld"...

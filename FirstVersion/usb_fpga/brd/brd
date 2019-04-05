@@ -1,0 +1,746 @@
+Netlist
+
+Exported from 7_7_9_usb_fpga.brd at 10/7/2009 1:25:57 PM
+
+EAGLE Version 5.6.0 Copyright (c) 1988-2009 CadSoft
+
+Net      Part     Pad
+
+1.8V     C16      1
+         C20      1
+         C8       1
+         CPLD     26
+         CPLD     57
+         L3       P$1
+         R22      2
+
+AGND     C10      2
+         C11      1
+         C6       2
+         C7       2
+         C8       2
+         C9       2
+         R12      1
+         R19      1
+         R21      1
+         R23      1
+         R25      1
+         VOLTAGE_REG 14
+         VOLTAGE_REG 6
+         VOLTAGE_REG P$17
+
+BUSY     CPLD     91
+         FPGA     26
+
+CCLK     CPLD     27
+         FPGA     50
+         SPI_FLASH 6
+
+CE       50MHZ    1
+         CPLD     70
+
+CSO_B    CPLD     94
+         FPGA     24
+         SPI_FLASH 1
+
+D0       CPLD     64
+         FT245RL  1
+
+D1       CPLD     58
+         FT245RL  5
+
+D2       CPLD     60
+         FT245RL  3
+
+D3       CPLD     52
+         FT245RL  11
+
+D4       CPLD     61
+         FT245RL  2
+
+D5       CPLD     55
+         FT245RL  9
+
+D6       CPLD     53
+         FT245RL  10
+
+D7       CPLD     56
+         FT245RL  6
+
+DGND     50MHZ    2
+         C1       2
+         C12      2
+         C13      2
+         C14      2
+         C15      2
+         C16      2
+         C17      2
+         C18      2
+         C19      2
+         C2       2
+         C20      2
+         C21      2
+         C22      2
+         C23      2
+         C24      -
+         C25      2
+         C26      2
+         C27      2
+         C28      2
+         C29      2
+         C3       2
+         C4       2
+         C5       1
+         CPLD     100
+         CPLD     21
+         CPLD     31
+         CPLD     62
+         CPLD     69
+         CPLD     84
+         FPGA     14
+         FPGA     19
+         FPGA     29
+         FPGA     37
+         FPGA     38
+         FPGA     52
+         FPGA     59
+         FPGA     64
+         FPGA     7
+         FPGA     72
+         FPGA     81
+         FPGA     87
+         FPGA     93
+         FT245RL  18
+         FT245RL  21
+         FT245RL  25
+         FT245RL  26
+         FT245RL  7
+         I2C      4
+         J1       4
+         J1       5
+         J2       2
+         J3       P$21
+         J4       P$20
+         R12      2
+         SPI_FLASH 4
+         SW1      2
+         SW2      2
+         SW3      2
+
+DIN/_D0  CPLD     35
+         FPGA     44
+         SPI_FLASH 2
+
+DONE     CPLD     28
+         FPGA     51
+
+FPGA_TDI CPLD     83
+         FPGA     100
+
+HOLD     CPLD     76
+         SPI_FLASH 7
+
+HSWAP    CPLD     24
+         FPGA     99
+
+INIT_B   CPLD     92
+         FPGA     25
+
+J3_2     CPLD     10
+         J3       P$2
+         J4       P$39
+
+J3_3     J3       P$3
+         J4       P$38
+
+J3_4     CPLD     11
+         J3       P$4
+         J4       P$37
+
+J3_5     J3       P$5
+         J4       P$36
+
+J3_6     CPLD     12
+         J3       P$6
+         J4       P$35
+
+J3_7     J3       P$7
+         J4       P$34
+
+J3_8     CPLD     13
+         J3       P$8
+         J4       P$33
+
+J3_9     J3       P$9
+         J4       P$32
+
+J3_10    CPLD     23
+         J3       P$10
+         J4       P$31
+
+J3_11    J3       P$11
+         J4       P$30
+
+J3_12    CPLD     15
+         J3       P$12
+         J4       P$29
+
+J3_13    J3       P$13
+         J4       P$28
+
+J3_14    CPLD     16
+         J3       P$14
+         J4       P$27
+
+J3_15    J3       P$15
+         J4       P$26
+
+J3_16    CPLD     17
+         J3       P$16
+         J4       P$25
+
+J3_17    J3       P$17
+         J4       P$24
+
+J3_18    CPLD     18
+         J3       P$18
+         J4       P$23
+
+J3_19    J3       P$19
+         J4       P$22
+
+J3_20    CPLD     19
+         J3       P$20
+         J4       P$21
+
+J3_22    J3       P$22
+         J4       P$19
+
+J3_23    J3       P$23
+         J4       P$18
+
+J3_24    J3       P$24
+         J4       P$17
+
+J3_25    J3       P$25
+         J4       P$16
+
+J3_26    FPGA     84
+         J3       P$26
+         J4       P$15
+
+J3_27    J3       P$27
+         J4       P$14
+
+J3_28    FPGA     85
+         J3       P$28
+         J4       P$13
+
+J3_29    J3       P$29
+         J4       P$12
+
+J3_30    FPGA     86
+         J3       P$30
+         J4       P$11
+
+J3_31    J3       P$31
+         J4       P$10
+
+J3_32    FPGA     88
+         J3       P$32
+         J4       P$9
+
+J3_33    J3       P$33
+         J4       P$8
+
+J3_34    FPGA     89
+         J3       P$34
+         J4       P$7
+
+J3_35    J3       P$35
+         J4       P$6
+
+J3_36    FPGA     90
+         J3       P$36
+         J4       P$5
+
+J3_37    J3       P$37
+         J4       P$4
+
+J3_38    FPGA     91
+         J3       P$38
+         J4       P$3
+
+J3_39    J3       P$39
+         J4       P$2
+
+J3_40    FPGA     92
+         J3       P$40
+         J4       P$1
+
+J5_1     C27      1
+         FPGA     5
+         I2C      2
+         J5       P$1
+         J6       P$40
+         R27      1
+
+J5_2     J5       P$2
+         J6       P$39
+
+J5_3     C26      1
+         FPGA     9
+         I2C      3
+         J5       P$3
+         J6       P$38
+         R26      1
+
+J5_4     J5       P$4
+         J6       P$37
+
+J5_5     FPGA     10
+         J5       P$5
+         J6       P$36
+
+J5_6     J5       P$6
+         J6       P$35
+
+J5_7     FPGA     11
+         J5       P$7
+         J6       P$34
+
+J5_8     J5       P$8
+         J6       P$33
+
+J5_9     FPGA     12
+         J5       P$9
+         J6       P$32
+
+J5_10    J5       P$10
+         J6       P$31
+
+J5_11    FPGA     13
+         J5       P$11
+         J6       P$30
+
+J5_12    J5       P$12
+         J6       P$29
+
+J5_13    FPGA     15
+         J5       P$13
+         J6       P$28
+
+J5_14    J5       P$14
+         J6       P$27
+
+J5_15    FPGA     16
+         J5       P$15
+         J6       P$26
+
+J5_16    J5       P$16
+         J6       P$25
+
+J5_17    FPGA     17
+         J5       P$17
+         J6       P$24
+
+J5_18    J5       P$18
+         J6       P$23
+
+J5_19    FPGA     18
+         J5       P$19
+         J6       P$22
+
+J5_20    J5       P$20
+         J6       P$21
+
+J5_21    J5       P$21
+         J6       P$20
+
+J5_22    FPGA     70
+         J5       P$22
+         J6       P$19
+
+J5_23    J5       P$23
+         J6       P$18
+
+J5_24    FPGA     71
+         J5       P$24
+         J6       P$17
+
+J5_25    J5       P$25
+         J6       P$16
+
+J5_26    FPGA     79
+         J5       P$26
+         J6       P$15
+
+J5_27    J5       P$27
+         J6       P$14
+
+J5_28    FPGA     78
+         J5       P$28
+         J6       P$13
+
+J5_29    J5       P$29
+         J6       P$12
+
+J5_30    FPGA     98
+         J5       P$30
+         J6       P$11
+
+J5_31    J5       P$31
+         J6       P$10
+
+J5_32    FPGA     95
+         J5       P$32
+         J6       P$9
+
+J5_33    J5       P$33
+         J6       P$8
+
+J5_34    FPGA     94
+         J5       P$34
+         J6       P$7
+
+J5_35    J5       P$35
+         J6       P$6
+
+J5_36    FPGA     2
+         J5       P$36
+         J6       P$5
+
+J5_37    J5       P$37
+         J6       P$4
+
+J5_38    C29      1
+         FPGA     3
+         I2C      6
+         J5       P$38
+         J6       P$3
+         R29      1
+
+J5_39    J5       P$39
+         J6       P$2
+
+J5_40    C28      1
+         FPGA     4
+         I2C      7
+         J5       P$40
+         J6       P$1
+         R28      1
+
+LED1     CPLD     1
+         R1       1
+
+LED2     CPLD     2
+         R2       1
+
+LED3     CPLD     3
+         R3       1
+
+LED4     CPLD     4
+         R4       1
+
+LED5     CPLD     6
+         R5       1
+
+LED6     CPLD     7
+         R6       1
+
+LED7     CPLD     8
+         R7       1
+
+LED8     CPLD     9
+         R8       1
+
+M0       CPLD     36
+         FPGA     43
+
+M1       CPLD     39
+         FPGA     42
+
+M2       CPLD     42
+         FPGA     39
+
+MCLK     50MHZ    3
+         CPLD     22
+         FPGA     83
+
+MOSI     CPLD     90
+         FPGA     27
+         SPI_FLASH 5
+
+N$2      R22      1
+         R23      2
+         VOLTAGE_REG 1
+
+N$3      R24      1
+         R25      2
+         VOLTAGE_REG 2
+
+N$4      R18      1
+         R19      2
+         VOLTAGE_REG 11
+
+N$5      C1       1
+         FB       1
+         J1       1
+
+N$6      R20      1
+         R21      2
+         VOLTAGE_REG 10
+
+N$7      L1       P$1
+         VOLTAGE_REG 13
+
+N$13     L4       P$1
+         VOLTAGE_REG 8
+
+N$16     L2       P$2
+         VOLTAGE_REG 5
+
+N$17     L3       P$2
+         VOLTAGE_REG 4
+
+N$76     I2C      5
+         R30      1
+
+N$183    C4       1
+         FT245RL  17
+
+N$187    FT245RL  27
+
+N$188    FT245RL  28
+
+N$196    LED1     C
+         R1       2
+
+N$197    LED2     C
+         R2       2
+
+N$198    LED3     C
+         R3       2
+
+N$199    LED4     C
+         R4       2
+
+N$200    LED5     C
+         R5       2
+
+N$201    LED6     C
+         R6       2
+
+N$202    LED7     C
+         R7       2
+
+N$203    LED8     C
+         R8       2
+
+N$224    FPGA     30
+
+N$260    FPGA     23
+
+N$261    FPGA     22
+
+N$284    FPGA     53
+
+N$285    FPGA     54
+
+N$288    FPGA     57
+
+N$289    FPGA     58
+
+N$291    FPGA     60
+
+N$292    FPGA     61
+
+N$293    FPGA     62
+
+N$294    FPGA     63
+
+N$296    FPGA     65
+
+N$297    FPGA     66
+
+N$298    FPGA     67
+
+N$299    FPGA     68
+
+N$300    FPGA     69
+
+N12      CPLD     29
+
+N13      CPLD     32
+
+N37      CPLD     37
+
+PROG_B   CPLD     99
+         FPGA     1
+
+PWREN    CPLD     43
+         FT245RL  12
+         R17      1
+
+RD       CPLD     50
+         FT245RL  13
+
+RST      CPLD     14
+         FT245RL  19
+
+RX       CPLD     68
+         FT245RL  23
+
+SW1      CPLD     74
+         R9       1
+         SW1      1
+
+SW2      CPLD     72
+         R10      1
+         SW2      1
+
+SW3      CPLD     71
+         R11      1
+         SW3      1
+
+TCK      CPLD     48
+         FPGA     77
+         J2       3
+
+TDI      CPLD     45
+         J2       5
+
+TDO      FPGA     76
+         J2       4
+
+TMS      CPLD     47
+         FPGA     75
+         J2       6
+
+TX       CPLD     67
+         FT245RL  22
+
+USBDM    FT245RL  16
+         J1       2
+
+USBDP    FT245RL  15
+         J1       3
+
+VCC      C10      1
+         C11      2
+         C2       1
+         C3       1
+         FB       2
+         J3       P$1
+         J4       P$40
+         VOLTAGE_REG 12
+         VOLTAGE_REG 15
+         VOLTAGE_REG 16
+         VOLTAGE_REG 3
+         VOLTAGE_REG 7
+         VOLTAGE_REG 9
+
+VCCAUX   C12      1
+         C15      1
+         C19      1
+         C9       1
+         CPLD     5
+         FPGA     21
+         FPGA     46
+         FPGA     74
+         FPGA     96
+         J2       1
+         L2       P$1
+         R24      2
+
+VCCINT   C17      1
+         C21      1
+         C6       1
+         FPGA     28
+         FPGA     56
+         FPGA     6
+         FPGA     80
+         L1       P$2
+         R18      2
+
+VCCO     50MHZ    4
+         C13      1
+         C14      1
+         C18      1
+         C22      1
+         C23      1
+         C24      +
+         C25      1
+         C5       2
+         C7       1
+         CPLD     38
+         CPLD     51
+         CPLD     88
+         CPLD     98
+         FPGA     20
+         FPGA     31
+         FPGA     45
+         FPGA     55
+         FPGA     73
+         FPGA     8
+         FPGA     82
+         FPGA     97
+         FT245RL  20
+         FT245RL  4
+         I2C      8
+         L4       P$2
+         LED1     A
+         LED2     A
+         LED3     A
+         LED4     A
+         LED5     A
+         LED6     A
+         LED7     A
+         LED8     A
+         R10      2
+         R11      2
+         R17      2
+         R20      2
+         R26      2
+         R27      2
+         R28      2
+         R29      2
+         R30      2
+         R9       2
+         SPI_FLASH 8
+
+VS0      CPLD     30
+         FPGA     49
+
+VS1      CPLD     33
+         FPGA     48
+
+VS2      CPLD     34
+         FPGA     47
+
+W        SPI_FLASH 3
+
+WR       CPLD     49
+         FT245RL  14
+
+_D1      CPLD     40
+         FPGA     41
+
+_D2      CPLD     41
+         FPGA     40
+
+_D3      CPLD     77
+         FPGA     36
+
+_D4      CPLD     78
+         FPGA     35
+
+_D5      CPLD     79
+         FPGA     34
+
+_D6      CPLD     81
+         FPGA     33
+
+_D7      CPLD     89
+         FPGA     32
+

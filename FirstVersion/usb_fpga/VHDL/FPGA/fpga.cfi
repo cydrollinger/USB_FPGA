@@ -1,0 +1,10 @@
+# PROMGEN: Xilinx Prom Generator L.33
+# Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION L.33
+DATE            07/17/2009 - 11:55
+SOURCE          fpga.bin
+DEVICE          128K
+DATA_WIDTH      8
+FILL_DATA       0xFF
+START_ADDRESS   0x00000000 END_ADDRESS 0x00011BDB DIRECTION_UP   "fpga.bit" 3s100evq100

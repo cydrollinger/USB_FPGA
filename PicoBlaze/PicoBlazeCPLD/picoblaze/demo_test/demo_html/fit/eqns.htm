@@ -1,0 +1,1261 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "demo";
+      var device = "XC2C64A";
+      signals = new Array("N_PZ_725","N_PZ_730","N_PZ_731","N_PZ_732","N_PZ_733","N_PZ_734","N_PZ_800","N_PZ_828","N_PZ_831","N_PZ_838","N_PZ_844","N_PZ_846","N_PZ_847","N_PZ_872","N_PZ_877","N_PZ_879","address0_SPECSIG","address1_SPECSIG","address2_SPECSIG","address3_SPECSIG","address4_SPECSIG","address5_SPECSIG","address6_SPECSIG","address7_SPECSIG","clk_enable","instruction0_SPECSIG","instruction10_SPECSIG","instruction11_SPECSIG","instruction12_SPECSIG","instruction13_SPECSIG","instruction15_SPECSIG","output0_SPECSIG","output1_SPECSIG","output2_SPECSIG","output3_SPECSIG","output4_SPECSIG","output5_SPECSIG","output6_SPECSIG","output7_SPECSIG","processorALU_result7_SPECSIG","processorT_state_SPECSIG","processorarithmetic_carry_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG","processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG","processorarithmetic_result0_SPECSIG","processorarithmetic_result1_SPECSIG","processorarithmetic_result2_SPECSIG","processorarithmetic_result3_SPECSIG","processorarithmetic_result4_SPECSIG","processorarithmetic_result5_SPECSIG","processorarithmetic_result6_SPECSIG","processorarithmetic_result7_SPECSIG","processorbasic_controlreset_delay1_SPECSIG","processorcarry_flag_SPECSIG","processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","processorinternal_reset_SPECSIG","processorlogical_result0_SPECSIG","processorlogical_result1_SPECSIG","processorlogical_result2_SPECSIG","processorlogical_result3_SPECSIG","processorlogical_result4_SPECSIG","processorlogical_result5_SPECSIG","processorlogical_result6_SPECSIG","processorlogical_result7_SPECSIG","processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG","processorreg_and_flag_enablesregister_write_valid_SPECSIG","processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG","processorshift_and_rotate_carry_SPECSIG","processorshift_and_rotate_result0_SPECSIG","processorshift_and_rotate_result1_SPECSIG","processorshift_and_rotate_result2_SPECSIG","processorshift_and_rotate_result3_SPECSIG","processorshift_and_rotate_result4_SPECSIG","processorshift_and_rotate_result5_SPECSIG","processorshift_and_rotate_result6_SPECSIG","processorshift_and_rotate_result7_SPECSIG","write_strobe");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","ON","ON","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","ON","ON","ON","ON","OFF","ON","ON","ON","ON","OFF");
+      sigTypes = new Array("","","","","","","","","","","","","","","","","DFF","DFF","DFF","TFF","DFF","DFF","TFF","TFF","","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","","DFF","DFF","","","","","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF");
+
+      
+        specSig["address0_SPECSIG"]=new Array("address<0>");
+      
+        specSig["address1_SPECSIG"]=new Array("address<1>");
+      
+        specSig["address2_SPECSIG"]=new Array("address<2>");
+      
+        specSig["address3_SPECSIG"]=new Array("address<3>");
+      
+        specSig["address4_SPECSIG"]=new Array("address<4>");
+      
+        specSig["address5_SPECSIG"]=new Array("address<5>");
+      
+        specSig["address6_SPECSIG"]=new Array("address<6>");
+      
+        specSig["address7_SPECSIG"]=new Array("address<7>");
+      
+        specSig["instruction0_SPECSIG"]=new Array("instruction<0>");
+      
+        specSig["instruction10_SPECSIG"]=new Array("instruction<10>");
+      
+        specSig["instruction11_SPECSIG"]=new Array("instruction<11>");
+      
+        specSig["instruction12_SPECSIG"]=new Array("instruction<12>");
+      
+        specSig["instruction13_SPECSIG"]=new Array("instruction<13>");
+      
+        specSig["instruction15_SPECSIG"]=new Array("instruction<15>");
+      
+        specSig["output0_SPECSIG"]=new Array("output<0>");
+      
+        specSig["output1_SPECSIG"]=new Array("output<1>");
+      
+        specSig["output2_SPECSIG"]=new Array("output<2>");
+      
+        specSig["output3_SPECSIG"]=new Array("output<3>");
+      
+        specSig["output4_SPECSIG"]=new Array("output<4>");
+      
+        specSig["output5_SPECSIG"]=new Array("output<5>");
+      
+        specSig["output6_SPECSIG"]=new Array("output<6>");
+      
+        specSig["output7_SPECSIG"]=new Array("output<7>");
+      
+        specSig["processorALU_result7_SPECSIG"]=new Array("processor/ALU_result<7>");
+      
+        specSig["processorT_state_SPECSIG"]=new Array("processor/T_state");
+      
+        specSig["processorarithmetic_carry_SPECSIG"]=new Array("processor/arithmetic_carry");
+      
+        specSig["processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG"]=new Array("processor/arithmetic_group/add_sub_module/carry_chain<1>");
+      
+        specSig["processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG"]=new Array("processor/arithmetic_group/add_sub_module/carry_chain<3>");
+      
+        specSig["processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG"]=new Array("processor/arithmetic_group/add_sub_module/carry_chain<5>");
+      
+        specSig["processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG"]=new Array("processor/arithmetic_group/add_sub_module/half_addsub<1>");
+      
+        specSig["processorarithmetic_result0_SPECSIG"]=new Array("processor/arithmetic_result<0>");
+      
+        specSig["processorarithmetic_result1_SPECSIG"]=new Array("processor/arithmetic_result<1>");
+      
+        specSig["processorarithmetic_result2_SPECSIG"]=new Array("processor/arithmetic_result<2>");
+      
+        specSig["processorarithmetic_result3_SPECSIG"]=new Array("processor/arithmetic_result<3>");
+      
+        specSig["processorarithmetic_result4_SPECSIG"]=new Array("processor/arithmetic_result<4>");
+      
+        specSig["processorarithmetic_result5_SPECSIG"]=new Array("processor/arithmetic_result<5>");
+      
+        specSig["processorarithmetic_result6_SPECSIG"]=new Array("processor/arithmetic_result<6>");
+      
+        specSig["processorarithmetic_result7_SPECSIG"]=new Array("processor/arithmetic_result<7>");
+      
+        specSig["processorbasic_controlreset_delay1_SPECSIG"]=new Array("processor/basic_control/reset_delay1");
+      
+        specSig["processorcarry_flag_SPECSIG"]=new Array("processor/carry_flag");
+      
+        specSig["processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>");
+      
+        specSig["processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>");
+      
+        specSig["processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG"]=new Array("processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>");
+      
+        specSig["processorinternal_reset_SPECSIG"]=new Array("processor/internal_reset");
+      
+        specSig["processorlogical_result0_SPECSIG"]=new Array("processor/logical_result<0>");
+      
+        specSig["processorlogical_result1_SPECSIG"]=new Array("processor/logical_result<1>");
+      
+        specSig["processorlogical_result2_SPECSIG"]=new Array("processor/logical_result<2>");
+      
+        specSig["processorlogical_result3_SPECSIG"]=new Array("processor/logical_result<3>");
+      
+        specSig["processorlogical_result4_SPECSIG"]=new Array("processor/logical_result<4>");
+      
+        specSig["processorlogical_result5_SPECSIG"]=new Array("processor/logical_result<5>");
+      
+        specSig["processorlogical_result6_SPECSIG"]=new Array("processor/logical_result<6>");
+      
+        specSig["processorlogical_result7_SPECSIG"]=new Array("processor/logical_result<7>");
+      
+        specSig["processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG"]=new Array("processor/reg_and_flag_enables/arith_or_logical_valid");
+      
+        specSig["processorreg_and_flag_enablesregister_write_valid_SPECSIG"]=new Array("processor/reg_and_flag_enables/register_write_valid");
+      
+        specSig["processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG"]=new Array("processor/reg_and_flag_enables/returni_or_shift_valid");
+      
+        specSig["processorshift_and_rotate_carry_SPECSIG"]=new Array("processor/shift_and_rotate_carry");
+      
+        specSig["processorshift_and_rotate_result0_SPECSIG"]=new Array("processor/shift_and_rotate_result<0>");
+      
+        specSig["processorshift_and_rotate_result1_SPECSIG"]=new Array("processor/shift_and_rotate_result<1>");
+      
+        specSig["processorshift_and_rotate_result2_SPECSIG"]=new Array("processor/shift_and_rotate_result<2>");
+      
+        specSig["processorshift_and_rotate_result3_SPECSIG"]=new Array("processor/shift_and_rotate_result<3>");
+      
+        specSig["processorshift_and_rotate_result4_SPECSIG"]=new Array("processor/shift_and_rotate_result<4>");
+      
+        specSig["processorshift_and_rotate_result5_SPECSIG"]=new Array("processor/shift_and_rotate_result<5>");
+      
+        specSig["processorshift_and_rotate_result6_SPECSIG"]=new Array("processor/shift_and_rotate_result<6>");
+      
+        specSig["processorshift_and_rotate_result7_SPECSIG"]=new Array("processor/shift_and_rotate_result<7>");
+      
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_733","/output0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","instruction0_SPECSIG","/instruction12_SPECSIG","/instruction10_SPECSIG","write_strobe");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","/N_PZ_731");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/address0_SPECSIG","/address2_SPECSIG","/address3_SPECSIG","address1_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address0_SPECSIG","/N_PZ_734","processorT_state_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/address0_SPECSIG","/N_PZ_734","/processorT_state_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/processorinternal_reset_SPECSIG","instruction0_SPECSIG","N_PZ_734");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/reset","/processorbasic_controlreset_delay1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("reset");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address0_SPECSIG","/address2_SPECSIG","/address3_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/address2_SPECSIG","/address3_SPECSIG","/address1_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address2_SPECSIG","/N_PZ_734","/N_PZ_879");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/address2_SPECSIG","/N_PZ_734","N_PZ_879");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorinternal_reset_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction13_SPECSIG","/processorcarry_flag_SPECSIG","/processorT_state_SPECSIG","instruction15_SPECSIG","instruction12_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/processorT_state_SPECSIG","instruction15_SPECSIG","instruction12_SPECSIG","/instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/processorinternal_reset_SPECSIG","processorcarry_flag_SPECSIG","/processorT_state_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/processorinternal_reset_SPECSIG","processorcarry_flag_SPECSIG","/processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG","/processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction13_SPECSIG","/processorinternal_reset_SPECSIG","processorT_state_SPECSIG","processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG","/instruction15_SPECSIG","processorarithmetic_carry_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","/processorinternal_reset_SPECSIG","processorT_state_SPECSIG","/instruction15_SPECSIG","processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG","processorarithmetic_carry_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("instruction13_SPECSIG","/processorinternal_reset_SPECSIG","processorT_state_SPECSIG","processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_carry_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("instruction13_SPECSIG","/processorinternal_reset_SPECSIG","processorT_state_SPECSIG","instruction15_SPECSIG","processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_carry_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/processorinternal_reset_SPECSIG","/processorT_state_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/instruction15_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address0_SPECSIG","/address2_SPECSIG","/address3_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/address2_SPECSIG","/address3_SPECSIG","address1_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_734","address3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("address2_SPECSIG","/N_PZ_734","N_PZ_879");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address0_SPECSIG","/processorT_state_SPECSIG","address1_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_734","/N_PZ_879","address1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("address0_SPECSIG","/N_PZ_734","/processorT_state_SPECSIG","/N_PZ_879");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_734","address4_SPECSIG","/N_PZ_847");
+          
+            pterms["INPUTPINS_1_2"]=new Array("address2_SPECSIG","/N_PZ_734","address3_SPECSIG","N_PZ_879","/N_PZ_847");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address2_SPECSIG","address3_SPECSIG","N_PZ_879","address4_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_734","N_PZ_847","/address5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_734","/N_PZ_847","address5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_734","address6_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_734","N_PZ_847","address5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_734","address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_734","N_PZ_847","address5_SPECSIG","address6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address0_SPECSIG","/address2_SPECSIG","/address3_SPECSIG","address1_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("address0_SPECSIG","/address2_SPECSIG","/address3_SPECSIG","/address1_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("processorALU_result7_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","processorarithmetic_result7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result7_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result7_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorALU_result7_SPECSIG","N_PZ_731");
+          
+            pterms["INPUTPINS_1_2"]=new Array("processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/N_PZ_731");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorT_state_SPECSIG","/instruction10_SPECSIG","processorreg_and_flag_enablesregister_write_valid_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/address0_SPECSIG","/address2_SPECSIG","/address3_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/address2_SPECSIG","/address3_SPECSIG","/address1_SPECSIG","/address4_SPECSIG","/address5_SPECSIG","/address6_SPECSIG","/address7_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction15_SPECSIG","instruction12_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction15_SPECSIG","instruction11_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_877");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result6_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result6_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_731","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result6_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result6_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result5_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result5_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_731","processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result5_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result5_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_844");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result4_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result4_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result4_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_731","processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result4_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result4_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result4_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_872");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result3_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result3_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result3_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","N_PZ_831");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_731","processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result3_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result3_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result3_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_828");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction10_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result2_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result2_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result2_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction13_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction12_SPECSIG","N_PZ_828");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_731","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result2_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result1_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result1_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","processorshift_and_rotate_result1_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","/instruction11_SPECSIG","processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_731","processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorarithmetic_result1_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_731","processorlogical_result1_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_731","processorshift_and_rotate_result1_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_730");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG","/N_PZ_732");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction15_SPECSIG","N_PZ_732","processorarithmetic_result0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction15_SPECSIG","processorlogical_result0_SPECSIG","N_PZ_732");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","/instruction11_SPECSIG","N_PZ_732","processorshift_and_rotate_result0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/instruction11_SPECSIG","N_PZ_725");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction0_SPECSIG","/instruction12_SPECSIG","/N_PZ_730");
+          
+            pterms["INPUTPINS_1_3"]=new Array("processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG","instruction12_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction0_SPECSIG","/instruction12_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorT_state_SPECSIG","instruction10_SPECSIG","processorreg_and_flag_enablesregister_write_valid_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/instruction13_SPECSIG","/processorcarry_flag_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction13_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_730","N_PZ_846");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_730","/N_PZ_846");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_725");
+          
+            pterms["INPUTPINS_1_2"]=new Array("processorcarry_flag_SPECSIG","instruction11_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG","/N_PZ_800");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG","N_PZ_800");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction12_SPECSIG","/instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_730","N_PZ_846");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","N_PZ_725","/N_PZ_846");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction12_SPECSIG","/N_PZ_725","/N_PZ_846");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction13_SPECSIG","/instruction12_SPECSIG","N_PZ_828");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction12_SPECSIG","/N_PZ_828");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction12_SPECSIG","N_PZ_828","/processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("instruction12_SPECSIG","/N_PZ_828","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG","N_PZ_800");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG","processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG","processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/instruction12_SPECSIG","N_PZ_872");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction13_SPECSIG","/instruction12_SPECSIG","/N_PZ_828");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction13_SPECSIG","/instruction12_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction12_SPECSIG","/instruction10_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/instruction12_SPECSIG","/N_PZ_828","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("instruction12_SPECSIG","N_PZ_828","/processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","N_PZ_831");
+          
+            pterms["INPUTPINS_1_7"]=new Array("instruction12_SPECSIG","/N_PZ_828","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","/N_PZ_831");
+          
+            pterms["INPUTPINS_1_8"]=new Array("instruction12_SPECSIG","processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG","/N_PZ_831");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/N_PZ_872","processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG","/N_PZ_828","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG","/N_PZ_828","processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG","/N_PZ_831");
+          
+            pterms["INPUTPINS_1_11"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG","N_PZ_831");
+          
+            pterms["INPUTPINS_1_12"]=new Array("instruction12_SPECSIG","N_PZ_872","processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG","N_PZ_828","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("instruction12_SPECSIG","/N_PZ_872","/processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG","N_PZ_828","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/instruction12_SPECSIG","N_PZ_844");
+          
+            pterms["INPUTPINS_1_3"]=new Array("N_PZ_844","processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/N_PZ_844","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction10_SPECSIG","/N_PZ_800");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","/N_PZ_872","/processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/N_PZ_872","N_PZ_828","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction13_SPECSIG","/instruction12_SPECSIG","/N_PZ_872","N_PZ_828");
+          
+            pterms["INPUTPINS_1_5"]=new Array("instruction13_SPECSIG","/instruction12_SPECSIG","/N_PZ_872","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("instruction13_SPECSIG","/instruction10_SPECSIG","/N_PZ_872","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG","N_PZ_828","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("instruction12_SPECSIG","N_PZ_828","/processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","/N_PZ_831");
+          
+            pterms["INPUTPINS_1_9"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG","/N_PZ_831");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/N_PZ_844","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("instruction12_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction10_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/N_PZ_844","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","/N_PZ_844","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","/N_PZ_844","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","/processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG","processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_877","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","N_PZ_877","/processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/instruction12_SPECSIG","instruction10_SPECSIG","/N_PZ_877");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/instruction10_SPECSIG","/N_PZ_877","processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction10_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","N_PZ_838");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","N_PZ_838");
+          
+            pterms["INPUTPINS_1_4"]=new Array("processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG","N_PZ_877");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG","N_PZ_877");
+          
+            pterms["INPUTPINS_1_8"]=new Array("instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","instruction10_SPECSIG","/N_PZ_838");
+          
+            pterms["INPUTPINS_1_9"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","instruction10_SPECSIG","/N_PZ_838");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/instruction12_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG","/N_PZ_877","processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/instruction12_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG","/N_PZ_877","processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction12_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("instruction12_SPECSIG","instruction10_SPECSIG","/processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("instruction12_SPECSIG","/instruction10_SPECSIG","/processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","N_PZ_838");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","N_PZ_838");
+          
+            pterms["INPUTPINS_1_4"]=new Array("instruction12_SPECSIG","/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","instruction10_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG","/N_PZ_877","processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/instruction12_SPECSIG","processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG","/N_PZ_877","processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/instruction13_SPECSIG","/processorinternal_reset_SPECSIG","/processorT_state_SPECSIG","instruction15_SPECSIG","/instruction12_SPECSIG","instruction11_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_725","write_strobe");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_733","/output1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_828","N_PZ_733");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_733","/output2_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_872","N_PZ_733");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_733","/output3_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_844","N_PZ_733");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_733","/output4_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_733","/output5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/instruction10_SPECSIG","/processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("N_PZ_877","N_PZ_733");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/N_PZ_733","/output6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("clk");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/N_PZ_733","/output7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG","instruction10_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG","/instruction10_SPECSIG","N_PZ_733");
+          
+            pterms["INPUTPINS_1_4"]=new Array("clk");
+          
+          d2["clk_enable"]=new Array("GND");
+          
+          d2["output0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["output0_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop0data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["instruction13_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["instruction13_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["address0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["address0_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processorinternal_reset_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorinternal_reset_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["processorbasic_controlreset_delay1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorbasic_controlreset_delay1_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["instruction0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["instruction0_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["address2_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address2_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["N_PZ_734"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+          d2["processorcarry_flag_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6");
+          
+              clk["processorcarry_flag_SPECSIG"]=new Array("INPUTPINS_1_7");
+              
+          d2["processorT_state_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorT_state_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorreg_and_flag_enablesarith_or_logical_valid_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["instruction15_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["instruction15_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["address3_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address3_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["N_PZ_879"]=new Array("INPUTPINS_1_1");
+          
+          d2["address1_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address1_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["address4_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address4_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["N_PZ_847"]=new Array("INPUTPINS_1_1");
+          
+          d2["address5_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address5_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["address6_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address6_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["address7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["address7_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorreg_and_flag_enablesreturni_or_shift_valid_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["instruction12_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["instruction12_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["instruction11_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["instruction11_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["processorshift_and_rotate_carry_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorshift_and_rotate_carry_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processordata_registersbus_width_loop7data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processorALU_result7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+          d2["processorlogical_result7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["processorlogical_result7_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processordata_registersbus_width_loop7data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["N_PZ_731"]=new Array("INPUTPINS_1_1");
+          
+          d2["instruction10_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["instruction10_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processorreg_and_flag_enablesregister_write_valid_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorreg_and_flag_enablesregister_write_valid_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processorshift_and_rotate_result7_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorshift_and_rotate_result7_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["N_PZ_877"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d2["processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop6data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result6_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["processorlogical_result6_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop6data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorshift_and_rotate_result6_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorshift_and_rotate_result6_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop5data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result5_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["processorlogical_result5_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop5data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorshift_and_rotate_result5_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorshift_and_rotate_result5_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["N_PZ_844"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d2["processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop4data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result4_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["processorlogical_result4_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop4data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorshift_and_rotate_result4_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorshift_and_rotate_result4_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["N_PZ_872"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d2["processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop3data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result3_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorlogical_result3_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop3data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorshift_and_rotate_result3_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorshift_and_rotate_result3_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["N_PZ_828"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d2["processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop2data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result2_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5");
+          
+              clk["processorlogical_result2_SPECSIG"]=new Array("INPUTPINS_1_6");
+              
+          d2["processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop2data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorshift_and_rotate_result2_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorshift_and_rotate_result2_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop1data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result1_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorlogical_result1_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop1data_register_bitrambit0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorshift_and_rotate_result1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+              clk["processorshift_and_rotate_result1_SPECSIG"]=new Array("INPUTPINS_1_2");
+              
+          d2["N_PZ_730"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d2["processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processordata_registersbus_width_loop0data_register_bitrambit7_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorlogical_result0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processorlogical_result0_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["N_PZ_725"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d2["N_PZ_732"]=new Array("INPUTPINS_1_1");
+          
+          d2["processorshift_and_rotate_result0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["processorshift_and_rotate_result0_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["processorarithmetic_result0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorarithmetic_result0_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d1["N_PZ_846"]=new Array("INPUTPINS_1_1");
+          
+          d2["N_PZ_846"]=new Array("INPUTPINS_1_2");
+          
+          d2["processorarithmetic_result1_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["processorarithmetic_result1_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d1["processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+          d2["processorarithmetic_groupadd_sub_modulehalf_addsub1_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3");
+          
+          d2["N_PZ_800"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+          d1["processorarithmetic_result2_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+          d2["processorarithmetic_result2_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5");
+          
+              clk["processorarithmetic_result2_SPECSIG"]=new Array("INPUTPINS_1_6");
+              
+          d2["processorarithmetic_groupadd_sub_modulecarry_chain1_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+          d1["processorarithmetic_result3_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+          d2["processorarithmetic_result3_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13");
+          
+              clk["processorarithmetic_result3_SPECSIG"]=new Array("INPUTPINS_1_14");
+              
+          d2["N_PZ_831"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+          d1["processorarithmetic_result4_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+          d2["processorarithmetic_result4_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+              clk["processorarithmetic_result4_SPECSIG"]=new Array("INPUTPINS_1_5");
+              
+          d2["processorarithmetic_groupadd_sub_modulecarry_chain3_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9");
+          
+          d2["processorarithmetic_result5_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9");
+          
+              clk["processorarithmetic_result5_SPECSIG"]=new Array("INPUTPINS_1_10");
+              
+          d2["processorarithmetic_groupadd_sub_modulecarry_chain5_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9");
+          
+          d1["processorarithmetic_result6_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+          d2["processorarithmetic_result6_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5");
+          
+              clk["processorarithmetic_result6_SPECSIG"]=new Array("INPUTPINS_1_6");
+              
+          d2["processorarithmetic_result7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11");
+          
+              clk["processorarithmetic_result7_SPECSIG"]=new Array("INPUTPINS_1_12");
+              
+          d2["N_PZ_838"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+          d2["processorarithmetic_carry_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6");
+          
+              clk["processorarithmetic_carry_SPECSIG"]=new Array("INPUTPINS_1_7");
+              
+          d2["write_strobe"]=new Array("INPUTPINS_1_1");
+          
+              clk["write_strobe"]=new Array("INPUTPINS_1_2");
+              
+          d2["N_PZ_733"]=new Array("INPUTPINS_1_1");
+          
+          d2["output1_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["output1_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["output2_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["output2_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["output3_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["output3_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["output4_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["output4_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["output5_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["output5_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+          d2["output6_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+              clk["output6_SPECSIG"]=new Array("INPUTPINS_1_3");
+              
+          d2["output7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+              clk["output7_SPECSIG"]=new Array("INPUTPINS_1_4");
+              
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

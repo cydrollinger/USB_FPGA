@@ -1,0 +1,264 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_FPGA_D0: FDCPE port map (FPGA_D_I(0),data(0),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(0) <= FPGA_D_I(0) when FPGA_D_OE(0) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(0) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D1: FDCPE port map (FPGA_D_I(1),data(1),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(1) <= FPGA_D_I(1) when FPGA_D_OE(1) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(1) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D2: FDCPE port map (FPGA_D_I(2),data(2),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(2) <= FPGA_D_I(2) when FPGA_D_OE(2) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(2) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D3: FDCPE port map (FPGA_D_I(3),data(3),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(3) <= FPGA_D_I(3) when FPGA_D_OE(3) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(3) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D4: FDCPE port map (FPGA_D_I(4),data(4),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(4) <= FPGA_D_I(4) when FPGA_D_OE(4) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(4) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D5: FDCPE port map (FPGA_D_I(5),data(5),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(5) <= FPGA_D_I(5) when FPGA_D_OE(5) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(5) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D6: FDCPE port map (FPGA_D_I(6),data(6),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(6) <= FPGA_D_I(6) when FPGA_D_OE(6) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(6) <= NOT FPGA_done;
+</td></tr><tr><td>
+FDCPE_FPGA_D7: FDCPE port map (FPGA_D_I(7),data(7),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D(7) <= FPGA_D_I(7) when FPGA_D_OE(7) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_D_OE(7) <= NOT FPGA_done;
+</td></tr><tr><td>
+</td></tr><tr><td>
+FPGA_MOSI <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+FPGA_RDWR <= '0';
+</td></tr><tr><td>
+FTCPE_FPGA_cclk: FTCPE port map (FPGA_cclk,FPGA_cclk_T,mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_cclk_T <= ((FPGA_cclk AND NOT usb_timing(0) AND usb_timing(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(1) AND NOT usb_timing(3) AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_cclk AND usb_timing(0) AND NOT usb_timing(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	usb_timing(1) AND NOT usb_timing(3) AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8)));
+</td></tr><tr><td>
+FTCPE_FPGA_prog_B: FTCPE port map (FPGA_prog_B,FPGA_prog_B_T,mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA_prog_B_T <= ((NOT SW_1_hi AND fpga_timing(3) AND NOT fpga_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	FPGA_prog_B)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT SW_1_hi AND fpga_timing(2) AND NOT fpga_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	FPGA_prog_B)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(8) AND FPGA_prog_B)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT SW_1_hi AND fpga_timing(1) AND NOT fpga_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(8) AND FPGA_prog_B)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(3) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(8) AND fpga_timing(4) AND FPGA_prog_B)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(3) AND fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(7) AND NOT fpga_timing(8) AND fpga_timing(4) AND NOT FPGA_prog_B)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(3) AND NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4) AND NOT FPGA_prog_B));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(1) <= NOT (((FPGA_done AND FPGA_D(0).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT usb_rst)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(2) <= NOT (((FPGA_done AND FPGA_D(1).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT SW_1_hi)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(3) <= NOT (((FPGA_done AND FPGA_D(2).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT SW_2_hi)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(4) <= NOT (((FPGA_done AND FPGA_D(3).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT FPGA_INITB)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(5) <= NOT (((FPGA_done AND FPGA_D(4).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT usb_rst)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(6) <= NOT (((FPGA_done AND FPGA_D(5).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT N24.PIN)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(7) <= NOT (((FPGA_done AND FPGA_D(6).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT N24.PIN)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(8) <= NOT (((FPGA_done AND FPGA_D(7).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT FPGA_done AND NOT N24.PIN)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Mode(0) <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+Mode(1) <= NOT ('0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+Mode(2) <= NOT ('0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+N24_I <= NOT ('0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N24 <= N24_I when N24_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N24_OE <= SW_2_hi;
+</td></tr><tr><td>
+FDCPE_SW_1_hi: FDCPE port map (SW_1_hi,SW(1),mclk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_SW_2_hi: FDCPE port map (SW_2_hi,SW(2),mclk,'0','0','1');
+</td></tr><tr><td>
+FTCPE_fpga_timing0: FTCPE port map (fpga_timing(0),fpga_timing_T(0),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_T(0) <= ((fpga_timing(0) AND SW_1_hi)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT SW_1_hi AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT SW_1_hi AND NOT fpga_timing(1) AND NOT fpga_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT SW_1_hi AND NOT fpga_timing(3) AND NOT fpga_timing(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8)));
+</td></tr><tr><td>
+FTCPE_fpga_timing1: FTCPE port map (fpga_timing(1),fpga_timing_T(1),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_T(1) <= ((SW_1_hi AND fpga_timing(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(3) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(8)));
+</td></tr><tr><td>
+FTCPE_fpga_timing2: FTCPE port map (fpga_timing(2),fpga_timing_T(2),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_T(2) <= ((SW_1_hi AND fpga_timing(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(3) AND NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(7) AND NOT fpga_timing(8)));
+</td></tr><tr><td>
+FTCPE_fpga_timing3: FTCPE port map (fpga_timing(3),fpga_timing_T(3),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_T(3) <= ((SW_1_hi AND fpga_timing(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(8) AND NOT fpga_timing(4)));
+</td></tr><tr><td>
+FDCPE_fpga_timing4: FDCPE port map (fpga_timing(4),fpga_timing_D(4),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_D(4) <= ((NOT SW_1_hi AND fpga_timing(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	fpga_timing(3) AND fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT fpga_timing(7) AND NOT fpga_timing(8)));
+</td></tr><tr><td>
+FDCPE_fpga_timing5: FDCPE port map (fpga_timing(5),fpga_timing_D(5),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_D(5) <= (NOT SW_1_hi AND fpga_timing(5));
+</td></tr><tr><td>
+FDCPE_fpga_timing6: FDCPE port map (fpga_timing(6),fpga_timing_D(6),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_D(6) <= (NOT SW_1_hi AND fpga_timing(6));
+</td></tr><tr><td>
+FDCPE_fpga_timing7: FDCPE port map (fpga_timing(7),fpga_timing_D(7),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_D(7) <= (NOT SW_1_hi AND fpga_timing(7));
+</td></tr><tr><td>
+FDCPE_fpga_timing8: FDCPE port map (fpga_timing(8),fpga_timing_D(8),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fpga_timing_D(8) <= (NOT SW_1_hi AND fpga_timing(8));
+</td></tr><tr><td>
+</td></tr><tr><td>
+mclk_ce <= NOT ('0');
+</td></tr><tr><td>
+FDCPE_previous: FDCPE port map (previous,usb_dry,mclk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_previous_usb_dry: FDCPE port map (previous_usb_dry,previous,mclk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_usb_dry: FDCPE port map (usb_dry,NOT usb_rx,mclk,'0','0','1');
+</td></tr><tr><td>
+FTCPE_usb_rd: FTCPE port map (usb_rd,usb_rd_T,mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_rd_T <= ((NOT usb_timing(2) AND NOT usb_timing(3) AND NOT usb_timing(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(5) AND NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	usb_rd)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT usb_timing(0) AND usb_timing(2) AND NOT usb_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(3) AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(7) AND NOT usb_timing(8) AND NOT usb_rd));
+</td></tr><tr><td>
+FDCPE_usb_rst: FDCPE port map (usb_rst,SW(0),mclk,'0','0','1');
+</td></tr><tr><td>
+FTCPE_usb_timing0: FTCPE port map (usb_timing(0),usb_timing_T(0),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(0) <= ((usb_timing(0) AND usb_dry AND NOT previous_usb_dry)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT usb_timing(2) AND NOT usb_timing(3) AND NOT usb_dry AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND NOT usb_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT usb_timing(2) AND NOT usb_timing(3) AND previous_usb_dry AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND NOT usb_timing(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT usb_timing(0) AND NOT usb_timing(1) AND NOT usb_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(7) AND NOT usb_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT usb_timing(0) AND NOT usb_timing(1) AND NOT usb_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	previous_usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(7) AND NOT usb_timing(8)));
+</td></tr><tr><td>
+FTCPE_usb_timing1: FTCPE port map (usb_timing(1),usb_timing_T(1),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(1) <= ((usb_timing(1) AND usb_dry AND NOT previous_usb_dry)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (usb_timing(0) AND NOT usb_timing(2) AND NOT usb_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(7) AND NOT usb_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (usb_timing(0) AND NOT usb_timing(2) AND NOT usb_timing(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	previous_usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(7) AND NOT usb_timing(8)));
+</td></tr><tr><td>
+FTCPE_usb_timing2: FTCPE port map (usb_timing(2),usb_timing_T(2),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(2) <= ((usb_timing(2) AND usb_dry AND NOT previous_usb_dry)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (usb_timing(0) AND NOT usb_timing(2) AND usb_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(3) AND NOT usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (usb_timing(0) AND NOT usb_timing(2) AND usb_timing(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(3) AND previous_usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8)));
+</td></tr><tr><td>
+FTCPE_usb_timing3: FTCPE port map (usb_timing(3),usb_timing_T(3),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(3) <= (usb_timing(3) AND usb_dry AND NOT previous_usb_dry);
+</td></tr><tr><td>
+FTCPE_usb_timing4: FTCPE port map (usb_timing(4),usb_timing_T(4),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(4) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(4));
+</td></tr><tr><td>
+FTCPE_usb_timing5: FTCPE port map (usb_timing(5),usb_timing_T(5),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(5) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(5));
+</td></tr><tr><td>
+FTCPE_usb_timing6: FTCPE port map (usb_timing(6),usb_timing_T(6),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(6) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(6));
+</td></tr><tr><td>
+FTCPE_usb_timing7: FTCPE port map (usb_timing(7),usb_timing_T(7),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(7) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(7));
+</td></tr><tr><td>
+FTCPE_usb_timing8: FTCPE port map (usb_timing(8),usb_timing_T(8),mclk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usb_timing_T(8) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(8));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

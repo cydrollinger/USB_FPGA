@@ -1,0 +1,30 @@
+Pin Freeze File:  version P.20131013
+
+2C64A100 XC2C64A-7-VQ100
+DIR S:PIN18
+INT_1V8 S:PIN13
+SCL_PI S:PIN15
+INT_PI S:PIN17
+LEDs<1> S:PIN1
+LEDs<2> S:PIN2
+LEDs<3> S:PIN3
+LEDs<4> S:PIN4
+LEDs<5> S:PIN6
+LEDs<6> S:PIN7
+SCL_1V8 S:PIN11
+SDA_1V8 S:PIN12
+SDA_PI S:PIN16
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_2 SDA_1V8 SCL_1V8
+PARTITION FB1_7 LEDs<6> LEDs<5> LEDs<4> LEDs<3>
+		 LEDs<2> LEDs<1>
+
+PARTITION FB2_3 SDA_PI INT_PI
+
+
+
+

@@ -1,0 +1,96 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GCLK0: 2=mclk.p
+----------------- B l o c k 0 ------------------
+PLApt(37/56), Fanin(24/38), Clk(1/3), Bct(0/4), Pin(10/16), Mcell(16/16)
+PLApts[37/37] 71 72 73 74 75 76 77 15 16 17 37 34 18 36 51 19 20 21 22 23 24 25 33 49 35 40 32 45 48 30 41 43 
+              46 31 42 44 47
+Fanins[24] FPGA_prog_B.n usb_rst.n SW_1_hi.n SW_2_hi.n fpga_timing<0>.n fpga_timing<1>.n fpga_timing<2>.n 
+           fpga_timing<3>.n fpga_timing<4>.n fpga_timing<5>.n fpga_timing<6>.n fpga_timing<7>.n 
+           fpga_timing<8>.n FPGA_D<0>.p FPGA_D<1>.p FPGA_D<2>.p FPGA_D<3>.p FPGA_D<4>.p FPGA_D<5>.p 
+           FPGA_D<6>.p FPGA_D<7>.p FPGA_INITB.p FPGA_done.p N24.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [FPGA_prog_B(113),FPGA_prog_B(99)] [LEDs<1>(112),LEDs<1>(1)] [LEDs<2>(111),LEDs<2>(2)]  
+           [LEDs<3>(110),LEDs<3>(3)] [LEDs<4>(109),LEDs<4>(4)] [LEDs<5>(108),LEDs<5>(6)]  
+           [LEDs<6>(107),LEDs<6>(7)] [LEDs<7>(106),LEDs<7>(8)] [LEDs<8>(105),LEDs<8>(9)] [FPGA_INITB(92)]  
+           [fpga_timing<3>(116)] [fpga_timing<4>(115)] [fpga_timing<2>(114)] [fpga_timing<0>(104)]  
+           [fpga_timing<1>(103)] [fpga_timing<5>(102)] [fpga_timing<6>(101)] 
+Signal[17] [ 0: fpga_timing<6>(101) (13)  ][ 1: fpga_timing<5>(102) (12)  ][ 2: fpga_timing<1>(103) (11)  ] 
+           [ 3: fpga_timing<0>(104) (10)  ][ 4: LEDs<8>(105) LEDs<8>(9)  ][ 5: LEDs<7>(106) LEDs<7>(8)  ] 
+           [ 6: LEDs<6>(107) LEDs<6>(7)  ][ 7: LEDs<5>(108) LEDs<5>(6)  ][ 8: LEDs<4>(109) LEDs<4>(4)  ][ 9:  
+           LEDs<3>(110) LEDs<3>(3)  ][ 10: LEDs<2>(111) LEDs<2>(2)  ][ 11: LEDs<1>(112) LEDs<1>(1)  ][ 12:  
+           FPGA_prog_B(113) FPGA_prog_B(99)  ][ 13: fpga_timing<2>(114) (97)  ][ 14: fpga_timing<4>(115)  
+           (94)  ][ 15: fpga_timing<3>(116) FPGA_INITB(92)  ]
+----------------- B l o c k 1 ------------------
+PLApt(25/56), Fanin(18/38), Clk(1/3), Bct(1/4), Pin(5/16), Mcell(16/16)
+PLApts[25/47] 27 28 54 59 64 55 60 50 63 53 11 56 58 38 61 62 14 () () 57 () () 52 () () 70 () () 69 () () 68 
+              () () 67 () () () () () 66 () () () () () 65
+Fanins[18] FPGA_cclk.n SW_1_hi.n SW_2_hi.n fpga_timing<7>.n previous.n previous_usb_dry.n usb_dry.n 
+           usb_timing<0>.n usb_timing<1>.n usb_timing<2>.n usb_timing<3>.n usb_timing<4>.n usb_timing<5>.n 
+           usb_timing<6>.n usb_timing<7>.n usb_timing<8>.n SW<0>.p usb_rx.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=50) SW_2_hi ;
+vref: [0]
+Signal[18] [FPGA_cclk(126),FPGA_cclk(27)] [usb_rst(117),usb_rst(14)] [N24(128),N24(29)] [FPGA_done(28)]  
+           [mclk(22)] [usb_timing<1>(132)] [usb_timing<2>(131)] [usb_timing<0>(130)] [usb_timing<3>(129)]  
+           [usb_timing<4>(127)] [usb_timing<5>(125)] [usb_timing<6>(124)] [usb_timing<7>(123)]  
+           [usb_timing<8>(122)] [previous(121)] [previous_usb_dry(120)] [usb_dry(119)] [fpga_timing<7>(118)] 
+Signal[18] [ 0: usb_rst(117) usb_rst(14)  ][ 1: fpga_timing<7>(118) (15)  ][ 2: usb_dry(119) (16)  ][ 3:  
+           previous_usb_dry(120) (17)  ][ 4: previous(121) (18)  ][ 5: usb_timing<8>(122) (19)  ][ 6:  
+           usb_timing<7>(123) mclk(22)  ][ 7: usb_timing<6>(124) (23)  ][ 8: usb_timing<5>(125) (24)  ][ 9:  
+           FPGA_cclk(126) FPGA_cclk(27)  ][ 10: usb_timing<4>(127) FPGA_done(28)  ][ 11: N24(128) N24(29)  ] 
+           [ 12: usb_timing<3>(129) (30)  ][ 13: usb_timing<0>(130) (32)  ][ 14: usb_timing<2>(131) (33)  ] 
+           [ 15: usb_timing<1>(132) (34)  ]
+----------------- B l o c k 2 ------------------
+PLApt(7/56), Fanin(8/38), Clk(1/3), Bct(1/4), Pin(13/16), Mcell(10/16)
+PLApts[7/56] () () () () () () () 3 () () () () () () () () 10 () () 9 () () 8 () () 7 () () 6 () () () () () 
+             () () () () () () () () () () () () () () () () () () () () () 39
+Fanins[ 8] SW_1_hi.n fpga_timing<8>.n FPGA_done.p data<3>.p data<4>.p data<5>.p data<6>.p data<7>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[16] [FPGA_D<3>(139),FPGA_D<3>(77)] [FPGA_D<4>(138),FPGA_D<4>(78)] [FPGA_D<5>(137),FPGA_D<5>(79)]  
+           [FPGA_D<6>(136),FPGA_D<6>(81)] [FPGA_D<7>(135),FPGA_D<7>(89)] [mclk_ce(144),mclk_ce(70)]  
+           [FPGA_MOSI(134),FPGA_MOSI(90)] [SW<0>(71)] [data<0>(64)] [data<4>(61)] [usb_rx(68)]  
+           [SW_1_hi,SW<1>(72)] [SW_2_hi,SW<2>(74)] [fpga_timing<8>(148)] 
+Signal[16] [ 0: (91)  ][ 1: FPGA_MOSI(134) FPGA_MOSI(90)  ][ 2: FPGA_D<7>(135) FPGA_D<7>(89)  ][ 3:  
+           FPGA_D<6>(136) FPGA_D<6>(81)  ][ 4: FPGA_D<5>(137) FPGA_D<5>(79)  ][ 5: FPGA_D<4>(138)  
+           FPGA_D<4>(78)  ][ 6: FPGA_D<3>(139) FPGA_D<3>(77)  ][ 7: (76)  ][ 8: SW_2_hi(141) SW<2>(74)  ] 
+           [ 9: SW_1_hi(142) SW<1>(72)  ][ 10: SW<0>(71)  ][ 11: mclk_ce(144) mclk_ce(70)  ][ 12: usb_rx(68)  
+            ][ 13: (67)  ][ 14: data<0>(64)  ][ 15: fpga_timing<8>(148) data<4>(61)  ]
+----------------- B l o c k 3 ------------------
+PLApt(6/56), Fanin(14/38), Clk(1/3), Bct(1/4), Pin(13/16), Mcell(7/16)
+PLApts[6/26] 26 29 () () () () () 3 () () 1 () () () () () () () () () () () 4 () () 5
+Fanins[14] usb_rd.n usb_timing<0>.n usb_timing<1>.n usb_timing<2>.n usb_timing<3>.n usb_timing<4>.n 
+           usb_timing<5>.n usb_timing<6>.n usb_timing<7>.n usb_timing<8>.n FPGA_done.p data<0>.p data<1>.p 
+           data<2>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[13] [usb_rd(158),usb_rd(50)] [FPGA_D<0>(149),FPGA_D<0>(35)] [FPGA_D<1>(153),FPGA_D<1>(40)]  
+           [FPGA_D<2>(154),FPGA_D<2>(41)] [Mode<1>(152),Mode<1>(39)] [Mode<2>(155),Mode<2>(42)]  
+           [Mode<0>(150),Mode<0>(36)] [data<1>(58)] [data<2>(60)] [data<3>(52)] [data<5>(55)] [data<6>(53)]  
+           [data<7>(56)] 
+Signal[13] [ 0: FPGA_D<0>(149) FPGA_D<0>(35)  ][ 1: Mode<0>(150) Mode<0>(36)  ][ 2: (37)  ][ 3: Mode<1>(152)  
+           Mode<1>(39)  ][ 4: FPGA_D<1>(153) FPGA_D<1>(40)  ][ 5: FPGA_D<2>(154) FPGA_D<2>(41)  ][ 6:  
+           Mode<2>(155) Mode<2>(42)  ][ 7: (43)  ][ 8: (49)  ][ 9: usb_rd(158) usb_rd(50)  ][ 10:  
+           data<3>(52)  ][ 11: data<6>(53)  ][ 12: data<5>(55)  ][ 13: data<7>(56)  ][ 14: data<1>(58)  ] 
+           [ 15: data<2>(60)  ]

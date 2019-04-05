@@ -1,0 +1,69 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+Banked output:
+[INT_PI](0/-1) [LEDs<1>](2/-1) [LEDs<2>](2/-1) [LEDs<3>](2/-1) [LEDs<4>](2/-1) [LEDs<5>](2/-1) [LEDs<6>](2/-1) [SCL_1V8](2/-1) [SDA_1V8](2/-1) [SDA_PI](0/-1) 
+Banked input:
+[DIR](0/-1) [INT_1V8](2/-1) [SCL_PI](0/-1) 
+LOB0(2/-1): POB1 
+Float/Total=0/9 signals: [INT_1V8](2/-1) [LEDs<1>](2/-1) [LEDs<2>](2/-1) [LEDs<3>](2/-1) [LEDs<4>](2/-1) [LEDs<5>](2/-1) [LEDs<6>](2/-1) [SCL_1V8](2/-1) [SDA_1V8](2/-1) 
+
+LOB1(0/-1): POB0 
+Float/Total=0/4 signals: [DIR](0/-1) [INT_PI](0/-1) [SCL_PI](0/-1) [SDA_PI](0/-1) 
+
+
+POB0(0/-1): LOB1 
+4 signals: [DIR](0/-1) [INT_PI](0/-1) [SCL_PI](0/-1) [SDA_PI](0/-1) 
+0 vrefs: 
+POB0's input pads:
+	.@@@@.:...:....:......:.....:::..:....:..
+	000000:000:0000:000000:00000:::00:0000:00
+
+POB0 has 28 pins, 0 Dinputs, 30 mcells, 73 fanins, 109 pla pts free in FB2 FB4 
+
+POB1(2/-1): LOB0 
+9 signals: [INT_1V8](2/-1) [LEDs<1>](2/-1) [LEDs<2>](2/-1) [LEDs<3>](2/-1) [LEDs<4>](2/-1) [LEDs<5>](2/-1) [LEDs<6>](2/-1) [SCL_1V8](2/-1) [SDA_1V8](2/-1) 
+0 vrefs: 
+POB1's input pads:
+	@@:@@...@@@:GAP:.:...:.........:::......:.:@@
+	00:00000000:GAP:0:000:000000000:::000000:0:00
+
+POB1 has 23 pins, 0 Dinputs, 24 mcells, 71 fanins, 103 pla pts free in FB1 FB3 
+
+
+----------------- B l o c k 0 ------------------
+PLApt(9/56), Fanin(5/38), Clk(0/3), Bct(1/4), Pin(9/16), Mcell(8/16)
+PLApts[9/44] () () () () () () () 2 () () () () () 0 () () 4 () () () () () () () () () () () 5 () () 4 () () 0 () () 3 () () 4 () () 1
+Fanins[ 5] DIR.p INT_1V8.p SCL_PI.p SDA_1V8.p SDA_PI.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=2) DIR' ;
+vref: [0]
+Signal[ 9] [SDA_1V8(102),SDA_1V8(12)] [LEDs<1>(112),LEDs<1>(1)] [LEDs<2>(111),LEDs<2>(2)]  
+           [LEDs<3>(110),LEDs<3>(3)] [LEDs<4>(109),LEDs<4>(4)] [LEDs<5>(108),LEDs<5>(6)]  
+           [LEDs<6>(107),LEDs<6>(7)] [SCL_1V8(103),SCL_1V8(11)] [INT_1V8(13)] 
+Signal[ 9] [ 0: INT_1V8(13)  ][ 1: SDA_1V8(102) SDA_1V8(12)  ][ 2: SCL_1V8(103) SCL_1V8(11)  ][ 3: (10)  ] 
+           [ 4: (9)  ][ 5: (8)  ][ 6: LEDs<6>(107) LEDs<6>(7)  ][ 7: LEDs<5>(108) LEDs<5>(6)  ][ 8:  
+           LEDs<4>(109) LEDs<4>(4)  ][ 9: LEDs<3>(110) LEDs<3>(3)  ][ 10: LEDs<2>(111) LEDs<2>(2)  ][ 11:  
+           LEDs<1>(112) LEDs<1>(1)  ][ 12: (99)  ][ 13: (97)  ][ 14: (94)  ][ 15: (92)  ]
+----------------- B l o c k 1 ------------------
+PLApt(3/56), Fanin(3/38), Clk(0/3), Bct(1/4), Pin(4/16), Mcell(2/16)
+PLApts[3/20] () () () () () () () 1 () () () () () () () () 3 () () 5
+Fanins[ 3] DIR.p INT_1V8.p SDA_1V8.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=1) DIR ;
+vref: [0]
+Signal[ 4] [SDA_PI(119),SDA_PI(16)] [INT_PI(120),INT_PI(17)] [DIR(18)] [SCL_PI(15)] 
+Signal[ 4] [ 0: (14)  ][ 1: SCL_PI(15)  ][ 2: SDA_PI(119) SDA_PI(16)  ][ 3: INT_PI(120) INT_PI(17)  ][ 4:  
+           DIR(18)  ][ 5: (19)  ][ 6: (22)  ][ 7: (23)  ][ 8: (24)  ][ 9: (27)  ][ 10: (28)  ][ 11: (29)  ] 
+           [ 12: (30)  ][ 13: (32)  ][ 14: (33)  ][ 15: (34)  ]
+----------------- B l o c k 2 ------------------
+----------------- B l o c k 3 ------------------

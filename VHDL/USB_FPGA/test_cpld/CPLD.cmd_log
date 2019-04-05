@@ -1,0 +1,278 @@
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused float -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused float -terminate float -iostd LVCMOS15 CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused float -terminate float -iostd LVCMOS15 CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVCMOS15 CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVCMOS15 CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVCMOS15 CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVCMOS15 CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused keeper -terminate keeper -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate pullup -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -ifn "C:/Documents and Settings/test_cpld/CPLD.xst" -ofn "C:/Documents and Settings/test_cpld/CPLD.syr" 
+ngdbuild -ise "test_cpld.ise" -intstyle ise -dd _ngo -i -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" CPLD_build.xml 
+tsim -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise CPLD CPLD.nga 
+taengine -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -ise "C:/Documents and Settings/test_cpld/test_cpld.ise" -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+taengine -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c256-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 26 -pterms 26 -unused pullup -terminate float -iostd LVTTL CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 

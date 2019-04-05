@@ -1,0 +1,2529 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C64A100 | XC2C64A-7-VQ100
+
+DEVICE | 2C64A | 2C64A100 | 
+
+NETWORK | CPLD | 0 | 0 | 536887302 | 0
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<0>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<0>_II/UIM | 4851 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<0>_MC.Q | 4858 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<0>_MC.Q | FPGA_D<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<0>_MC.OE | 4860 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<0>_MC.BUFOE.OUT | FPGA_D<0>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<0>_MC.SI | FPGA_D<0>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<0>_II/UIM | 4851 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<0>_MC.D1 | 4848 | ? | 0 | 0 | FPGA_D<0>_MC | NULL | NULL | FPGA_D<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<0>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<0>_MC.D2 | 4849 | ? | 0 | 0 | FPGA_D<0>_MC | NULL | NULL | FPGA_D<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<0>_MC.REG | FPGA_D<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<0>_MC.D | 4847 | ? | 0 | 0 | FPGA_D<0>_MC | NULL | NULL | FPGA_D<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<0>_MC.Q | 4857 | ? | 0 | 0 | FPGA_D<0>_MC | NULL | NULL | FPGA_D<0>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<0>_MC.BUFOE | FPGA_D<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<0>_MC.BUFOE.OUT | 4859 | ? | 0 | 0 | FPGA_D<0>_MC | NULL | NULL | FPGA_D<0>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<0>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<0> | 4850 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<0>_II/UIM | 4851 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<0>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | mclk_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | mclk | 4852 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_done_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_done | 4855 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<0> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<0>_MC.Q | 4858 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<0>_MC.Q | FPGA_D<0>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<0>_MC.OE | 4860 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<0>_MC.BUFOE.OUT | FPGA_D<0>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<0> | 4861 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<1>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<1>_II/UIM | 4866 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<1>_MC.Q | 4868 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<1>_MC.Q | FPGA_D<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<1>_MC.OE | 4870 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<1>_MC.BUFOE.OUT | FPGA_D<1>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<1>_MC.SI | FPGA_D<1>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<1>_II/UIM | 4866 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<1>_MC.D1 | 4863 | ? | 0 | 0 | FPGA_D<1>_MC | NULL | NULL | FPGA_D<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<1>_MC.D2 | 4864 | ? | 0 | 0 | FPGA_D<1>_MC | NULL | NULL | FPGA_D<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<1>_MC.REG | FPGA_D<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<1>_MC.D | 4862 | ? | 0 | 0 | FPGA_D<1>_MC | NULL | NULL | FPGA_D<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<1>_MC.Q | 4867 | ? | 0 | 0 | FPGA_D<1>_MC | NULL | NULL | FPGA_D<1>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<1>_MC.BUFOE | FPGA_D<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<1>_MC.BUFOE.OUT | 4869 | ? | 0 | 0 | FPGA_D<1>_MC | NULL | NULL | FPGA_D<1>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<1>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<1> | 4865 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<1>_II/UIM | 4866 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<1>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<1> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<1>_MC.Q | 4868 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<1>_MC.Q | FPGA_D<1>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<1>_MC.OE | 4870 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<1>_MC.BUFOE.OUT | FPGA_D<1>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<1> | 4871 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<2>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<2>_II/UIM | 4876 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<2>_MC.Q | 4878 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<2>_MC.Q | FPGA_D<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<2>_MC.OE | 4880 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<2>_MC.BUFOE.OUT | FPGA_D<2>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<2>_MC.SI | FPGA_D<2>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<2>_II/UIM | 4876 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<2>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<2>_MC.D1 | 4873 | ? | 0 | 0 | FPGA_D<2>_MC | NULL | NULL | FPGA_D<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<2>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<2>_MC.D2 | 4874 | ? | 0 | 0 | FPGA_D<2>_MC | NULL | NULL | FPGA_D<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<2>_MC.REG | FPGA_D<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<2>_MC.D | 4872 | ? | 0 | 0 | FPGA_D<2>_MC | NULL | NULL | FPGA_D<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<2>_MC.Q | 4877 | ? | 0 | 0 | FPGA_D<2>_MC | NULL | NULL | FPGA_D<2>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<2>_MC.BUFOE | FPGA_D<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<2>_MC.BUFOE.OUT | 4879 | ? | 0 | 0 | FPGA_D<2>_MC | NULL | NULL | FPGA_D<2>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<2>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<2> | 4875 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<2>_II/UIM | 4876 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<2>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<2> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<2>_MC.Q | 4878 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<2>_MC.Q | FPGA_D<2>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<2>_MC.OE | 4880 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<2>_MC.BUFOE.OUT | FPGA_D<2>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<2> | 4881 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<3>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<3>_II/UIM | 4886 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<3>_MC.Q | 4889 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<3>_MC.Q | FPGA_D<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<3>_MC.OE | 4891 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<3>_MC.BUFOE.OUT | FPGA_D<3>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<3>_MC.SI | FPGA_D<3>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<3>_II/UIM | 4886 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<3>_MC.D1 | 4883 | ? | 0 | 0 | FPGA_D<3>_MC | NULL | NULL | FPGA_D<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<3>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<3>_MC.D2 | 4884 | ? | 0 | 0 | FPGA_D<3>_MC | NULL | NULL | FPGA_D<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<3>_MC.REG | FPGA_D<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<3>_MC.D | 4882 | ? | 0 | 0 | FPGA_D<3>_MC | NULL | NULL | FPGA_D<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<3>_MC.Q | 4888 | ? | 0 | 0 | FPGA_D<3>_MC | NULL | NULL | FPGA_D<3>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<3>_MC.BUFOE | FPGA_D<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<3>_MC.BUFOE.OUT | 4890 | ? | 0 | 0 | FPGA_D<3>_MC | NULL | NULL | FPGA_D<3>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<3>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<3> | 4885 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<3>_II/UIM | 4886 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<3>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<3> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<3>_MC.Q | 4889 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<3>_MC.Q | FPGA_D<3>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<3>_MC.OE | 4891 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<3>_MC.BUFOE.OUT | FPGA_D<3>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<3> | 4892 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<3> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<4>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<4>_II/UIM | 4897 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<4>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<4>_MC.Q | 4899 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<4>_MC.Q | FPGA_D<4>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<4>_MC.OE | 4901 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<4>_MC.BUFOE.OUT | FPGA_D<4>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<4>_MC.SI | FPGA_D<4>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<4>_II/UIM | 4897 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<4>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<4>_MC.D1 | 4894 | ? | 0 | 0 | FPGA_D<4>_MC | NULL | NULL | FPGA_D<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<4>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<4>_MC.D2 | 4895 | ? | 0 | 0 | FPGA_D<4>_MC | NULL | NULL | FPGA_D<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<4>_MC.REG | FPGA_D<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<4>_MC.D | 4893 | ? | 0 | 0 | FPGA_D<4>_MC | NULL | NULL | FPGA_D<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<4>_MC.Q | 4898 | ? | 0 | 0 | FPGA_D<4>_MC | NULL | NULL | FPGA_D<4>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<4>_MC.BUFOE | FPGA_D<4>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<4>_MC.BUFOE.OUT | 4900 | ? | 0 | 0 | FPGA_D<4>_MC | NULL | NULL | FPGA_D<4>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<4>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<4> | 4896 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<4>_II/UIM | 4897 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<4>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<4> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<4>_MC.Q | 4899 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<4>_MC.Q | FPGA_D<4>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<4>_MC.OE | 4901 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<4>_MC.BUFOE.OUT | FPGA_D<4>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<4> | 4902 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<4> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<5>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<5>_II/UIM | 4907 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<5>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<5>_MC.Q | 4909 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<5>_MC.Q | FPGA_D<5>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<5>_MC.OE | 4911 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<5>_MC.BUFOE.OUT | FPGA_D<5>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<5>_MC.SI | FPGA_D<5>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<5>_II/UIM | 4907 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<5>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<5>_MC.D1 | 4904 | ? | 0 | 0 | FPGA_D<5>_MC | NULL | NULL | FPGA_D<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<5>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<5>_MC.D2 | 4905 | ? | 0 | 0 | FPGA_D<5>_MC | NULL | NULL | FPGA_D<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<5>_MC.REG | FPGA_D<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<5>_MC.D | 4903 | ? | 0 | 0 | FPGA_D<5>_MC | NULL | NULL | FPGA_D<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<5>_MC.Q | 4908 | ? | 0 | 0 | FPGA_D<5>_MC | NULL | NULL | FPGA_D<5>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<5>_MC.BUFOE | FPGA_D<5>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<5>_MC.BUFOE.OUT | 4910 | ? | 0 | 0 | FPGA_D<5>_MC | NULL | NULL | FPGA_D<5>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<5>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<5> | 4906 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<5>_II/UIM | 4907 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<5>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<5> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<5>_MC.Q | 4909 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<5>_MC.Q | FPGA_D<5>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<5>_MC.OE | 4911 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<5>_MC.BUFOE.OUT | FPGA_D<5>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<5> | 4912 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<5> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<6>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<6>_II/UIM | 4917 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<6>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<6>_MC.Q | 4919 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<6>_MC.Q | FPGA_D<6>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<6>_MC.OE | 4921 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<6>_MC.BUFOE.OUT | FPGA_D<6>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<6>_MC.SI | FPGA_D<6>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<6>_II/UIM | 4917 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<6>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<6>_MC.D1 | 4914 | ? | 0 | 0 | FPGA_D<6>_MC | NULL | NULL | FPGA_D<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<6>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<6>_MC.D2 | 4915 | ? | 0 | 0 | FPGA_D<6>_MC | NULL | NULL | FPGA_D<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<6>_MC.REG | FPGA_D<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<6>_MC.D | 4913 | ? | 0 | 0 | FPGA_D<6>_MC | NULL | NULL | FPGA_D<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<6>_MC.Q | 4918 | ? | 0 | 0 | FPGA_D<6>_MC | NULL | NULL | FPGA_D<6>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<6>_MC.BUFOE | FPGA_D<6>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<6>_MC.BUFOE.OUT | 4920 | ? | 0 | 0 | FPGA_D<6>_MC | NULL | NULL | FPGA_D<6>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<6>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<6> | 4916 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<6>_II/UIM | 4917 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<6>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<6> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<6>_MC.Q | 4919 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<6>_MC.Q | FPGA_D<6>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<6>_MC.OE | 4921 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<6>_MC.BUFOE.OUT | FPGA_D<6>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<6> | 4922 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<6> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+PinTrst | FPGA_D<7>_MC | CPLD_COPY_0_COPY_0 | 17408 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<7>_II/UIM | 4927 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<7>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_D<7>_MC.Q | 4929 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<7>_MC.Q | FPGA_D<7>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | FPGA_D<7>_MC.OE | 4931 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<7>_MC.BUFOE.OUT | FPGA_D<7>_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | FPGA_D<7>_MC.SI | FPGA_D<7>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | data<7>_II/UIM | 4927 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<7>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_D<7>_MC.D1 | 4924 | ? | 0 | 0 | FPGA_D<7>_MC | NULL | NULL | FPGA_D<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | data<7>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_D<7>_MC.D2 | 4925 | ? | 0 | 0 | FPGA_D<7>_MC | NULL | NULL | FPGA_D<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_D<7>_MC.REG | FPGA_D<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_D<7>_MC.D | 4923 | ? | 0 | 0 | FPGA_D<7>_MC | NULL | NULL | FPGA_D<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_D<7>_MC.Q | 4928 | ? | 0 | 0 | FPGA_D<7>_MC | NULL | NULL | FPGA_D<7>_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | FPGA_D<7>_MC.BUFOE | FPGA_D<7>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | FPGA_D<7>_MC.BUFOE.OUT | 4930 | ? | 0 | 0 | FPGA_D<7>_MC | NULL | NULL | FPGA_D<7>_MC.BUFOE | 0 | 10 | BUF_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | data<7>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | data<7> | 4926 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | data<7>_II/UIM | 4927 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | data<7>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | FPGA_D<7> | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_D<7>_MC.Q | 4929 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<7>_MC.Q | FPGA_D<7>_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | FPGA_D<7>_MC.OE | 4931 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_D<7>_MC.BUFOE.OUT | FPGA_D<7>_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_D<7> | 4932 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<7> | 0 | 6 | OI_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_INITB_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_INITB | 4933 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_INITB_II/UIM | 5096 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_INITB_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | FPGA_MOSI_MC | CPLD_COPY_0_COPY_0 | 0 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_MOSI_MC.Q | 4938 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_MOSI_MC.Q | FPGA_MOSI_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | FPGA_MOSI_MC.SI | FPGA_MOSI_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_MOSI_MC.D1 | 4936 | ? | 0 | 0 | FPGA_MOSI_MC | NULL | NULL | FPGA_MOSI_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_MOSI_MC.D2 | 4935 | ? | 0 | 0 | FPGA_MOSI_MC | NULL | NULL | FPGA_MOSI_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | FPGA_MOSI_MC.REG | FPGA_MOSI_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_MOSI_MC.D | 4934 | ? | 0 | 0 | FPGA_MOSI_MC | NULL | NULL | FPGA_MOSI_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_MOSI_MC.Q | 4937 | ? | 0 | 0 | FPGA_MOSI_MC | NULL | NULL | FPGA_MOSI_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | FPGA_MOSI | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_MOSI_MC.Q | 4938 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_MOSI_MC.Q | FPGA_MOSI_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_MOSI | 4939 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_MOSI | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+Tff | FPGA_cclk_MC | CPLD_COPY_0_COPY_0 | 5120 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_cclk_MC.UIM | 4944 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_cclk_MC.Q | FPGA_cclk_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_cclk_MC.Q | 5007 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_cclk_MC.Q | FPGA_cclk_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | FPGA_cclk_MC.UIM | 4944 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_cclk_MC.Q | FPGA_cclk_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | FPGA_cclk_MC.SI | FPGA_cclk_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_cclk_MC.UIM | 4944 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_cclk_MC.Q | FPGA_cclk_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_cclk_MC.D1 | 4942 | ? | 0 | 0 | FPGA_cclk_MC | NULL | NULL | FPGA_cclk_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_cclk_MC.D2 | 4941 | ? | 0 | 0 | FPGA_cclk_MC | NULL | NULL | FPGA_cclk_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 10 | IV_TRUE | FPGA_cclk_MC.UIM | IV_FALSE | usb_timing<0> | IV_TRUE | usb_timing<2> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+SPPTERM | 10 | IV_FALSE | FPGA_cclk_MC.UIM | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_TRUE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+
+SRFF_INSTANCE | FPGA_cclk_MC.REG | FPGA_cclk_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_cclk_MC.D | 4940 | ? | 0 | 0 | FPGA_cclk_MC | NULL | NULL | FPGA_cclk_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_cclk_MC.Q | 4943 | ? | 0 | 0 | FPGA_cclk_MC | NULL | NULL | FPGA_cclk_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldHigh+Tff | usb_timing<0>_MC | CPLD_COPY_0_COPY_0 | 4608 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<0>_MC.SI | usb_timing<0>_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<0>_MC.D1 | 4949 | ? | 0 | 0 | usb_timing<0>_MC | NULL | NULL | usb_timing<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<0>_MC.D2 | 4948 | ? | 0 | 0 | usb_timing<0>_MC | NULL | NULL | usb_timing<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | usb_timing<0> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+SPPTERM | 8 | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+SPPTERM | 8 | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+SPPTERM | 9 | IV_FALSE | usb_timing<0> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+SPPTERM | 9 | IV_FALSE | usb_timing<0> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+
+SRFF_INSTANCE | usb_timing<0>_MC.REG | usb_timing<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<0>_MC.D | 4947 | ? | 0 | 0 | usb_timing<0>_MC | NULL | NULL | usb_timing<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<0>_MC.Q | 4946 | ? | 0 | 0 | usb_timing<0>_MC | NULL | NULL | usb_timing<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldHigh+Tff | usb_timing<2>_MC | CPLD_COPY_0_COPY_0 | 4608 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<2>_MC.SI | usb_timing<2>_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<2>_MC.D1 | 4954 | ? | 0 | 0 | usb_timing<2>_MC | NULL | NULL | usb_timing<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<2>_MC.D2 | 4953 | ? | 0 | 0 | usb_timing<2>_MC | NULL | NULL | usb_timing<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | usb_timing<2> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+SPPTERM | 10 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_TRUE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+SPPTERM | 10 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_TRUE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+
+SRFF_INSTANCE | usb_timing<2>_MC.REG | usb_timing<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<2>_MC.D | 4952 | ? | 0 | 0 | usb_timing<2>_MC | NULL | NULL | usb_timing<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<2>_MC.Q | 4951 | ? | 0 | 0 | usb_timing<2>_MC | NULL | NULL | usb_timing<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<1>_MC | CPLD_COPY_0_COPY_0 | 5120 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<1>_MC.SI | usb_timing<1>_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<1>_MC.D1 | 4959 | ? | 0 | 0 | usb_timing<1>_MC | NULL | NULL | usb_timing<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<1>_MC.D2 | 4958 | ? | 0 | 0 | usb_timing<1>_MC | NULL | NULL | usb_timing<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | usb_timing<1> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+SPPTERM | 9 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+SPPTERM | 9 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+
+SRFF_INSTANCE | usb_timing<1>_MC.REG | usb_timing<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<1>_MC.D | 4957 | ? | 0 | 0 | usb_timing<1>_MC | NULL | NULL | usb_timing<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<1>_MC.Q | 4956 | ? | 0 | 0 | usb_timing<1>_MC | NULL | NULL | usb_timing<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<3>_MC | CPLD_COPY_0_COPY_0 | 5120 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<3>_MC.SI | usb_timing<3>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<3>_MC.D1 | 4963 | ? | 0 | 0 | usb_timing<3>_MC | NULL | NULL | usb_timing<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | usb_timing<3> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<3>_MC.D2 | 4964 | ? | 0 | 0 | usb_timing<3>_MC | NULL | NULL | usb_timing<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_timing<3>_MC.REG | usb_timing<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<3>_MC.D | 4962 | ? | 0 | 0 | usb_timing<3>_MC | NULL | NULL | usb_timing<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<3>_MC.Q | 4961 | ? | 0 | 0 | usb_timing<3>_MC | NULL | NULL | usb_timing<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | usb_dry_MC | CPLD_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rx_II/UIM | 4971 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | usb_rx_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_dry_MC.SI | usb_dry_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rx_II/UIM | 4971 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | usb_rx_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_dry_MC.D1 | 4968 | ? | 0 | 0 | usb_dry_MC | NULL | NULL | usb_dry_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | usb_rx_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_dry_MC.D2 | 4969 | ? | 0 | 0 | usb_dry_MC | NULL | NULL | usb_dry_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_dry_MC.REG | usb_dry_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_dry_MC.D | 4967 | ? | 0 | 0 | usb_dry_MC | NULL | NULL | usb_dry_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_dry_MC.Q | 4966 | ? | 0 | 0 | usb_dry_MC | NULL | NULL | usb_dry_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | usb_rx_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | usb_rx | 4970 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | usb_rx_II/UIM | 4971 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | usb_rx_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow | previous_usb_dry_MC | CPLD_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous | 4977 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_MC.Q | previous_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | previous_usb_dry_MC.SI | previous_usb_dry_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous | 4977 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_MC.Q | previous_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | previous_usb_dry_MC.D1 | 4975 | ? | 0 | 0 | previous_usb_dry_MC | NULL | NULL | previous_usb_dry_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | previous
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | previous_usb_dry_MC.D2 | 4976 | ? | 0 | 0 | previous_usb_dry_MC | NULL | NULL | previous_usb_dry_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | previous_usb_dry_MC.REG | previous_usb_dry_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | previous_usb_dry_MC.D | 4974 | ? | 0 | 0 | previous_usb_dry_MC | NULL | NULL | previous_usb_dry_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | previous_usb_dry_MC.Q | 4973 | ? | 0 | 0 | previous_usb_dry_MC | NULL | NULL | previous_usb_dry_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | previous_MC | CPLD_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | previous | 4977 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_MC.Q | previous_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | previous_MC.SI | previous_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | previous_MC.D1 | 4980 | ? | 0 | 0 | previous_MC | NULL | NULL | previous_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | usb_dry
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | previous_MC.D2 | 4981 | ? | 0 | 0 | previous_MC | NULL | NULL | previous_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | previous_MC.REG | previous_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | previous_MC.D | 4979 | ? | 0 | 0 | previous_MC | NULL | NULL | previous_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | previous_MC.Q | 4978 | ? | 0 | 0 | previous_MC | NULL | NULL | previous_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<4>_MC | CPLD_COPY_0_COPY_0 | 5120 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<4>_MC.SI | usb_timing<4>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<4>_MC.D1 | 4985 | ? | 0 | 0 | usb_timing<4>_MC | NULL | NULL | usb_timing<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<4>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<4>_MC.D2 | 4986 | ? | 0 | 0 | usb_timing<4>_MC | NULL | NULL | usb_timing<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_timing<4>_MC.REG | usb_timing<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<4>_MC.D | 4984 | ? | 0 | 0 | usb_timing<4>_MC | NULL | NULL | usb_timing<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<4>_MC.Q | 4983 | ? | 0 | 0 | usb_timing<4>_MC | NULL | NULL | usb_timing<4>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<5>_MC | CPLD_COPY_0_COPY_0 | 5120 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<5>_MC.SI | usb_timing<5>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<5>_MC.D1 | 4990 | ? | 0 | 0 | usb_timing<5>_MC | NULL | NULL | usb_timing<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<5>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<5>_MC.D2 | 4991 | ? | 0 | 0 | usb_timing<5>_MC | NULL | NULL | usb_timing<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_timing<5>_MC.REG | usb_timing<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<5>_MC.D | 4989 | ? | 0 | 0 | usb_timing<5>_MC | NULL | NULL | usb_timing<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<5>_MC.Q | 4988 | ? | 0 | 0 | usb_timing<5>_MC | NULL | NULL | usb_timing<5>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<6>_MC | CPLD_COPY_0_COPY_0 | 5120 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<6>_MC.SI | usb_timing<6>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<6>_MC.D1 | 4995 | ? | 0 | 0 | usb_timing<6>_MC | NULL | NULL | usb_timing<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<6>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<6>_MC.D2 | 4996 | ? | 0 | 0 | usb_timing<6>_MC | NULL | NULL | usb_timing<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_timing<6>_MC.REG | usb_timing<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<6>_MC.D | 4994 | ? | 0 | 0 | usb_timing<6>_MC | NULL | NULL | usb_timing<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<6>_MC.Q | 4993 | ? | 0 | 0 | usb_timing<6>_MC | NULL | NULL | usb_timing<6>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<7>_MC | CPLD_COPY_0_COPY_0 | 5120 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<7>_MC.SI | usb_timing<7>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<7>_MC.D1 | 5000 | ? | 0 | 0 | usb_timing<7>_MC | NULL | NULL | usb_timing<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<7>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<7>_MC.D2 | 5001 | ? | 0 | 0 | usb_timing<7>_MC | NULL | NULL | usb_timing<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_timing<7>_MC.REG | usb_timing<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<7>_MC.D | 4999 | ? | 0 | 0 | usb_timing<7>_MC | NULL | NULL | usb_timing<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<7>_MC.Q | 4998 | ? | 0 | 0 | usb_timing<7>_MC | NULL | NULL | usb_timing<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_timing<8>_MC | CPLD_COPY_0_COPY_0 | 5120 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_timing<8>_MC.SI | usb_timing<8>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_dry | 4965 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_dry_MC.Q | usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | previous_usb_dry | 4972 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | previous_usb_dry_MC.Q | previous_usb_dry_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_timing<8>_MC.D1 | 5005 | ? | 0 | 0 | usb_timing<8>_MC | NULL | NULL | usb_timing<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<8>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_timing<8>_MC.D2 | 5006 | ? | 0 | 0 | usb_timing<8>_MC | NULL | NULL | usb_timing<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_timing<8>_MC.REG | usb_timing<8>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_timing<8>_MC.D | 5004 | ? | 0 | 0 | usb_timing<8>_MC | NULL | NULL | usb_timing<8>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_timing<8>_MC.Q | 5003 | ? | 0 | 0 | usb_timing<8>_MC | NULL | NULL | usb_timing<8>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | FPGA_cclk | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_cclk_MC.Q | 5007 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_cclk_MC.Q | FPGA_cclk_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_cclk | 5008 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_cclk | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+Tff | FPGA_prog_B_MC | CPLD_COPY_0_COPY_0 | 5120 | 12 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_prog_B_MC.UIM | 5060 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_prog_B_MC.Q | FPGA_prog_B_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | FPGA_prog_B_MC.Q | 5061 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_prog_B_MC.Q | FPGA_prog_B_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | FPGA_prog_B_MC.UIM | 5060 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_prog_B_MC.Q | FPGA_prog_B_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | FPGA_prog_B_MC.SI | FPGA_prog_B_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_prog_B_MC.UIM | 5060 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_prog_B_MC.Q | FPGA_prog_B_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | FPGA_prog_B_MC.D1 | 5011 | ? | 0 | 0 | FPGA_prog_B_MC | NULL | NULL | FPGA_prog_B_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | FPGA_prog_B_MC.D2 | 5010 | ? | 0 | 0 | FPGA_prog_B_MC | NULL | NULL | FPGA_prog_B_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 8 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4> | IV_TRUE | FPGA_prog_B_MC.UIM
+SPPTERM | 8 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4> | IV_TRUE | FPGA_prog_B_MC.UIM
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | FPGA_prog_B_MC.UIM
+SPPTERM | 9 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | FPGA_prog_B_MC.UIM
+SPPTERM | 10 | IV_FALSE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | fpga_timing<4> | IV_TRUE | FPGA_prog_B_MC.UIM
+SPPTERM | 11 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | fpga_timing<4> | IV_FALSE | FPGA_prog_B_MC.UIM
+SPPTERM | 11 | IV_FALSE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4> | IV_FALSE | FPGA_prog_B_MC.UIM
+
+SRFF_INSTANCE | FPGA_prog_B_MC.REG | FPGA_prog_B_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | FPGA_prog_B_MC.D | 5009 | ? | 0 | 0 | FPGA_prog_B_MC | NULL | NULL | FPGA_prog_B_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | FPGA_prog_B_MC.Q | 5059 | ? | 0 | 0 | FPGA_prog_B_MC | NULL | NULL | FPGA_prog_B_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | fpga_timing<0>_MC | CPLD_COPY_0_COPY_0 | 5120 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<0>_MC.SI | fpga_timing<0>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<0>_MC.D1 | 5016 | ? | 0 | 0 | fpga_timing<0>_MC | NULL | NULL | fpga_timing<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<0>_MC.D2 | 5015 | ? | 0 | 0 | fpga_timing<0>_MC | NULL | NULL | fpga_timing<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | fpga_timing<0> | IV_TRUE | SW_1_hi
+SPPTERM | 6 | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+SPPTERM | 7 | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+SPPTERM | 7 | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+
+SRFF_INSTANCE | fpga_timing<0>_MC.REG | fpga_timing<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<0>_MC.D | 5014 | ? | 0 | 0 | fpga_timing<0>_MC | NULL | NULL | fpga_timing<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<0>_MC.Q | 5013 | ? | 0 | 0 | fpga_timing<0>_MC | NULL | NULL | fpga_timing<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | SW_1_hi_MC | CPLD_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW<1>_II/IREG | 5173 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<1>_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | SW_1_hi_MC.REG | SW_1_hi_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | SW<1>_II/IREG | 5173 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<1>_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | SW_1_hi_MC.Q | 5018 | ? | 0 | 0 | SW_1_hi_MC | NULL | NULL | SW_1_hi_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | fpga_timing<1>_MC | CPLD_COPY_0_COPY_0 | 5120 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<1>_MC.SI | fpga_timing<1>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<1>_MC.D1 | 5023 | ? | 0 | 0 | fpga_timing<1>_MC | NULL | NULL | fpga_timing<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<1>_MC.D2 | 5022 | ? | 0 | 0 | fpga_timing<1>_MC | NULL | NULL | fpga_timing<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | SW_1_hi | IV_TRUE | fpga_timing<1>
+SPPTERM | 7 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+SPPTERM | 8 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+SPPTERM | 8 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+
+SRFF_INSTANCE | fpga_timing<1>_MC.REG | fpga_timing<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<1>_MC.D | 5021 | ? | 0 | 0 | fpga_timing<1>_MC | NULL | NULL | fpga_timing<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<1>_MC.Q | 5020 | ? | 0 | 0 | fpga_timing<1>_MC | NULL | NULL | fpga_timing<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | fpga_timing<3>_MC | CPLD_COPY_0_COPY_0 | 5120 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<3>_MC.SI | fpga_timing<3>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<3>_MC.D1 | 5028 | ? | 0 | 0 | fpga_timing<3>_MC | NULL | NULL | fpga_timing<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<3>_MC.D2 | 5027 | ? | 0 | 0 | fpga_timing<3>_MC | NULL | NULL | fpga_timing<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | SW_1_hi | IV_TRUE | fpga_timing<3>
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+
+SRFF_INSTANCE | fpga_timing<3>_MC.REG | fpga_timing<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<3>_MC.D | 5026 | ? | 0 | 0 | fpga_timing<3>_MC | NULL | NULL | fpga_timing<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<3>_MC.Q | 5025 | ? | 0 | 0 | fpga_timing<3>_MC | NULL | NULL | fpga_timing<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | fpga_timing<2>_MC | CPLD_COPY_0_COPY_0 | 5120 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<2>_MC.SI | fpga_timing<2>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<2>_MC.D1 | 5033 | ? | 0 | 0 | fpga_timing<2>_MC | NULL | NULL | fpga_timing<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<2>_MC.D2 | 5032 | ? | 0 | 0 | fpga_timing<2>_MC | NULL | NULL | fpga_timing<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | SW_1_hi | IV_TRUE | fpga_timing<2>
+SPPTERM | 8 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+
+SRFF_INSTANCE | fpga_timing<2>_MC.REG | fpga_timing<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<2>_MC.D | 5031 | ? | 0 | 0 | fpga_timing<2>_MC | NULL | NULL | fpga_timing<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<2>_MC.Q | 5030 | ? | 0 | 0 | fpga_timing<2>_MC | NULL | NULL | fpga_timing<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | fpga_timing<5>_MC | CPLD_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<5>_MC.SI | fpga_timing<5>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<5>_MC.D1 | 5037 | ? | 0 | 0 | fpga_timing<5>_MC | NULL | NULL | fpga_timing<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<5>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<5>_MC.D2 | 5038 | ? | 0 | 0 | fpga_timing<5>_MC | NULL | NULL | fpga_timing<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | fpga_timing<5>_MC.REG | fpga_timing<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<5>_MC.D | 5036 | ? | 0 | 0 | fpga_timing<5>_MC | NULL | NULL | fpga_timing<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<5>_MC.Q | 5035 | ? | 0 | 0 | fpga_timing<5>_MC | NULL | NULL | fpga_timing<5>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | fpga_timing<6>_MC | CPLD_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<6>_MC.SI | fpga_timing<6>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<6>_MC.D1 | 5042 | ? | 0 | 0 | fpga_timing<6>_MC | NULL | NULL | fpga_timing<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<6>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<6>_MC.D2 | 5043 | ? | 0 | 0 | fpga_timing<6>_MC | NULL | NULL | fpga_timing<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | fpga_timing<6>_MC.REG | fpga_timing<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<6>_MC.D | 5041 | ? | 0 | 0 | fpga_timing<6>_MC | NULL | NULL | fpga_timing<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<6>_MC.Q | 5040 | ? | 0 | 0 | fpga_timing<6>_MC | NULL | NULL | fpga_timing<6>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | fpga_timing<7>_MC | CPLD_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<7>_MC.SI | fpga_timing<7>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<7>_MC.D1 | 5047 | ? | 0 | 0 | fpga_timing<7>_MC | NULL | NULL | fpga_timing<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<7>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<7>_MC.D2 | 5048 | ? | 0 | 0 | fpga_timing<7>_MC | NULL | NULL | fpga_timing<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | fpga_timing<7>_MC.REG | fpga_timing<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<7>_MC.D | 5046 | ? | 0 | 0 | fpga_timing<7>_MC | NULL | NULL | fpga_timing<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<7>_MC.Q | 5045 | ? | 0 | 0 | fpga_timing<7>_MC | NULL | NULL | fpga_timing<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | fpga_timing<8>_MC | CPLD_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<8>_MC.SI | fpga_timing<8>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<8>_MC.D1 | 5052 | ? | 0 | 0 | fpga_timing<8>_MC | NULL | NULL | fpga_timing<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<8>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<8>_MC.D2 | 5053 | ? | 0 | 0 | fpga_timing<8>_MC | NULL | NULL | fpga_timing<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | fpga_timing<8>_MC.REG | fpga_timing<8>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<8>_MC.D | 5051 | ? | 0 | 0 | fpga_timing<8>_MC | NULL | NULL | fpga_timing<8>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<8>_MC.Q | 5050 | ? | 0 | 0 | fpga_timing<8>_MC | NULL | NULL | fpga_timing<8>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | fpga_timing<4>_MC | CPLD_COPY_0_COPY_0 | 1024 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fpga_timing<4>_MC.SI | fpga_timing<4>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<4> | 5054 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<4>_MC.Q | fpga_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<0> | 5012 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<0>_MC.Q | fpga_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<1> | 5019 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<1>_MC.Q | fpga_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<3> | 5024 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<3>_MC.Q | fpga_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<2> | 5029 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<2>_MC.Q | fpga_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<5> | 5034 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<5>_MC.Q | fpga_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<6> | 5039 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<6>_MC.Q | fpga_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<7> | 5044 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<7>_MC.Q | fpga_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fpga_timing<8> | 5049 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | fpga_timing<8>_MC.Q | fpga_timing<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fpga_timing<4>_MC.D1 | 5058 | ? | 0 | 0 | fpga_timing<4>_MC | NULL | NULL | fpga_timing<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fpga_timing<4>_MC.D2 | 5057 | ? | 0 | 0 | fpga_timing<4>_MC | NULL | NULL | fpga_timing<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<4>
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_TRUE | fpga_timing<3> | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+
+SRFF_INSTANCE | fpga_timing<4>_MC.REG | fpga_timing<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fpga_timing<4>_MC.D | 5056 | ? | 0 | 0 | fpga_timing<4>_MC | NULL | NULL | fpga_timing<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fpga_timing<4>_MC.Q | 5055 | ? | 0 | 0 | fpga_timing<4>_MC | NULL | NULL | fpga_timing<4>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | FPGA_prog_B | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | FPGA_prog_B_MC.Q | 5061 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | FPGA_prog_B_MC.Q | FPGA_prog_B_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | FPGA_prog_B | 5062 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_prog_B | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<1>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<0>_II/UIM | 5073 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rst_MC.UIM | 5072 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<1>_MC.Q | 5075 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<1>_MC.Q | LEDs<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<1>_MC.SI | LEDs<1>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<0>_II/UIM | 5073 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rst_MC.UIM | 5072 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<1>_MC.D1 | 5065 | ? | 0 | 0 | LEDs<1>_MC | NULL | NULL | LEDs<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<1>_MC.D2 | 5064 | ? | 0 | 0 | LEDs<1>_MC | NULL | NULL | LEDs<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<0>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | usb_rst_MC.UIM
+
+SRFF_INSTANCE | LEDs<1>_MC.REG | LEDs<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<1>_MC.D | 5063 | ? | 0 | 0 | LEDs<1>_MC | NULL | NULL | LEDs<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<1>_MC.Q | 5074 | ? | 0 | 0 | LEDs<1>_MC | NULL | NULL | LEDs<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | usb_rst_MC | CPLD_COPY_0_COPY_0 | 1024 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW<0>_II/UIM | 5070 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | usb_rst_MC.Q | 5170 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_rst_MC.UIM | 5072 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_rst_MC.SI | usb_rst_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW<0>_II/UIM | 5070 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_rst_MC.D1 | 5067 | ? | 0 | 0 | usb_rst_MC | NULL | NULL | usb_rst_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | SW<0>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_rst_MC.D2 | 5068 | ? | 0 | 0 | usb_rst_MC | NULL | NULL | usb_rst_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | usb_rst_MC.REG | usb_rst_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_rst_MC.D | 5066 | ? | 0 | 0 | usb_rst_MC | NULL | NULL | usb_rst_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_rst_MC.Q | 5071 | ? | 0 | 0 | usb_rst_MC | NULL | NULL | usb_rst_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | SW<0>_II | CPLD_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | SW<0> | 5069 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | SW<0>_II/UIM | 5070 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<0>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<0>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<0> | 4861 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<0> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<0>_II/UIM | 5073 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<0>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<1> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<1>_MC.Q | 5075 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<1>_MC.Q | LEDs<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<1> | 5076 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<2>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<1>_II/UIM | 5080 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<2>_MC.Q | 5082 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<2>_MC.Q | LEDs<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<2>_MC.SI | LEDs<2>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<1>_II/UIM | 5080 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_1_hi | 5017 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_1_hi_MC.Q | SW_1_hi_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<2>_MC.D1 | 5079 | ? | 0 | 0 | LEDs<2>_MC | NULL | NULL | LEDs<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<2>_MC.D2 | 5078 | ? | 0 | 0 | LEDs<2>_MC | NULL | NULL | LEDs<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<1>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | SW_1_hi
+
+SRFF_INSTANCE | LEDs<2>_MC.REG | LEDs<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<2>_MC.D | 5077 | ? | 0 | 0 | LEDs<2>_MC | NULL | NULL | LEDs<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<2>_MC.Q | 5081 | ? | 0 | 0 | LEDs<2>_MC | NULL | NULL | LEDs<2>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<1>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<1> | 4871 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<1> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<1>_II/UIM | 5080 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<1>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<2> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<2>_MC.Q | 5082 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<2>_MC.Q | LEDs<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<2> | 5083 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<3>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<2>_II/UIM | 5087 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_2_hi | 5088 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_2_hi_MC.Q | SW_2_hi_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<3>_MC.Q | 5091 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<3>_MC.Q | LEDs<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<3>_MC.SI | LEDs<3>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<2>_II/UIM | 5087 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_2_hi | 5088 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_2_hi_MC.Q | SW_2_hi_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<3>_MC.D1 | 5086 | ? | 0 | 0 | LEDs<3>_MC | NULL | NULL | LEDs<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<3>_MC.D2 | 5085 | ? | 0 | 0 | LEDs<3>_MC | NULL | NULL | LEDs<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<2>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | SW_2_hi
+
+SRFF_INSTANCE | LEDs<3>_MC.REG | LEDs<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<3>_MC.D | 5084 | ? | 0 | 0 | LEDs<3>_MC | NULL | NULL | LEDs<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<3>_MC.Q | 5090 | ? | 0 | 0 | LEDs<3>_MC | NULL | NULL | LEDs<3>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<2>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<2> | 4881 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<2> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<2>_II/UIM | 5087 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<2>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow | SW_2_hi_MC | CPLD_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW<2>_II/IREG | 5175 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<2>_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | SW_2_hi | 5088 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_2_hi_MC.Q | SW_2_hi_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | SW_2_hi_MC.REG | SW_2_hi_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | SW<2>_II/IREG | 5175 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<2>_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | SW_2_hi_MC.Q | 5089 | ? | 0 | 0 | SW_2_hi_MC | NULL | NULL | SW_2_hi_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | LEDs<3> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<3>_MC.Q | 5091 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<3>_MC.Q | LEDs<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<3> | 5092 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<3> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<4>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<3>_II/UIM | 5097 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_INITB_II/UIM | 5096 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_INITB_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<4>_MC.Q | 5099 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<4>_MC.Q | LEDs<4>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<4>_MC.SI | LEDs<4>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<3>_II/UIM | 5097 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_INITB_II/UIM | 5096 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_INITB_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<4>_MC.D1 | 5095 | ? | 0 | 0 | LEDs<4>_MC | NULL | NULL | LEDs<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<4>_MC.D2 | 5094 | ? | 0 | 0 | LEDs<4>_MC | NULL | NULL | LEDs<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<3>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | FPGA_INITB_II/UIM
+
+SRFF_INSTANCE | LEDs<4>_MC.REG | LEDs<4>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<4>_MC.D | 5093 | ? | 0 | 0 | LEDs<4>_MC | NULL | NULL | LEDs<4>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<4>_MC.Q | 5098 | ? | 0 | 0 | LEDs<4>_MC | NULL | NULL | LEDs<4>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<3>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<3> | 4892 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<3> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<3>_II/UIM | 5097 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<3>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<4> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<4>_MC.Q | 5099 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<4>_MC.Q | LEDs<4>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<4> | 5100 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<4> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<5>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<4>_II/UIM | 5104 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<4>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rst_MC.UIM | 5072 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<5>_MC.Q | 5106 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<5>_MC.Q | LEDs<5>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<5>_MC.SI | LEDs<5>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<4>_II/UIM | 5104 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<4>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rst_MC.UIM | 5072 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<5>_MC.D1 | 5103 | ? | 0 | 0 | LEDs<5>_MC | NULL | NULL | LEDs<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<5>_MC.D2 | 5102 | ? | 0 | 0 | LEDs<5>_MC | NULL | NULL | LEDs<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<4>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | usb_rst_MC.UIM
+
+SRFF_INSTANCE | LEDs<5>_MC.REG | LEDs<5>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<5>_MC.D | 5101 | ? | 0 | 0 | LEDs<5>_MC | NULL | NULL | LEDs<5>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<5>_MC.Q | 5105 | ? | 0 | 0 | LEDs<5>_MC | NULL | NULL | LEDs<5>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<4>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<4> | 4902 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<4> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<4>_II/UIM | 5104 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<4>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<5> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<5>_MC.Q | 5106 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<5>_MC.Q | LEDs<5>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<5> | 5107 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<5> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<6>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<5>_II/UIM | 5113 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<5>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<6>_MC.Q | 5115 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<6>_MC.Q | LEDs<6>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<6>_MC.SI | LEDs<6>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<5>_II/UIM | 5113 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<5>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<6>_MC.D1 | 5110 | ? | 0 | 0 | LEDs<6>_MC | NULL | NULL | LEDs<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<6>_MC.D2 | 5109 | ? | 0 | 0 | LEDs<6>_MC | NULL | NULL | LEDs<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<5>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | N24_II/UIM
+
+SRFF_INSTANCE | LEDs<6>_MC.REG | LEDs<6>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<6>_MC.D | 5108 | ? | 0 | 0 | LEDs<6>_MC | NULL | NULL | LEDs<6>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<6>_MC.Q | 5114 | ? | 0 | 0 | LEDs<6>_MC | NULL | NULL | LEDs<6>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | N24_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | N24 | 5111 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24 | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<5>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<5> | 4912 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<5> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<5>_II/UIM | 5113 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<5>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<6> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<6>_MC.Q | 5115 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<6>_MC.Q | LEDs<6>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<6> | 5116 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<6> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<7>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<6>_II/UIM | 5120 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<6>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<7>_MC.Q | 5122 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<7>_MC.Q | LEDs<7>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<7>_MC.SI | LEDs<7>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<6>_II/UIM | 5120 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<6>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<7>_MC.D1 | 5119 | ? | 0 | 0 | LEDs<7>_MC | NULL | NULL | LEDs<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<7>_MC.D2 | 5118 | ? | 0 | 0 | LEDs<7>_MC | NULL | NULL | LEDs<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<6>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | N24_II/UIM
+
+SRFF_INSTANCE | LEDs<7>_MC.REG | LEDs<7>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<7>_MC.D | 5117 | ? | 0 | 0 | LEDs<7>_MC | NULL | NULL | LEDs<7>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<7>_MC.Q | 5121 | ? | 0 | 0 | LEDs<7>_MC | NULL | NULL | LEDs<7>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<6>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<6> | 4922 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<6> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<6>_II/UIM | 5120 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<6>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<7> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<7>_MC.Q | 5122 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<7>_MC.Q | LEDs<7>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<7> | 5123 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<7> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | LEDs<8>_MC | CPLD_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<7>_II/UIM | 5127 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<7>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs<8>_MC.Q | 5129 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<8>_MC.Q | LEDs<8>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LEDs<8>_MC.SI | LEDs<8>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_D<7>_II/UIM | 5127 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<7>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N24_II/UIM | 5112 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs<8>_MC.D1 | 5126 | ? | 0 | 0 | LEDs<8>_MC | NULL | NULL | LEDs<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs<8>_MC.D2 | 5125 | ? | 0 | 0 | LEDs<8>_MC | NULL | NULL | LEDs<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<7>_II/UIM
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | N24_II/UIM
+
+SRFF_INSTANCE | LEDs<8>_MC.REG | LEDs<8>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs<8>_MC.D | 5124 | ? | 0 | 0 | LEDs<8>_MC | NULL | NULL | LEDs<8>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs<8>_MC.Q | 5128 | ? | 0 | 0 | LEDs<8>_MC | NULL | NULL | LEDs<8>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | FPGA_D<7>_II | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | FPGA_D<7> | 4932 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<7> | 0 | 6 | OI_OUT
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | FPGA_D<7>_II/UIM | 5127 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_D<7>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | LEDs<8> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs<8>_MC.Q | 5129 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | LEDs<8>_MC.Q | LEDs<8>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<8> | 5130 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | LEDs<8> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Mode<0>_MC | CPLD_COPY_0_COPY_0 | 0 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Mode<0>_MC.Q | 5135 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | Mode<0>_MC.Q | Mode<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Mode<0>_MC.SI | Mode<0>_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Mode<0>_MC.D1 | 5133 | ? | 0 | 0 | Mode<0>_MC | NULL | NULL | Mode<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Mode<0>_MC.D2 | 5132 | ? | 0 | 0 | Mode<0>_MC | NULL | NULL | Mode<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | Mode<0>_MC.REG | Mode<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Mode<0>_MC.D | 5131 | ? | 0 | 0 | Mode<0>_MC | NULL | NULL | Mode<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Mode<0>_MC.Q | 5134 | ? | 0 | 0 | Mode<0>_MC | NULL | NULL | Mode<0>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Mode<0> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Mode<0>_MC.Q | 5135 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | Mode<0>_MC.Q | Mode<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Mode<0> | 5136 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | Mode<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Mode<1>_MC | CPLD_COPY_0_COPY_0 | 256 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Mode<1>_MC.Q | 5141 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | Mode<1>_MC.Q | Mode<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Mode<1>_MC.SI | Mode<1>_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Mode<1>_MC.D1 | 5139 | ? | 0 | 0 | Mode<1>_MC | NULL | NULL | Mode<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Mode<1>_MC.D2 | 5138 | ? | 0 | 0 | Mode<1>_MC | NULL | NULL | Mode<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | Mode<1>_MC.REG | Mode<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Mode<1>_MC.D | 5137 | ? | 0 | 0 | Mode<1>_MC | NULL | NULL | Mode<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Mode<1>_MC.Q | 5140 | ? | 0 | 0 | Mode<1>_MC | NULL | NULL | Mode<1>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Mode<1> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Mode<1>_MC.Q | 5141 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | Mode<1>_MC.Q | Mode<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Mode<1> | 5142 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | Mode<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Mode<2>_MC | CPLD_COPY_0_COPY_0 | 256 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Mode<2>_MC.Q | 5147 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | Mode<2>_MC.Q | Mode<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Mode<2>_MC.SI | Mode<2>_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Mode<2>_MC.D1 | 5145 | ? | 0 | 0 | Mode<2>_MC | NULL | NULL | Mode<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Mode<2>_MC.D2 | 5144 | ? | 0 | 0 | Mode<2>_MC | NULL | NULL | Mode<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | Mode<2>_MC.REG | Mode<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Mode<2>_MC.D | 5143 | ? | 0 | 0 | Mode<2>_MC | NULL | NULL | Mode<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Mode<2>_MC.Q | 5146 | ? | 0 | 0 | Mode<2>_MC | NULL | NULL | Mode<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Mode<2> | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Mode<2>_MC.Q | 5147 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | Mode<2>_MC.Q | Mode<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Mode<2> | 5148 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | Mode<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv+PinTrst | N24_MC | CPLD_COPY_0_COPY_0 | 16640 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/7 | 5152 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_TRUE | SW_2_hi
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | N24_MC.Q | 5154 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | N24_MC.Q | N24_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 2 | 0 | MC_OE
+NODE | N24_MC.OE | 5156 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | N24_MC.BUFOE.OUT | N24_MC | 2 | 0 | MC_OE
+
+SIGNAL_INSTANCE | N24_MC.SI | N24_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N24_MC.D1 | 5151 | ? | 0 | 0 | N24_MC | NULL | NULL | N24_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N24_MC.D2 | 5150 | ? | 0 | 0 | N24_MC | NULL | NULL | N24_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | N24_MC.REG | N24_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N24_MC.D | 5149 | ? | 0 | 0 | N24_MC | NULL | NULL | N24_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N24_MC.Q | 5153 | ? | 0 | 0 | N24_MC | NULL | NULL | N24_MC.REG | 0 | 8 | SRFF_Q
+
+BUF_INSTANCE | N24_MC.BUFOE | N24_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 10 | CTOR_UNKNOWN
+SIGNAL | NODE | FOOBAR2__ctinst/7 | 5152 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_TRUE | SW_2_hi
+OUTPUT_NODE_TYPE | 0 | 10 | BUF_OUT
+NODE | N24_MC.BUFOE.OUT | 5155 | ? | 0 | 0 | N24_MC | NULL | NULL | N24_MC.BUFOE | 0 | 10 | BUF_OUT
+
+OUTPUT_INSTANCE | 0 | N24 | CPLD_COPY_0_COPY_0 | 3 | 2 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | N24_MC.Q | 5154 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | N24_MC.Q | N24_MC | 0 | 0 | MC_Q
+INPUT_NODE_TYPE | 2 | 6 | OI_OE
+NODE | N24_MC.OE | 5156 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | N24_MC.BUFOE.OUT | N24_MC | 2 | 0 | MC_OE
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | N24 | 5111 | PIPO | 0 | 64 | CPLD_COPY_0_COPY_0 | NULL | NULL | N24 | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | mclk_ce_MC | CPLD_COPY_0_COPY_0 | 256 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | mclk_ce_MC.Q | 5161 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | mclk_ce_MC.Q | mclk_ce_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | mclk_ce_MC.SI | mclk_ce_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | mclk_ce_MC.D1 | 5159 | ? | 0 | 0 | mclk_ce_MC | NULL | NULL | mclk_ce_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | mclk_ce_MC.D2 | 5158 | ? | 0 | 0 | mclk_ce_MC | NULL | NULL | mclk_ce_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | mclk_ce_MC.REG | mclk_ce_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | mclk_ce_MC.D | 5157 | ? | 0 | 0 | mclk_ce_MC | NULL | NULL | mclk_ce_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | mclk_ce_MC.Q | 5160 | ? | 0 | 0 | mclk_ce_MC | NULL | NULL | mclk_ce_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | mclk_ce | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | mclk_ce_MC.Q | 5161 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | mclk_ce_MC.Q | mclk_ce_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | mclk_ce | 5162 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_ce | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+Tff | usb_rd_MC | CPLD_COPY_0_COPY_0 | 5120 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rd_MC.UIM | 5167 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rd_MC.Q | usb_rd_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | usb_rd_MC.Q | 5168 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rd_MC.Q | usb_rd_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | usb_rd_MC.UIM | 5167 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rd_MC.Q | usb_rd_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | usb_rd_MC.SI | usb_rd_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<2> | 4950 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<2>_MC.Q | usb_timing<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<3> | 4960 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<3>_MC.Q | usb_timing<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<4> | 4982 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<4>_MC.Q | usb_timing<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<5> | 4987 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<5>_MC.Q | usb_timing<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<6> | 4992 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<6>_MC.Q | usb_timing<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<7> | 4997 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<7>_MC.Q | usb_timing<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<8> | 5002 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<8>_MC.Q | usb_timing<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_rd_MC.UIM | 5167 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rd_MC.Q | usb_rd_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<0> | 4945 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<0>_MC.Q | usb_timing<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | usb_timing<1> | 4955 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_timing<1>_MC.Q | usb_timing<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | usb_rd_MC.D1 | 5165 | ? | 0 | 0 | usb_rd_MC | NULL | NULL | usb_rd_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | usb_rd_MC.D2 | 5164 | ? | 0 | 0 | usb_rd_MC | NULL | NULL | usb_rd_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 8 | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8> | IV_TRUE | usb_rd_MC.UIM
+SPPTERM | 10 | IV_FALSE | usb_timing<0> | IV_TRUE | usb_timing<2> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8> | IV_FALSE | usb_rd_MC.UIM
+
+SRFF_INSTANCE | usb_rd_MC.REG | usb_rd_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | usb_rd_MC.D | 5163 | ? | 0 | 0 | usb_rd_MC | NULL | NULL | usb_rd_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | mclk_II/FCLK | 4853 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | mclk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | usb_rd_MC.Q | 5166 | ? | 0 | 0 | usb_rd_MC | NULL | NULL | usb_rd_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | usb_rd | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | usb_rd_MC.Q | 5168 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rd_MC.Q | usb_rd_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | usb_rd | 5169 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | usb_rd | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | usb_rst | CPLD_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | usb_rst_MC.Q | 5170 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | usb_rst_MC.Q | usb_rst_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | usb_rst | 5171 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | usb_rst | 0 | 6 | OI_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | SW<1>_II | CPLD_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | SW<1> | 5172 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | SW<1>_II/IREG | 5173 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<1>_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | SW<2>_II | CPLD_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | SW<2> | 5174 | PI | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | SW<2>_II/IREG | 5175 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | SW<2>_II | 10 | 5 | II_REG
+
+FB_INSTANCE | FOOBAR1_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | fpga_timing<6>_MC | 1 | NULL | 0 | NULL | 0 | 13 | 49152
+FBPIN | 2 | fpga_timing<5>_MC | 1 | NULL | 0 | NULL | 0 | 12 | 49152
+FBPIN | 3 | fpga_timing<1>_MC | 1 | NULL | 0 | NULL | 0 | 11 | 49152
+FBPIN | 4 | fpga_timing<0>_MC | 1 | NULL | 0 | NULL | 0 | 10 | 49152
+FBPIN | 5 | LEDs<8>_MC | 1 | NULL | 0 | LEDs<8> | 1 | 9 | 49152
+FBPIN | 6 | LEDs<7>_MC | 1 | NULL | 0 | LEDs<7> | 1 | 8 | 49152
+FBPIN | 7 | LEDs<6>_MC | 1 | NULL | 0 | LEDs<6> | 1 | 7 | 49152
+FBPIN | 8 | LEDs<5>_MC | 1 | NULL | 0 | LEDs<5> | 1 | 6 | 49152
+FBPIN | 9 | LEDs<4>_MC | 1 | NULL | 0 | LEDs<4> | 1 | 4 | 53248
+FBPIN | 10 | LEDs<3>_MC | 1 | NULL | 0 | LEDs<3> | 1 | 3 | 53248
+FBPIN | 11 | LEDs<2>_MC | 1 | NULL | 0 | LEDs<2> | 1 | 2 | 53248
+FBPIN | 12 | LEDs<1>_MC | 1 | NULL | 0 | LEDs<1> | 1 | 1 | 53248
+FBPIN | 13 | FPGA_prog_B_MC | 1 | NULL | 0 | FPGA_prog_B | 1 | 99 | 51200
+FBPIN | 14 | fpga_timing<2>_MC | 1 | NULL | 0 | NULL | 0 | 97 | 49152
+FBPIN | 15 | fpga_timing<4>_MC | 1 | NULL | 0 | NULL | 0 | 94 | 49152
+FBPIN | 16 | fpga_timing<3>_MC | 1 | FPGA_INITB_II | 1 | NULL | 0 | 92 | 49152
+
+FB_INSTANCE | FOOBAR2_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | usb_rst_MC | 1 | NULL | 0 | usb_rst | 1 | 14 | 49152
+FBPIN | 2 | fpga_timing<7>_MC | 1 | NULL | 0 | NULL | 0 | 15 | 49152
+FBPIN | 3 | usb_dry_MC | 1 | NULL | 0 | NULL | 0 | 16 | 49152
+FBPIN | 4 | previous_usb_dry_MC | 1 | NULL | 0 | NULL | 0 | 17 | 49152
+FBPIN | 5 | previous_MC | 1 | NULL | 0 | NULL | 0 | 18 | 49152
+FBPIN | 6 | usb_timing<8>_MC | 1 | NULL | 0 | NULL | 0 | 19 | 49152
+FBPIN | 7 | usb_timing<7>_MC | 1 | mclk_II | 1 | NULL | 0 | 22 | 57344
+FBPIN | 8 | usb_timing<6>_MC | 1 | NULL | 0 | NULL | 0 | 23 | 57344
+FBPIN | 9 | usb_timing<5>_MC | 1 | NULL | 0 | NULL | 0 | 24 | 49152
+FBPIN | 10 | FPGA_cclk_MC | 1 | NULL | 0 | FPGA_cclk | 1 | 27 | 57344
+FBPIN | 11 | usb_timing<4>_MC | 1 | FPGA_done_II | 1 | NULL | 0 | 28 | 49152
+FBPIN | 12 | N24_MC | 1 | N24_II | 1 | N24 | 1 | 29 | 49152
+FBPIN | 13 | usb_timing<3>_MC | 1 | NULL | 0 | NULL | 0 | 30 | 49152
+FBPIN | 14 | usb_timing<0>_MC | 1 | NULL | 0 | NULL | 0 | 32 | 49152
+FBPIN | 15 | usb_timing<2>_MC | 1 | NULL | 0 | NULL | 0 | 33 | 49152
+FBPIN | 16 | usb_timing<1>_MC | 1 | NULL | 0 | NULL | 0 | 34 | 49152
+
+FB_INSTANCE | FOOBAR3_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | FPGA_MOSI_MC | 1 | NULL | 0 | FPGA_MOSI | 1 | 90 | 49152
+FBPIN | 3 | FPGA_D<7>_MC | 1 | FPGA_D<7>_II | 1 | FPGA_D<7> | 1 | 89 | 49152
+FBPIN | 4 | FPGA_D<6>_MC | 1 | FPGA_D<6>_II | 1 | FPGA_D<6> | 1 | 81 | 49152
+FBPIN | 5 | FPGA_D<5>_MC | 1 | FPGA_D<5>_II | 1 | FPGA_D<5> | 1 | 79 | 49152
+FBPIN | 6 | FPGA_D<4>_MC | 1 | FPGA_D<4>_II | 1 | FPGA_D<4> | 1 | 78 | 49152
+FBPIN | 7 | FPGA_D<3>_MC | 1 | FPGA_D<3>_II | 1 | FPGA_D<3> | 1 | 77 | 49152
+FBPIN | 9 | SW_2_hi_MC | 1 | SW<2>_II | 1 | NULL | 0 | 74 | 49152
+FBPIN | 10 | SW_1_hi_MC | 1 | SW<1>_II | 1 | NULL | 0 | 72 | 49152
+FBPIN | 11 | NULL | 0 | SW<0>_II | 1 | NULL | 0 | 71 | 49152
+FBPIN | 12 | mclk_ce_MC | 1 | NULL | 0 | mclk_ce | 1 | 70 | 49152
+FBPIN | 13 | NULL | 0 | usb_rx_II | 1 | NULL | 0 | 68 | 49152
+FBPIN | 15 | NULL | 0 | data<0>_II | 1 | NULL | 0 | 64 | 49152
+FBPIN | 16 | fpga_timing<8>_MC | 1 | data<4>_II | 1 | NULL | 0 | 61 | 49152
+
+FB_INSTANCE | FOOBAR4_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | FPGA_D<0>_MC | 1 | FPGA_D<0>_II | 1 | FPGA_D<0> | 1 | 35 | 49152
+FBPIN | 2 | Mode<0>_MC | 1 | NULL | 0 | Mode<0> | 1 | 36 | 49152
+FBPIN | 4 | Mode<1>_MC | 1 | NULL | 0 | Mode<1> | 1 | 39 | 49152
+FBPIN | 5 | FPGA_D<1>_MC | 1 | FPGA_D<1>_II | 1 | FPGA_D<1> | 1 | 40 | 49152
+FBPIN | 6 | FPGA_D<2>_MC | 1 | FPGA_D<2>_II | 1 | FPGA_D<2> | 1 | 41 | 49152
+FBPIN | 7 | Mode<2>_MC | 1 | NULL | 0 | Mode<2> | 1 | 42 | 49152
+FBPIN | 10 | usb_rd_MC | 1 | NULL | 0 | usb_rd | 1 | 50 | 49152
+FBPIN | 11 | NULL | 0 | data<3>_II | 1 | NULL | 0 | 52 | 49152
+FBPIN | 12 | NULL | 0 | data<6>_II | 1 | NULL | 0 | 53 | 49152
+FBPIN | 13 | NULL | 0 | data<5>_II | 1 | NULL | 0 | 55 | 49152
+FBPIN | 14 | NULL | 0 | data<7>_II | 1 | NULL | 0 | 56 | 49152
+FBPIN | 15 | NULL | 0 | data<1>_II | 1 | NULL | 0 | 58 | 49152
+FBPIN | 16 | NULL | 0 | data<2>_II | 1 | NULL | 0 | 60 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SW_2_hi | 5088 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | SW_2_hi_MC.Q | SW_2_hi_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 7 | 12 | CT_SI7
+SIGNAL | NODE | FOOBAR2__ctinst/7 | 5152 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_TRUE | SW_2_hi
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 7 | 12 | CT_SI7
+SIGNAL | NODE | FOOBAR3__ctinst/7 | 4887 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | CPLD_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FPGA_done_II/UIM | 4856 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FPGA_done_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 7 | 12 | CT_SI7
+SIGNAL | NODE | FOOBAR4__ctinst/7 | 4854 | ? | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 7 | 12 | CT_SI7
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+
+PLA | FOOBAR1_ | 37
+PLA_TERM | 0 | 
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | FPGA_prog_B_MC.UIM
+PLA_TERM | 1 | 
+SPPTERM | 9 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | FPGA_prog_B_MC.UIM
+PLA_TERM | 2 | 
+SPPTERM | 10 | IV_FALSE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | fpga_timing<4> | IV_TRUE | FPGA_prog_B_MC.UIM
+PLA_TERM | 3 | 
+SPPTERM | 8 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4> | IV_TRUE | FPGA_prog_B_MC.UIM
+PLA_TERM | 4 | 
+SPPTERM | 8 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4> | IV_TRUE | FPGA_prog_B_MC.UIM
+PLA_TERM | 5 | 
+SPPTERM | 11 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_TRUE | fpga_timing<4> | IV_FALSE | FPGA_prog_B_MC.UIM
+PLA_TERM | 6 | 
+SPPTERM | 11 | IV_FALSE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4> | IV_FALSE | FPGA_prog_B_MC.UIM
+PLA_TERM | 7 | 
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | usb_rst_MC.UIM
+PLA_TERM | 8 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<0>_II/UIM
+PLA_TERM | 9 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<1>_II/UIM
+PLA_TERM | 10 | 
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<6>
+PLA_TERM | 11 | 
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | SW_1_hi
+PLA_TERM | 12 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<2>_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<5>
+PLA_TERM | 14 | 
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | SW_2_hi
+PLA_TERM | 15 | 
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | FPGA_INITB_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<3>_II/UIM
+PLA_TERM | 17 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<4>_II/UIM
+PLA_TERM | 18 | 
+SPPTERM | 2 | IV_FALSE | FPGA_done_II/UIM | IV_FALSE | N24_II/UIM
+PLA_TERM | 19 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<5>_II/UIM
+PLA_TERM | 20 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<6>_II/UIM
+PLA_TERM | 21 | 
+SPPTERM | 2 | IV_TRUE | FPGA_done_II/UIM | IV_TRUE | FPGA_D<7>_II/UIM
+PLA_TERM | 22 | 
+SPPTERM | 2 | IV_TRUE | SW_1_hi | IV_TRUE | fpga_timing<3>
+PLA_TERM | 23 | 
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+PLA_TERM | 24 | 
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<4>
+PLA_TERM | 25 | 
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_TRUE | fpga_timing<3> | IV_TRUE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+PLA_TERM | 26 | 
+SPPTERM | 2 | IV_TRUE | SW_1_hi | IV_TRUE | fpga_timing<2>
+PLA_TERM | 27 | 
+SPPTERM | 9 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+PLA_TERM | 28 | 
+SPPTERM | 8 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<1> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+PLA_TERM | 29 | 
+SPPTERM | 2 | IV_TRUE | fpga_timing<0> | IV_TRUE | SW_1_hi
+PLA_TERM | 30 | 
+SPPTERM | 7 | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+PLA_TERM | 31 | 
+SPPTERM | 7 | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+PLA_TERM | 32 | 
+SPPTERM | 6 | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+PLA_TERM | 33 | 
+SPPTERM | 2 | IV_TRUE | SW_1_hi | IV_TRUE | fpga_timing<1>
+PLA_TERM | 34 | 
+SPPTERM | 8 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<1> | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+PLA_TERM | 35 | 
+SPPTERM | 8 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<3> | IV_FALSE | fpga_timing<2> | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8>
+PLA_TERM | 36 | 
+SPPTERM | 7 | IV_TRUE | fpga_timing<0> | IV_FALSE | SW_1_hi | IV_FALSE | fpga_timing<5> | IV_FALSE | fpga_timing<6> | IV_FALSE | fpga_timing<7> | IV_FALSE | fpga_timing<8> | IV_FALSE | fpga_timing<4>
+
+PLA | FOOBAR2_ | 25
+PLA_TERM | 0 | 
+SPPTERM | 10 | IV_FALSE | FPGA_cclk_MC.UIM | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_TRUE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 1 | 
+SPPTERM | 10 | IV_TRUE | FPGA_cclk_MC.UIM | IV_FALSE | usb_timing<0> | IV_TRUE | usb_timing<2> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 2 | 
+SPPTERM | 9 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 3 | 
+SPPTERM | 9 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 4 | 
+SPPTERM | 3 | IV_TRUE | usb_timing<1> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+PLA_TERM | 5 | 
+SPPTERM | 10 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_TRUE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 6 | 
+SPPTERM | 10 | IV_TRUE | usb_timing<0> | IV_FALSE | usb_timing<2> | IV_TRUE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 7 | 
+SPPTERM | 1 | IV_TRUE | SW_2_hi
+PLA_TERM | 8 | 
+SPPTERM | 3 | IV_TRUE | usb_timing<2> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+PLA_TERM | 9 | 
+SPPTERM | 8 | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_TRUE | SW<0>_II/UIM
+PLA_TERM | 11 | 
+SPPTERM | 9 | IV_FALSE | usb_timing<0> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 12 | 
+SPPTERM | 8 | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 13 | 
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<7>
+PLA_TERM | 14 | 
+SPPTERM | 9 | IV_FALSE | usb_timing<0> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_TRUE | previous_usb_dry | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8>
+PLA_TERM | 15 | 
+SPPTERM | 3 | IV_TRUE | usb_timing<0> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_FALSE | usb_rx_II/UIM
+PLA_TERM | 19 | 
+SPPTERM | 1 | IV_TRUE | previous
+PLA_TERM | 22 | 
+SPPTERM | 1 | IV_TRUE | usb_dry
+PLA_TERM | 25 | 
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<8>
+PLA_TERM | 28 | 
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<7>
+PLA_TERM | 31 | 
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<6>
+PLA_TERM | 34 | 
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<5>
+PLA_TERM | 40 | 
+SPPTERM | 3 | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry | IV_TRUE | usb_timing<4>
+PLA_TERM | 46 | 
+SPPTERM | 3 | IV_TRUE | usb_timing<3> | IV_TRUE | usb_dry | IV_FALSE | previous_usb_dry
+
+PLA | FOOBAR3_ | 7
+PLA_TERM | 7 | 
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_TRUE | data<7>_II/UIM
+PLA_TERM | 19 | 
+SPPTERM | 1 | IV_TRUE | data<6>_II/UIM
+PLA_TERM | 22 | 
+SPPTERM | 1 | IV_TRUE | data<5>_II/UIM
+PLA_TERM | 25 | 
+SPPTERM | 1 | IV_TRUE | data<4>_II/UIM
+PLA_TERM | 28 | 
+SPPTERM | 1 | IV_TRUE | data<3>_II/UIM
+PLA_TERM | 55 | 
+SPPTERM | 2 | IV_FALSE | SW_1_hi | IV_TRUE | fpga_timing<8>
+
+PLA | FOOBAR4_ | 6
+PLA_TERM | 0 | 
+SPPTERM | 8 | IV_FALSE | usb_timing<2> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8> | IV_TRUE | usb_rd_MC.UIM
+PLA_TERM | 1 | 
+SPPTERM | 10 | IV_FALSE | usb_timing<0> | IV_TRUE | usb_timing<2> | IV_FALSE | usb_timing<1> | IV_FALSE | usb_timing<3> | IV_FALSE | usb_timing<4> | IV_FALSE | usb_timing<5> | IV_FALSE | usb_timing<6> | IV_FALSE | usb_timing<7> | IV_FALSE | usb_timing<8> | IV_FALSE | usb_rd_MC.UIM
+PLA_TERM | 7 | 
+SPPTERM | 1 | IV_FALSE | FPGA_done_II/UIM
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_TRUE | data<0>_II/UIM
+PLA_TERM | 22 | 
+SPPTERM | 1 | IV_TRUE | data<1>_II/UIM
+PLA_TERM | 25 | 
+SPPTERM | 1 | IV_TRUE | data<2>_II/UIM
+
+BUSINFO | DATA<7:0> | 8 | 0 | 0 | data<0> | 7 | data<1> | 6 | data<2> | 5 | data<3> | 4 | data<4> | 3 | data<5> | 2 | data<6> | 1 | data<7> | 0
+BUSINFO | FPGA_D<7:0> | 8 | 0 | 2 | FPGA_D<0> | 7 | FPGA_D<1> | 6 | FPGA_D<2> | 5 | FPGA_D<3> | 4 | FPGA_D<4> | 3 | FPGA_D<5> | 2 | FPGA_D<6> | 1 | FPGA_D<7> | 0
+BUSINFO | LEDS<8:1> | 8 | 0 | 1 | LEDs<1> | 7 | LEDs<2> | 6 | LEDs<3> | 5 | LEDs<4> | 4 | LEDs<5> | 3 | LEDs<6> | 2 | LEDs<7> | 1 | LEDs<8> | 0
+BUSINFO | MODE<2:0> | 3 | 0 | 1 | Mode<0> | 2 | Mode<1> | 1 | Mode<2> | 0
+BUSINFO | SW<2:0> | 3 | 0 | 0 | SW<0> | 2 | SW<1> | 1 | SW<2> | 0
+
+IOSTD | LVTTL
+data<0> | LVTTL
+mclk | LVTTL
+FPGA_done | LVTTL
+FPGA_D<0> | LVTTL
+data<1> | LVTTL
+FPGA_D<1> | LVTTL
+data<2> | LVTTL
+FPGA_D<2> | LVTTL
+data<3> | LVTTL
+FPGA_D<3> | LVTTL
+data<4> | LVTTL
+FPGA_D<4> | LVTTL
+data<5> | LVTTL
+FPGA_D<5> | LVTTL
+data<6> | LVTTL
+FPGA_D<6> | LVTTL
+data<7> | LVTTL
+FPGA_D<7> | LVTTL
+FPGA_INITB | LVTTL
+FPGA_MOSI | LVTTL
+usb_rx | LVTTL
+FPGA_cclk | LVTTL
+FPGA_prog_B | LVTTL
+SW<0> | LVTTL
+FPGA_D<0> | LVTTL
+LEDs<1> | LVTTL
+FPGA_D<1> | LVTTL
+LEDs<2> | LVTTL
+FPGA_D<2> | LVTTL
+LEDs<3> | LVTTL
+FPGA_D<3> | LVTTL
+LEDs<4> | LVTTL
+FPGA_D<4> | LVTTL
+LEDs<5> | LVTTL
+N24 | LVTTL
+FPGA_D<5> | LVTTL
+LEDs<6> | LVTTL
+FPGA_D<6> | LVTTL
+LEDs<7> | LVTTL
+FPGA_D<7> | LVTTL
+LEDs<8> | LVTTL
+Mode<0> | LVTTL
+Mode<1> | LVTTL
+Mode<2> | LVTTL
+N24 | LVTTL
+mclk_ce | LVTTL
+usb_rd | LVTTL
+usb_rst | LVTTL
+SW<1> | LVTTL
+SW<2> | LVTTL
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | SW_2_hi | NULL | 1 | fpga_timing<3> | NULL | 3 | FPGA_D<7> | NULL | 4 | FPGA_D<2> | NULL | 5 | fpga_timing<5> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 6 | FPGA_D<0> | NULL | 7 | fpga_timing<7> | NULL | 8 | fpga_timing<4> | NULL | 9 | SW_1_hi | NULL | 10 | FPGA_prog_B_MC.UIM | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 11 | fpga_timing<8> | NULL | 12 | fpga_timing<6> | NULL | 13 | FPGA_D<6> | NULL | 14 | fpga_timing<0> | NULL | 15 | FPGA_INITB | 92
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 17 | FPGA_done | 28 | 19 | usb_rst_MC.UIM | NULL | 21 | fpga_timing<2> | NULL | 23 | FPGA_D<4> | NULL | 24 | FPGA_D<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 27 | N24 | NULL | 28 | fpga_timing<1> | NULL | 34 | FPGA_D<3> | NULL | 36 | FPGA_D<5> | NULL
+
+FB_IMUX_INDEX | FOOBAR1_ | 104 | 79 | -1 | 34 | 53 | 65 | 48 | 81 | 78 | 105 | 76 | 111 | 64 | 35 | 67 | 15 | -1 | 26 | -1 | 80 | -1 | 77 | -1 | 37 | 52 | -1 | -1 | 27 | 66 | -1 | -1 | -1 | -1 | -1 | 38 | -1 | 36 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 0 | SW_2_hi | NULL | 1 | usb_timing<5> | NULL | 3 | previous | NULL | 4 | usb_timing<1> | NULL | 5 | usb_timing<8> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 6 | usb_timing<2> | NULL | 7 | FPGA_cclk_MC.UIM | NULL | 8 | usb_timing<0> | NULL | 9 | SW_1_hi | NULL | 10 | usb_timing<7> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 11 | usb_timing<6> | NULL | 12 | usb_dry | NULL | 13 | usb_rx | 68 | 14 | previous_usb_dry | NULL | 16 | fpga_timing<7> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 19 | SW<0> | 71 | 20 | usb_timing<3> | NULL | 21 | usb_timing<4> | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | 104 | 88 | -1 | 84 | 95 | 85 | 94 | 89 | 93 | 105 | 86 | 87 | 82 | 44 | 83 | -1 | 81 | -1 | -1 | 42 | 92 | 90 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 1 | data<7> | 56 | 2 | data<6> | 53 | 3 | data<3> | 52 | 4 | FPGA_done | 28 | 6 | fpga_timing<8> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 7 | data<5> | 55 | 9 | SW_1_hi | NULL | 20 | data<4> | 61
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | 61 | 59 | 58 | 26 | -1 | 111 | 60 | -1 | 105 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 47 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 0 | usb_timing<3> | NULL | 1 | usb_timing<5> | NULL | 2 | data<2> | 60 | 4 | usb_rd_MC.UIM | NULL | 5 | usb_timing<8> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 6 | usb_timing<2> | NULL | 8 | usb_timing<0> | NULL | 9 | usb_timing<4> | NULL | 10 | usb_timing<7> | NULL | 11 | usb_timing<6> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 14 | data<0> | 64 | 17 | data<1> | 58 | 20 | usb_timing<1> | NULL | 32 | FPGA_done | 28
+
+FB_IMUX_INDEX | FOOBAR4_ | 92 | 88 | 63 | -1 | 121 | 85 | 94 | -1 | 93 | 90 | 86 | 87 | -1 | -1 | 46 | -1 | -1 | 62 | -1 | -1 | 95 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 26 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+GLOBAL_FCLK | mclk | 0 | 0

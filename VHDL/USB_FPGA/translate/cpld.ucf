@@ -1,0 +1,29 @@
+
+NET "SCL_1V8" LOC = "11" ;						#SCL1V8
+NET "SCL_1V8" IOSTANDARD = "LVCMOS18" ;
+NET "SDA_1V8" LOC = "12" ;
+NET "SDA_1V8" IOSTANDARD = "LVCMOS18" ; 	#SDA1V8
+NET "INT_1V8" LOC = "13";
+NET "INT_1V8" IOSTANDARD = "LVCMOS18" ;	#INT 1V8
+
+NET "SCL_PI"  LOC = "15" ;							#PI side
+NET "SCL_PI" IOSTANDARD = "LVCMOS33" ; 		# 
+NET "SDA_PI"  LOC = "16" ;							#PI side
+NET "SDA_PI" IOSTANDARD = "LVCMOS33" ; 		#
+NET "INT_PI" LOC = "17";
+NET "INT_PI" IOSTANDARD = "LVCMOS33" ; 		#
+NET "DIR"  LOC = "18" ;								#PI side
+NET "DIR" IOSTANDARD = "LVCMOS33" ; 			#
+
+NET "SW(0)" LOC = "71" ;
+NET "SW(1)" LOC = "72" ;
+NET "SW(2)" LOC = "74" ;
+
+NET "LEDs(1)" LOC = "P1" ;
+NET "LEDs(2)" LOC = "P2" ;
+NET "LEDs(3)" LOC = "P3" ;
+NET "LEDs(4)" LOC = "P4" ;
+NET "LEDs(5)" LOC = "P6" ;
+NET "LEDs(6)" LOC = "P7" ;
+NET "LEDs(7)" LOC = "P8" ;
+NET "LEDs(8)" LOC = "P9" ;

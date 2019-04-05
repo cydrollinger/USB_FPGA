@@ -1,0 +1,589 @@
+MDF Database:  version 1.0
+MDF_INFO | CPLD | XC2C64A-7-VQ100
+MACROCELL | 3 | 0 | FPGA_D<0>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<0>
+INPUTP | 1 | 55
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<0> := data<0>;	// (1 pt, 1 inp)
+    FPGA_D<0>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<0>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 3 | 4 | FPGA_D<1>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<1>
+INPUTP | 1 | 51
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<1> := data<1>;	// (1 pt, 1 inp)
+    FPGA_D<1>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<1>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 3 | 5 | FPGA_D<2>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<2>
+INPUTP | 1 | 52
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<2> := data<2>;	// (1 pt, 1 inp)
+    FPGA_D<2>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<2>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 6 | FPGA_D<3>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<3>
+INPUTP | 1 | 46
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<3> := data<3>;	// (1 pt, 1 inp)
+    FPGA_D<3>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<3>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 5 | FPGA_D<4>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<4>
+INPUTP | 1 | 53
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<4> := data<4>;	// (1 pt, 1 inp)
+    FPGA_D<4>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<4>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 4 | FPGA_D<5>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<5>
+INPUTP | 1 | 48
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<5> := data<5>;	// (1 pt, 1 inp)
+    FPGA_D<5>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<5>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 3 | FPGA_D<6>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<6>
+INPUTP | 1 | 47
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<6> := data<6>;	// (1 pt, 1 inp)
+    FPGA_D<6>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<6>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 2 | FPGA_D<7>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | data<7>
+INPUTP | 1 | 49
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   FPGA_D<7> := data<7>;	// (1 pt, 1 inp)
+    FPGA_D<7>.OE = !FPGA_done;	// CTE	(1 pt, 1 inp)
+   FPGA_D<7>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 1 | FPGA_MOSI_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   FPGA_MOSI = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 9 | FPGA_cclk_MC
+ATTRIBUTES | 2151973634 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 10 | FPGA_cclk  | usb_timing<0>  | usb_timing<2>  | usb_timing<1>  | usb_timing<3>  | usb_timing<4>  | usb_timing<5>  | usb_timing<6>  | usb_timing<7>  | usb_timing<8>
+INPUTMC | 10 | 1 | 9 | 1 | 13 | 1 | 14 | 1 | 15 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 7 | 
+   FPGA_cclk.T := FPGA_cclk & !usb_timing<0> & usb_timing<2> & 
+	!usb_timing<1> & !usb_timing<3> & !usb_timing<4> & !usb_timing<5> & 
+	!usb_timing<6> & !usb_timing<7> & !usb_timing<8>
+	# !FPGA_cclk & usb_timing<0> & !usb_timing<2> & 
+	usb_timing<1> & !usb_timing<3> & !usb_timing<4> & !usb_timing<5> & 
+	!usb_timing<6> & !usb_timing<7> & !usb_timing<8>;	// (2 pt, 10 inp)
+   FPGA_cclk.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 13 | usb_timing<0>_MC
+ATTRIBUTES | 2151711492 | 0
+OUTPUTMC | 5 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 11 | usb_timing<0>  | usb_dry  | previous_usb_dry  | usb_timing<2>  | usb_timing<3>  | usb_timing<4>  | usb_timing<5>  | usb_timing<6>  | usb_timing<7>  | usb_timing<8>  | usb_timing<1>
+INPUTMC | 11 | 1 | 13 | 1 | 2 | 1 | 3 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15
+EQ | 14 | 
+   usb_timing<0>.T := usb_timing<0> & usb_dry & !previous_usb_dry
+	# !usb_timing<2> & !usb_timing<3> & !usb_dry & 
+	!usb_timing<4> & !usb_timing<5> & !usb_timing<6> & !usb_timing<7> & 
+	!usb_timing<8>
+	# !usb_timing<2> & !usb_timing<3> & previous_usb_dry & 
+	!usb_timing<4> & !usb_timing<5> & !usb_timing<6> & !usb_timing<7> & 
+	!usb_timing<8>
+	# !usb_timing<0> & !usb_timing<1> & !usb_timing<3> & 
+	!usb_dry & !usb_timing<4> & !usb_timing<5> & !usb_timing<6> & 
+	!usb_timing<7> & !usb_timing<8>
+	# !usb_timing<0> & !usb_timing<1> & !usb_timing<3> & 
+	previous_usb_dry & !usb_timing<4> & !usb_timing<5> & !usb_timing<6> & 
+	!usb_timing<7> & !usb_timing<8>;	// (5 pt, 11 inp)
+   usb_timing<0>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 14 | usb_timing<2>_MC
+ATTRIBUTES | 2151711492 | 0
+OUTPUTMC | 5 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 11 | usb_timing<2>  | usb_dry  | previous_usb_dry  | usb_timing<0>  | usb_timing<1>  | usb_timing<3>  | usb_timing<4>  | usb_timing<5>  | usb_timing<6>  | usb_timing<7>  | usb_timing<8>
+INPUTMC | 11 | 1 | 14 | 1 | 2 | 1 | 3 | 1 | 13 | 1 | 15 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 8 | 
+   usb_timing<2>.T := usb_timing<2> & usb_dry & !previous_usb_dry
+	# usb_timing<0> & !usb_timing<2> & usb_timing<1> & 
+	!usb_timing<3> & !usb_dry & !usb_timing<4> & !usb_timing<5> & 
+	!usb_timing<6> & !usb_timing<7> & !usb_timing<8>
+	# usb_timing<0> & !usb_timing<2> & usb_timing<1> & 
+	!usb_timing<3> & previous_usb_dry & !usb_timing<4> & !usb_timing<5> & 
+	!usb_timing<6> & !usb_timing<7> & !usb_timing<8>;	// (3 pt, 11 inp)
+   usb_timing<2>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 15 | usb_timing<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 11 | usb_timing<1>  | usb_dry  | previous_usb_dry  | usb_timing<0>  | usb_timing<2>  | usb_timing<3>  | usb_timing<4>  | usb_timing<5>  | usb_timing<6>  | usb_timing<7>  | usb_timing<8>
+INPUTMC | 11 | 1 | 15 | 1 | 2 | 1 | 3 | 1 | 13 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 8 | 
+   usb_timing<1>.T := usb_timing<1> & usb_dry & !previous_usb_dry
+	# usb_timing<0> & !usb_timing<2> & !usb_timing<3> & 
+	!usb_dry & !usb_timing<4> & !usb_timing<5> & !usb_timing<6> & 
+	!usb_timing<7> & !usb_timing<8>
+	# usb_timing<0> & !usb_timing<2> & !usb_timing<3> & 
+	previous_usb_dry & !usb_timing<4> & !usb_timing<5> & !usb_timing<6> & 
+	!usb_timing<7> & !usb_timing<8>;	// (3 pt, 11 inp)
+   usb_timing<1>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 12 | usb_timing<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 12 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 3 | usb_timing<3>  | usb_dry  | previous_usb_dry
+INPUTMC | 3 | 1 | 12 | 1 | 2 | 1 | 3
+EQ | 2 | 
+   usb_timing<3>.T := usb_timing<3> & usb_dry & !previous_usb_dry;	// (1 pt, 3 inp)
+   usb_timing<3>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 2 | usb_dry_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 10 | 1 | 4 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTS | 1 | usb_rx
+INPUTP | 1 | 57
+EQ | 2 | 
+   usb_dry := !usb_rx;	// (1 pt, 1 inp)
+   usb_dry.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 3 | previous_usb_dry_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 9 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTS | 1 | previous
+INPUTMC | 1 | 1 | 4
+EQ | 2 | 
+   previous_usb_dry := previous;	// (1 pt, 1 inp)
+   previous_usb_dry.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 4 | previous_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 1 | 3
+INPUTS | 1 | usb_dry
+INPUTMC | 1 | 1 | 2
+EQ | 2 | 
+   previous := usb_dry;	// (1 pt, 1 inp)
+   previous.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 10 | usb_timing<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 10 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 3 | usb_dry  | previous_usb_dry  | usb_timing<4>
+INPUTMC | 3 | 1 | 2 | 1 | 3 | 1 | 10
+EQ | 2 | 
+   usb_timing<4>.T := usb_dry & !previous_usb_dry & usb_timing<4>;	// (1 pt, 3 inp)
+   usb_timing<4>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 8 | usb_timing<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 8 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 3 | usb_dry  | previous_usb_dry  | usb_timing<5>
+INPUTMC | 3 | 1 | 2 | 1 | 3 | 1 | 8
+EQ | 2 | 
+   usb_timing<5>.T := usb_dry & !previous_usb_dry & usb_timing<5>;	// (1 pt, 3 inp)
+   usb_timing<5>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 7 | usb_timing<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 7 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 3 | usb_dry  | previous_usb_dry  | usb_timing<6>
+INPUTMC | 3 | 1 | 2 | 1 | 3 | 1 | 7
+EQ | 2 | 
+   usb_timing<6>.T := usb_dry & !previous_usb_dry & usb_timing<6>;	// (1 pt, 3 inp)
+   usb_timing<6>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 6 | usb_timing<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 6 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 3 | usb_dry  | previous_usb_dry  | usb_timing<7>
+INPUTMC | 3 | 1 | 2 | 1 | 3 | 1 | 6
+EQ | 2 | 
+   usb_timing<7>.T := usb_dry & !previous_usb_dry & usb_timing<7>;	// (1 pt, 3 inp)
+   usb_timing<7>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 5 | usb_timing<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 3 | 9
+INPUTS | 3 | usb_dry  | previous_usb_dry  | usb_timing<8>
+INPUTMC | 3 | 1 | 2 | 1 | 3 | 1 | 5
+EQ | 2 | 
+   usb_timing<8>.T := usb_dry & !previous_usb_dry & usb_timing<8>;	// (1 pt, 3 inp)
+   usb_timing<8>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 12 | FPGA_prog_B_MC
+ATTRIBUTES | 2151973634 | 0
+OUTPUTMC | 1 | 0 | 12
+INPUTS | 11 | SW_1_hi  | fpga_timing<3>  | fpga_timing<5>  | fpga_timing<6>  | fpga_timing<7>  | fpga_timing<8>  | fpga_timing<4>  | FPGA_prog_B  | fpga_timing<2>  | fpga_timing<0>  | fpga_timing<1>
+INPUTMC | 11 | 2 | 9 | 0 | 15 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14 | 0 | 12 | 0 | 13 | 0 | 3 | 0 | 2
+EQ | 22 | 
+   FPGA_prog_B.T := !SW_1_hi & fpga_timing<3> & !fpga_timing<5> & 
+	!fpga_timing<6> & !fpga_timing<7> & !fpga_timing<8> & !fpga_timing<4> & 
+	FPGA_prog_B
+	# !SW_1_hi & fpga_timing<2> & !fpga_timing<5> & 
+	!fpga_timing<6> & !fpga_timing<7> & !fpga_timing<8> & !fpga_timing<4> & 
+	FPGA_prog_B
+	# fpga_timing<0> & !SW_1_hi & !fpga_timing<3> & 
+	!fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & 
+	!fpga_timing<8> & FPGA_prog_B
+	# !SW_1_hi & fpga_timing<1> & !fpga_timing<3> & 
+	!fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & 
+	!fpga_timing<8> & FPGA_prog_B
+	# !fpga_timing<0> & !SW_1_hi & !fpga_timing<1> & 
+	!fpga_timing<3> & !fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & 
+	!fpga_timing<8> & fpga_timing<4> & FPGA_prog_B
+	# fpga_timing<0> & !SW_1_hi & !fpga_timing<1> & 
+	!fpga_timing<3> & fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & 
+	!fpga_timing<7> & !fpga_timing<8> & fpga_timing<4> & !FPGA_prog_B
+	# !fpga_timing<0> & !SW_1_hi & !fpga_timing<1> & 
+	!fpga_timing<3> & !fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & 
+	!fpga_timing<7> & !fpga_timing<8> & !fpga_timing<4> & !FPGA_prog_B;	// (7 pt, 11 inp)
+   FPGA_prog_B.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 3 | fpga_timing<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 10 | fpga_timing<0>  | SW_1_hi  | fpga_timing<5>  | fpga_timing<6>  | fpga_timing<7>  | fpga_timing<8>  | fpga_timing<4>  | fpga_timing<1>  | fpga_timing<3>  | fpga_timing<2>
+INPUTMC | 10 | 0 | 3 | 2 | 9 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14 | 0 | 2 | 0 | 15 | 0 | 13
+EQ | 8 | 
+   fpga_timing<0>.T := fpga_timing<0> & SW_1_hi
+	# !SW_1_hi & !fpga_timing<5> & !fpga_timing<6> & 
+	!fpga_timing<7> & !fpga_timing<8> & !fpga_timing<4>
+	# !SW_1_hi & !fpga_timing<1> & !fpga_timing<3> & 
+	!fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & !fpga_timing<8>
+	# !SW_1_hi & !fpga_timing<3> & !fpga_timing<2> & 
+	!fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & !fpga_timing<8>;	// (4 pt, 10 inp)
+   fpga_timing<0>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 9 | SW_1_hi_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 11 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12 | 0 | 10
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+SW_1_hi := SW<1>;	// (0 pt, 0 inp)
+   SW_1_hi.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 2 | fpga_timing<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 10 | SW_1_hi  | fpga_timing<1>  | fpga_timing<0>  | fpga_timing<5>  | fpga_timing<6>  | fpga_timing<7>  | fpga_timing<8>  | fpga_timing<4>  | fpga_timing<3>  | fpga_timing<2>
+INPUTMC | 10 | 2 | 9 | 0 | 2 | 0 | 3 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14 | 0 | 15 | 0 | 13
+EQ | 10 | 
+   fpga_timing<1>.T := SW_1_hi & fpga_timing<1>
+	# fpga_timing<0> & !SW_1_hi & !fpga_timing<5> & 
+	!fpga_timing<6> & !fpga_timing<7> & !fpga_timing<8> & !fpga_timing<4>
+	# fpga_timing<0> & !SW_1_hi & !fpga_timing<1> & 
+	!fpga_timing<3> & !fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & 
+	!fpga_timing<8>
+	# fpga_timing<0> & !SW_1_hi & !fpga_timing<3> & 
+	!fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & 
+	!fpga_timing<8>;	// (4 pt, 10 inp)
+   fpga_timing<1>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 15 | fpga_timing<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 10 | SW_1_hi  | fpga_timing<3>  | fpga_timing<0>  | fpga_timing<1>  | fpga_timing<2>  | fpga_timing<5>  | fpga_timing<6>  | fpga_timing<7>  | fpga_timing<8>  | fpga_timing<4>
+INPUTMC | 10 | 2 | 9 | 0 | 15 | 0 | 3 | 0 | 2 | 0 | 13 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14
+EQ | 5 | 
+   fpga_timing<3>.T := SW_1_hi & fpga_timing<3>
+	# fpga_timing<0> & !SW_1_hi & fpga_timing<1> & 
+	fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & 
+	!fpga_timing<8> & !fpga_timing<4>;	// (2 pt, 10 inp)
+   fpga_timing<3>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 13 | fpga_timing<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 10 | SW_1_hi  | fpga_timing<2>  | fpga_timing<0>  | fpga_timing<1>  | fpga_timing<5>  | fpga_timing<6>  | fpga_timing<7>  | fpga_timing<8>  | fpga_timing<4>  | fpga_timing<3>
+INPUTMC | 10 | 2 | 9 | 0 | 13 | 0 | 3 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14 | 0 | 15
+EQ | 8 | 
+   fpga_timing<2>.T := SW_1_hi & fpga_timing<2>
+	# fpga_timing<0> & !SW_1_hi & fpga_timing<1> & 
+	!fpga_timing<5> & !fpga_timing<6> & !fpga_timing<7> & !fpga_timing<8> & 
+	!fpga_timing<4>
+	# fpga_timing<0> & !SW_1_hi & fpga_timing<1> & 
+	!fpga_timing<3> & !fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & 
+	!fpga_timing<7> & !fpga_timing<8>;	// (3 pt, 10 inp)
+   fpga_timing<2>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 1 | fpga_timing<5>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 7 | 0 | 1 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 2 | SW_1_hi  | fpga_timing<5>
+INPUTMC | 2 | 2 | 9 | 0 | 1
+EQ | 2 | 
+   fpga_timing<5> := !SW_1_hi & fpga_timing<5>;	// (1 pt, 2 inp)
+   fpga_timing<5>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 0 | fpga_timing<6>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 7 | 0 | 0 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 2 | SW_1_hi  | fpga_timing<6>
+INPUTMC | 2 | 2 | 9 | 0 | 0
+EQ | 2 | 
+   fpga_timing<6> := !SW_1_hi & fpga_timing<6>;	// (1 pt, 2 inp)
+   fpga_timing<6>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 1 | 1 | fpga_timing<7>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 7 | 1 | 1 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 2 | SW_1_hi  | fpga_timing<7>
+INPUTMC | 2 | 2 | 9 | 1 | 1
+EQ | 2 | 
+   fpga_timing<7> := !SW_1_hi & fpga_timing<7>;	// (1 pt, 2 inp)
+   fpga_timing<7>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 2 | 15 | fpga_timing<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 7 | 2 | 15 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 2 | SW_1_hi  | fpga_timing<8>
+INPUTMC | 2 | 2 | 9 | 2 | 15
+EQ | 2 | 
+   fpga_timing<8> := !SW_1_hi & fpga_timing<8>;	// (1 pt, 2 inp)
+   fpga_timing<8>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 14 | fpga_timing<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12
+INPUTS | 10 | SW_1_hi  | fpga_timing<4>  | fpga_timing<0>  | fpga_timing<1>  | fpga_timing<3>  | fpga_timing<2>  | fpga_timing<5>  | fpga_timing<6>  | fpga_timing<7>  | fpga_timing<8>
+INPUTMC | 10 | 2 | 9 | 0 | 14 | 0 | 3 | 0 | 2 | 0 | 15 | 0 | 13 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15
+EQ | 5 | 
+   fpga_timing<4> := !SW_1_hi & fpga_timing<4>
+	# fpga_timing<0> & !SW_1_hi & fpga_timing<1> & 
+	fpga_timing<3> & fpga_timing<2> & !fpga_timing<5> & !fpga_timing<6> & 
+	!fpga_timing<7> & !fpga_timing<8>;	// (2 pt, 10 inp)
+   fpga_timing<4>.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 11 | LEDs<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<0>.PIN  | usb_rst
+INPUTMC | 1 | 1 | 0
+INPUTP | 2 | 24 | 31
+EQ | 2 | 
+   !LEDs<1> = FPGA_done & FPGA_D<0>.PIN
+	# !FPGA_done & !usb_rst;	// (2 pt, 3 inp)
+
+MACROCELL | 1 | 0 | usb_rst_MC
+ATTRIBUTES | 2156167938 | 0
+OUTPUTMC | 2 | 0 | 11 | 0 | 7
+INPUTS | 1 | SW<0>
+INPUTP | 1 | 60
+EQ | 2 | 
+   usb_rst := SW<0>;	// (1 pt, 1 inp)
+   usb_rst.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 10 | LEDs<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<1>.PIN  | SW_1_hi
+INPUTMC | 1 | 2 | 9
+INPUTP | 2 | 24 | 36
+EQ | 2 | 
+   !LEDs<2> = FPGA_done & FPGA_D<1>.PIN
+	# !FPGA_done & !SW_1_hi;	// (2 pt, 3 inp)
+
+MACROCELL | 0 | 9 | LEDs<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<2>.PIN  | SW_2_hi
+INPUTMC | 1 | 2 | 8
+INPUTP | 2 | 24 | 37
+EQ | 2 | 
+   !LEDs<3> = FPGA_done & FPGA_D<2>.PIN
+	# !FPGA_done & !SW_2_hi;	// (2 pt, 3 inp)
+
+MACROCELL | 2 | 8 | SW_2_hi_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 1 | 0 | 9
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+SW_2_hi := SW<2>;	// (0 pt, 0 inp)
+   SW_2_hi.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+MACROCELL | 0 | 8 | LEDs<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<3>.PIN  | FPGA_INITB
+INPUTP | 3 | 24 | 64 | 74
+EQ | 2 | 
+   !LEDs<4> = FPGA_done & FPGA_D<3>.PIN
+	# !FPGA_done & !FPGA_INITB;	// (2 pt, 3 inp)
+
+MACROCELL | 0 | 7 | LEDs<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<4>.PIN  | usb_rst
+INPUTMC | 1 | 1 | 0
+INPUTP | 2 | 24 | 65
+EQ | 2 | 
+   !LEDs<5> = FPGA_done & FPGA_D<4>.PIN
+	# !FPGA_done & !usb_rst;	// (2 pt, 3 inp)
+
+MACROCELL | 0 | 6 | LEDs<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<5>.PIN  | N24.PIN
+INPUTP | 3 | 24 | 66 | 25
+EQ | 2 | 
+   !LEDs<6> = FPGA_done & FPGA_D<5>.PIN
+	# !FPGA_done & !N24.PIN;	// (2 pt, 3 inp)
+
+MACROCELL | 0 | 5 | LEDs<7>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<6>.PIN  | N24.PIN
+INPUTP | 3 | 24 | 67 | 25
+EQ | 2 | 
+   !LEDs<7> = FPGA_done & FPGA_D<6>.PIN
+	# !FPGA_done & !N24.PIN;	// (2 pt, 3 inp)
+
+MACROCELL | 0 | 4 | LEDs<8>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | FPGA_done  | FPGA_D<7>.PIN  | N24.PIN
+INPUTP | 3 | 24 | 71 | 25
+EQ | 2 | 
+   !LEDs<8> = FPGA_done & FPGA_D<7>.PIN
+	# !FPGA_done & !N24.PIN;	// (2 pt, 3 inp)
+
+MACROCELL | 3 | 1 | Mode<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   Mode<0> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 3 | Mode<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !Mode<1> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 6 | Mode<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !Mode<2> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 11 | N24_MC
+ATTRIBUTES | 1141113602 | 2
+INPUTS | 0
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   !N24 = Gnd;	// (0 pt, 0 inp)
+    N24.OE = SW_2_hi;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 2 | 11 | mclk_ce_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !mclk_ce = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 9 | usb_rd_MC
+ATTRIBUTES | 2151973634 | 0
+OUTPUTMC | 1 | 3 | 9
+INPUTS | 10 | usb_timing<2>  | usb_timing<3>  | usb_timing<4>  | usb_timing<5>  | usb_timing<6>  | usb_timing<7>  | usb_timing<8>  | usb_rd  | usb_timing<0>  | usb_timing<1>
+INPUTMC | 10 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 3 | 9 | 1 | 13 | 1 | 15
+EQ | 7 | 
+   usb_rd.T := !usb_timing<2> & !usb_timing<3> & !usb_timing<4> & 
+	!usb_timing<5> & !usb_timing<6> & !usb_timing<7> & !usb_timing<8> & 
+	usb_rd
+	# !usb_timing<0> & usb_timing<2> & !usb_timing<1> & 
+	!usb_timing<3> & !usb_timing<4> & !usb_timing<5> & !usb_timing<6> & 
+	!usb_timing<7> & !usb_timing<8> & !usb_rd;	// (2 pt, 10 inp)
+   usb_rd.CLK  =  mclk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | mclk
+
+PIN | data<0> | 64 | 0 | LVTTL | 55 | 1 | 3 | 0
+PIN | mclk | 4096 | 0 | LVTTL | 19 | 35 | 3 | 0 | 3 | 4 | 3 | 5 | 2 | 6 | 2 | 5 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 2 | 1 | 4 | 1 | 3 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 9 | 2 | 9 | 0 | 1 | 0 | 0 | 1 | 1 | 2 | 15 | 0 | 14 | 0 | 13 | 0 | 15 | 0 | 2 | 0 | 3 | 0 | 12 | 1 | 0 | 2 | 8 | 3 | 9
+PIN | FPGA_done | 64 | 0 | LVTTL | 24 | 8 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4
+PIN | data<1> | 64 | 0 | LVTTL | 51 | 1 | 3 | 4
+PIN | data<2> | 64 | 0 | LVTTL | 52 | 1 | 3 | 5
+PIN | data<3> | 64 | 0 | LVTTL | 46 | 1 | 2 | 6
+PIN | data<4> | 64 | 0 | LVTTL | 53 | 1 | 2 | 5
+PIN | data<5> | 64 | 0 | LVTTL | 48 | 1 | 2 | 4
+PIN | data<6> | 64 | 0 | LVTTL | 47 | 1 | 2 | 3
+PIN | data<7> | 64 | 0 | LVTTL | 49 | 1 | 2 | 2
+PIN | FPGA_INITB | 64 | 0 | LVTTL | 74 | 1 | 0 | 8
+PIN | usb_rx | 64 | 0 | LVTTL | 57 | 1 | 1 | 2
+PIN | SW<0> | 64 | 64 | LVTTL | 60 | 1 | 1 | 0
+PIN | SW<1> | 64 | 64 | LVTTL | 61 | 1 | 2 | 9
+PIN | SW<2> | 64 | 64 | LVTTL | 62 | 1 | 2 | 8
+PIN | FPGA_MOSI | 536871040 | 0 | LVTTL | 72
+PIN | FPGA_cclk | 536871040 | 0 | LVTTL | 23
+PIN | FPGA_prog_B | 536871040 | 0 | LVTTL | 78
+PIN | LEDs<1> | 536871040 | 0 | LVTTL | 80
+PIN | LEDs<2> | 536871040 | 0 | LVTTL | 81
+PIN | LEDs<3> | 536871040 | 0 | LVTTL | 1
+PIN | LEDs<4> | 536871040 | 0 | LVTTL | 2
+PIN | LEDs<5> | 536871040 | 0 | LVTTL | 4
+PIN | LEDs<6> | 536871040 | 0 | LVTTL | 5
+PIN | LEDs<7> | 536871040 | 0 | LVTTL | 6
+PIN | LEDs<8> | 536871040 | 0 | LVTTL | 7
+PIN | Mode<0> | 536871040 | 0 | LVTTL | 32
+PIN | Mode<1> | 536871040 | 0 | LVTTL | 35
+PIN | Mode<2> | 536871040 | 0 | LVTTL | 38
+PIN | mclk_ce | 536871040 | 0 | LVTTL | 59
+PIN | usb_rd | 536871040 | 0 | LVTTL | 44
+PIN | usb_rst | 536871040 | 0 | LVTTL | 12
+PIN | FPGA_D<0> | 536870976 | 0 | LVTTL | 31 | 1 | 0 | 11
+PIN | FPGA_D<1> | 536870976 | 0 | LVTTL | 36 | 1 | 0 | 10
+PIN | FPGA_D<2> | 536870976 | 0 | LVTTL | 37 | 1 | 0 | 9
+PIN | FPGA_D<3> | 536870976 | 0 | LVTTL | 64 | 1 | 0 | 8
+PIN | FPGA_D<4> | 536870976 | 0 | LVTTL | 65 | 1 | 0 | 7
+PIN | FPGA_D<5> | 536870976 | 0 | LVTTL | 66 | 1 | 0 | 6
+PIN | FPGA_D<6> | 536870976 | 0 | LVTTL | 67 | 1 | 0 | 5
+PIN | FPGA_D<7> | 536870976 | 0 | LVTTL | 71 | 1 | 0 | 4
+PIN | N24 | 536870976 | 0 | LVTTL | 25 | 3 | 0 | 6 | 0 | 5 | 0 | 4

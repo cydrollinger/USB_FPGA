@@ -1,0 +1,49 @@
+[Eagle]
+Version="05 06 00"
+Platform="Windows"
+Serial="6B337FDA02-LS-W-1CS"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="C:/Program Files/eagle5.6/lbr/con-molex.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/markers.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/Bourns.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/Panasonic.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/analog-devices_III.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/con-hirose.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/con-molex.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/crystal.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/diode.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/fairchild-semic.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/frames.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/led.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/linear-technology.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/littlefuse.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/magjack.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/power_connector.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/pulse.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/rcl.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/smsc.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/st-microelectronics.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/supply1.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/supply2.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/switch-omron.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/switch.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/transistor-npn.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/transistor-pnp.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/vishay.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/xilinx.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/ftdichip-3.lbr"
+UsedLibrary="C:/Program Files/eagle5.6/lbr/usb_fpga/con-cypressindustries.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="166 18 1344 635"
+State=2
+Number=0
+
+[Desktop]
+Screen="1440 900"
+Window="Win_1"

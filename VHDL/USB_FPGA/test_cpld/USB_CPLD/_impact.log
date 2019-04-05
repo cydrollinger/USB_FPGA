@@ -1,0 +1,319 @@
+iMPACT Version: 
+iMPACT log file Started on Sat Mar 14 15:50:12 2015
+
+// *** BATCH CMD : setPreference -pref AutoSignature:FALSE
+// *** BATCH CMD : setPreference -pref KeepSVF:FALSE
+// *** BATCH CMD : setPreference -pref ConcurrentMode:FALSE
+// *** BATCH CMD : setPreference -pref UseHighz:FALSE
+// *** BATCH CMD : setPreference -pref UserLevel:NOVICE
+// *** BATCH CMD : setPreference -pref svfUseTime:FALSE
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0.Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver xusbdfwu.sys version: 1021 (1027).
+ Driver windrvr6.sys version = 10.2.1.0. Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2400.
+CPLD file version = 0012h.
+CPLD version = FFFEh.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+Attempting to identify devices in the boundary-scan chain configuration...// *** BATCH CMD : Identify 
+PROGRESS_START - Starting Operation.
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xc3s250e, Version : 1
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/spartan3e/data/xc3s250e.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3s250e successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID =Xilinx xc2c256, Version : 1
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/xbr/data/xc2c256.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2c256 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.jed"
+'1': Loading file 'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.jed'...
+done.
+INFO:iMPACT:501 - '1': Added Device xc2c256 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+// *** BATCH CMD : assignFile -p 2 -file "C:/Documents and Settings/CyDrollinger/MyDocuments/work/Xilinx/USB_FPGA_jtagloader/USB_FPGA_jtagloader/USB_FPGA/usb_fpga.bit"
+'2': Loading file 'C:/Documents and Settings/Cy Drollinger/MyDocuments/work/Xilinx/USB_FPGA_jtagloader/USB_FPGA_jtagloader/USB_FPGA/usb_fpga.bit' ...
+done.
+WARNING:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the   bitstream stored in memory,
+   but the original bitstream file remains unchanged.
+INFO:iMPACT:501 - '2': Added Device xc3s250e successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+// *** BATCH CMD : Program -p 1 -e -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Setting ISC done bits...done
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+// *** BATCH CMD : Program -p 2 -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2':Programming  device...
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         1
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0001 1110 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+INFO:iMPACT:580 - '2':Checking done pin ....done.
+'2': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : Program -p 2 -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2':Programming  device...
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         1
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0001 1110 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+INFO:iMPACT:580 - '2':Checking done pin ....done.
+'2': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : Program -p 1 -e -defaultVersion 0 
+Updating config fileC:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.jed...
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Setting ISC done bits...done
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : Program -p 1 -e -defaultVersion 0 
+Updating config fileC:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.jed...
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Setting ISC done bits...done
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+// *** BATCH CMD : Program -p 1 -e -defaultVersion 0 
+Updating config fileC:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.jed...
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Setting ISC done bits...done
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+// *** BATCH CMD : Program -p 2 -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2':Programming  device...
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         0
+DCI matched                                       :         0
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         0
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0000 0000 0000 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+INFO:iMPACT:580 - '2':Checking done pin ....done.
+'2': Programming terminated, Done did not go high.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : Program -p 1 -e -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Setting ISC done bits...done
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+// *** BATCH CMD : Program -p 2 -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2':Programming  device...
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         0
+DCI matched                                       :         0
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         0
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0000 0000 0000 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+INFO:iMPACT:580 - '2':Checking done pin ....done.
+'2': Programming terminated, Done did not go high.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : Program -p 1 -e -defaultVersion 0 
+Updating config fileC:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.jed...
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Setting ISC done bits...done
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+// *** BATCH CMD : Program -p 2 -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2':Programming  device...
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         0
+DCI matched                                       :         0
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         0
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0000 0000 0000 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+INFO:iMPACT:580 - '2':Checking done pin ....done.
+'2': Programming terminated, Done did not go high.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+ Cable is LOCKED. Retrying...
+The selected cable is being used by another application.
+ Please retry the current operation.

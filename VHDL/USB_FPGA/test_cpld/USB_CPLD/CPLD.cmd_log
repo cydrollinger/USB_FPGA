@@ -1,0 +1,64 @@
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -i -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -i -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD
+xst -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -ifn CPLD.xst -ofn CPLD.syr
+ngdbuild -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -dd _ngo -uc "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" -p xbr "CPLD.ngc" CPLD.ngd
+cpldfit -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -p xc2c256-6-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" CPLD_build.xml
+tsim -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise CPLD CPLD.nga
+taengine -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -intstyle ise -f CPLD -w --format html1 -l C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD_html/tim/timing_report.htm
+hprep6 -ise "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise" -s IEEE1149 -i CPLD

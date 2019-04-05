@@ -1,0 +1,91 @@
+Pin Freeze File:  version P.20131013
+
+2C256100 XC2C256-7-VQ100
+FPGA_INITB S:PIN92
+FPGA_done S:PIN28
+SW<0> S:PIN71
+SW<1> S:PIN72
+SW<2> S:PIN74
+data<0> S:PIN64
+data<1> S:PIN58
+data<2> S:PIN60
+data<3> S:PIN52
+data<4> S:PIN61
+data<5> S:PIN55
+data<6> S:PIN53
+data<7> S:PIN56
+mclk S:PIN22
+usb_rx S:PIN68
+FPGA_D<0> S:PIN35
+FPGA_D<1> S:PIN40
+FPGA_D<2> S:PIN41
+FPGA_D<3> S:PIN77
+FPGA_D<4> S:PIN78
+FPGA_D<5> S:PIN79
+FPGA_D<6> S:PIN81
+FPGA_D<7> S:PIN89
+FPGA_MOSI S:PIN90
+FPGA_RDWR S:PIN10
+FPGA_cclk S:PIN27
+FPGA_prog_B S:PIN99
+LEDs<1> S:PIN1
+LEDs<2> S:PIN2
+LEDs<3> S:PIN3
+LEDs<4> S:PIN4
+LEDs<5> S:PIN6
+LEDs<6> S:PIN7
+LEDs<7> S:PIN8
+LEDs<8> S:PIN9
+Mode<0> S:PIN36
+Mode<1> S:PIN39
+Mode<2> S:PIN42
+N24 S:PIN29
+mclk_ce S:PIN70
+usb_rd S:PIN50
+usb_rst S:PIN14
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 usb_timing<3> previous FPGA_prog_B fpga_timing<8>
+		 fpga_timing<7> usb_timing<4> fpga_timing<6> fpga_timing<5>
+		 fpga_timing<1> fpga_timing<0> fpga_timing<2> usb_timing<0>
+		 usb_timing<2> usb_timing<1> fpga_timing<4> fpga_timing<3>
+		
+PARTITION FB2_1 LEDs<1>
+PARTITION FB2_3 LEDs<2>
+PARTITION FB2_5 LEDs<3>
+PARTITION FB2_8 usb_timing<8> usb_timing<7> usb_timing<6> usb_timing<5>
+		 LEDs<4> usb_dry LEDs<5> LEDs<6>
+		 previous_usb_dry
+PARTITION FB3_16 FPGA_MOSI
+PARTITION FB4_1 LEDs<7> LEDs<8> FPGA_RDWR
+
+
+PARTITION FB6_4 FPGA_cclk
+PARTITION FB6_14 N24
+
+PARTITION FB7_14 usb_rst
+
+PARTITION FB8_13 FPGA_D<0> Mode<0>
+
+PARTITION FB9_1 FPGA_D<4> FPGA_D<5>
+PARTITION FB9_6 FPGA_D<6>
+
+PARTITION FB10_1 FPGA_D<3>
+PARTITION FB10_3 SW_2_hi
+PARTITION FB10_5 SW_1_hi
+PARTITION FB10_12 mclk_ce
+
+PARTITION FB11_14 FPGA_D<7>
+
+
+
+PARTITION FB14_3 usb_rd
+
+
+PARTITION FB16_6 Mode<2>
+PARTITION FB16_11 FPGA_D<2> FPGA_D<1> Mode<1>
+
+

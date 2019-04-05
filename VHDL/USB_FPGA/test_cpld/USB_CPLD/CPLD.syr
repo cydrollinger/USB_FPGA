@@ -1,0 +1,210 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.39 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.39 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: CPLD.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPLD.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPLD"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : CPLD
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : YES
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+
+---- Other Options
+lso                                : CPLD.lso
+verilog2001                        : YES
+safe_implementation                : No
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.vhd" in Library work.
+Entity <cpld> compiled.
+Entity <cpld> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CPLD> in library <work> (architecture <behavioral>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CPLD> in library <work> (Architecture <behavioral>).
+Entity <CPLD> analyzed. Unit <CPLD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2561 - Always blocking tristate driving signal <FPGA_D> in unit <CPLD> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <FPGA_CSO_B> in unit <CPLD> is removed.
+
+Synthesizing Unit <CPLD>.
+    Related source file is "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.vhd".
+WARNING:Xst:1306 - Output <SPI_flash_W> is never assigned.
+WARNING:Xst:2565 - Inout <FPGA_prog_B> is never assigned.
+WARNING:Xst:1306 - Output <SPI_flash_HOLD> is never assigned.
+WARNING:Xst:2565 - Inout <data<0>> is never assigned.
+WARNING:Xst:647 - Input <FPGA_INITB> is never used.
+WARNING:Xst:2565 - Inout <data<1>> is never assigned.
+WARNING:Xst:2565 - Inout <data<2>> is never assigned.
+WARNING:Xst:2565 - Inout <data<3>> is never assigned.
+WARNING:Xst:2565 - Inout <data<4>> is never assigned.
+WARNING:Xst:2565 - Inout <data<5>> is never assigned.
+WARNING:Xst:2565 - Inout <data<6>> is never assigned.
+WARNING:Xst:2565 - Inout <data<7>> is never assigned.
+WARNING:Xst:647 - Input <SW> is never used.
+WARNING:Xst:2565 - Inout <usb_rd> is never assigned.
+WARNING:Xst:2565 - Inout <N24> is never assigned.
+WARNING:Xst:647 - Input <usb_rx> is never used.
+WARNING:Xst:2565 - Inout <usb_rst> is never assigned.
+WARNING:Xst:647 - Input <mclk> is never used.
+WARNING:Xst:2565 - Inout <FPGA_CSO_B> is never assigned.
+WARNING:Xst:1780 - Signal <usb_dry> is never used or assigned.
+WARNING:Xst:1780 - Signal <SW_1_hi> is never used or assigned.
+WARNING:Xst:1780 - Signal <usb_timing> is never used or assigned.
+WARNING:Xst:1780 - Signal <fpga_timing> is never used or assigned.
+WARNING:Xst:1780 - Signal <the_bus> is never used or assigned.
+WARNING:Xst:1780 - Signal <SW_0_hi> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus_reg> is never used or assigned.
+WARNING:Xst:1780 - Signal <previous_usb_dry> is never used or assigned.
+WARNING:Xst:1780 - Signal <SW_2_hi> is never used or assigned.
+WARNING:Xst:1780 - Signal <previous> is never used or assigned.
+    Found 1-bit tristate buffer for signal <FPGA_MOSI>.
+    Found 1-bit tristate buffer for signal <FPGA_cclk>.
+    Summary:
+	inferred   2 Tristate(s).
+Unit <CPLD> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CPLD> ...
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPLD.ngr
+Top Level Output File Name         : CPLD
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 46
+
+Cell Usage :
+# BELS                             : 10
+#      GND                         : 1
+#      INV                         : 8
+#      VCC                         : 1
+# IO Buffers                       : 25
+#      IBUF                        : 8
+#      OBUF                        : 15
+#      OBUFE                       : 2
+=========================================================================
+CPU : 4.88 / 5.28 s | Elapsed : 5.00 / 5.00 s
+ 
+--> 
+
+Total memory usage is 115944 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

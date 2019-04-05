@@ -1,0 +1,760 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: CPLD                                Date:  3-24-2018, 12:54PM
+Device Used: XC2C64A-7-VQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+49 /64  ( 77%) 75  /224  ( 33%) 64  /160  ( 40%) 35 /64  ( 55%) 41 /64  ( 64%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1      16/16*    24/40    37/56     9/16    0/1      0/1      0/1      0/1
+FB2      16/16*    18/40    25/56     3/16    0/1      0/1      0/1      1/1*
+FB3      10/16      8/40     7/56     7/16    0/1      0/1      0/1      1/1*
+FB4       7/16     14/40     6/56     7/16    0/1      0/1      0/1      1/1*
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total    49/64     64/160   75/224   26/64    0/4      0/4      0/4      3/4 
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+1/3         0/1         0/4         0/0
+
+Signal 'mclk' mapped onto global clock net GCK0.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   14          14    |  I/O              :    34     56
+Output        :   17          17    |  GCK/IO           :     2      3
+Bidirectional :    9           9    |  GTS/IO           :     4      4
+GCK           :    1           1    |  GSR/IO           :     1      1
+GTS           :    0           0    |  
+GSR           :    0           0    |  
+                 ----        ----
+        Total     41          41
+
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'CPLD.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'mclk' based upon the LOC
+   constraint 'P22'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+*************************  Summary of Mapped Logic  ************************
+
+** 26 Outputs **
+
+Signal              Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+LEDs<8>             2     3     2    FB1_5   9     I/O       O       LVTTL              FAST         
+LEDs<7>             2     3     2    FB1_6   8     I/O       O       LVTTL              FAST         
+LEDs<6>             2     3     2    FB1_7   7     I/O       O       LVTTL              FAST         
+LEDs<5>             2     3     2    FB1_8   6     I/O       O       LVTTL              FAST         
+LEDs<4>             2     3     2    FB1_9   4     GTS/I/O   O       LVTTL              FAST         
+LEDs<3>             2     3     2    FB1_10  3     GTS/I/O   O       LVTTL              FAST         
+LEDs<2>             2     3     2    FB1_11  2     GTS/I/O   O       LVTTL              FAST         
+LEDs<1>             2     3     2    FB1_12  1     GTS/I/O   O       LVTTL              FAST         
+FPGA_prog_B         7     11    2    FB1_13  99    GSR/I/O   O       LVTTL              FAST TFF     RESET
+usb_rst             1     1     1    FB2_1   14    I/O       O       LVTTL              FAST DFF     RESET
+FPGA_cclk           2     10    1    FB2_10  27    GCK/I/O   O       LVTTL              FAST TFF     RESET
+N24                 1     1     1    FB2_12  29    I/O       I/O     LVTTL              FAST         
+FPGA_MOSI           0     0     2    FB3_2   90    I/O       O       LVTTL              FAST         
+FPGA_D<7>           2     2     2    FB3_3   89    I/O       I/O     LVTTL              FAST DFF     RESET
+FPGA_D<6>           2     2     2    FB3_4   81    I/O       I/O     LVTTL              FAST DFF     RESET
+FPGA_D<5>           2     2     2    FB3_5   79    I/O       I/O     LVTTL              FAST DFF     RESET
+FPGA_D<4>           2     2     2    FB3_6   78    I/O       I/O     LVTTL              FAST DFF     RESET
+FPGA_D<3>           2     2     2    FB3_7   77    I/O       I/O     LVTTL              FAST DFF     RESET
+mclk_ce             0     0     2    FB3_12  70    I/O       O       LVTTL              FAST         
+FPGA_D<0>           2     2     1    FB4_1   35    I/O       I/O     LVTTL              FAST DFF     RESET
+Mode<0>             0     0     1    FB4_2   36    I/O       O       LVTTL              FAST         
+Mode<1>             0     0     1    FB4_4   39    I/O       O       LVTTL              FAST         
+FPGA_D<1>           2     2     1    FB4_5   40    I/O       I/O     LVTTL              FAST DFF     RESET
+FPGA_D<2>           2     2     1    FB4_6   41    I/O       I/O     LVTTL              FAST DFF     RESET
+Mode<2>             0     0     1    FB4_7   42    I/O       O       LVTTL              FAST         
+usb_rd              2     10    1    FB4_10  50    I/O       O       LVTTL              FAST TFF     RESET
+
+** 23 Buried Nodes **
+
+Signal              Total Total Loc     Reg     Reg Init
+Name                Pts   Inps          Use     State
+fpga_timing<6>      1     2     FB1_1   DFF     RESET
+fpga_timing<5>      1     2     FB1_2   DFF     RESET
+fpga_timing<1>      4     10    FB1_3   TFF     RESET
+fpga_timing<0>      4     10    FB1_4   TFF     RESET
+fpga_timing<2>      3     10    FB1_14  TFF     RESET
+fpga_timing<4>      2     10    FB1_15  DFF     RESET
+fpga_timing<3>      2     10    FB1_16  TFF     RESET
+fpga_timing<7>      1     2     FB2_2   DFF     RESET
+usb_dry             1     1     FB2_3   DFF     RESET
+previous_usb_dry    1     1     FB2_4   DFF     RESET
+previous            1     1     FB2_5   DFF     RESET
+usb_timing<8>       1     3     FB2_6   TFF     RESET
+usb_timing<7>       1     3     FB2_7   TFF     RESET
+usb_timing<6>       1     3     FB2_8   TFF     RESET
+usb_timing<5>       1     3     FB2_9   TFF     RESET
+usb_timing<4>       1     3     FB2_11  TFF     RESET
+usb_timing<3>       1     3     FB2_13  TFF     RESET
+usb_timing<0>       5     11    FB2_14  TFF/S   SET
+usb_timing<2>       3     11    FB2_15  TFF/S   SET
+usb_timing<1>       3     11    FB2_16  TFF     RESET
+SW_2_hi             0     0     FB3_9   DFF     RESET
+SW_1_hi             0     0     FB3_10  DFF     RESET
+fpga_timing<8>      1     2     FB3_16  DFF     RESET
+
+** 24 Inputs **
+
+Signal              Bank Loc     Pin   Pin       Pin     I/O      I/O
+Name                             No.   Type      Use     STD      Style
+FPGA_INITB          2    FB1_16  92    I/O       I       LVTTL    
+mclk                1    FB2_7   22    GCK/I/O   GCK     LVTTL    
+FPGA_done           1    FB2_11  28    I/O       I       LVTTL    
+N24                 1    FB2_12  29    I/O       I/O     LVTTL    
+FPGA_D<7>           2    FB3_3   89    I/O       I/O     LVTTL    
+FPGA_D<6>           2    FB3_4   81    I/O       I/O     LVTTL    
+FPGA_D<5>           2    FB3_5   79    I/O       I/O     LVTTL    
+FPGA_D<4>           2    FB3_6   78    I/O       I/O     LVTTL    
+FPGA_D<3>           2    FB3_7   77    I/O       I/O     LVTTL    
+SW<2>               2    FB3_9   74    I/O       I       LVTTL    PU
+SW<1>               2    FB3_10  72    I/O       I       LVTTL    PU
+SW<0>               2    FB3_11  71    I/O       I       LVTTL    PU
+usb_rx              2    FB3_13  68    I/O       I       LVTTL    
+data<0>             2    FB3_15  64    I/O       I       LVTTL    
+data<4>             2    FB3_16  61    I/O       I       LVTTL    
+FPGA_D<0>           1    FB4_1   35    I/O       I/O     LVTTL    
+FPGA_D<1>           1    FB4_5   40    I/O       I/O     LVTTL    
+FPGA_D<2>           1    FB4_6   41    I/O       I/O     LVTTL    
+data<3>             1    FB4_11  52    I/O       I       LVTTL    
+data<6>             1    FB4_12  53    I/O       I       LVTTL    
+data<5>             1    FB4_13  55    I/O       I       LVTTL    
+data<7>             1    FB4_14  56    I/O       I       LVTTL    
+data<1>             1    FB4_15  58    I/O       I       LVTTL    
+data<2>             1    FB4_16  60    I/O       I       LVTTL    
+
+Legend:
+Pin No.   - ~     - User Assigned
+I/O Style - OD    - OpenDrain
+          - PU    - Pullup
+          - KPR   - Keeper
+          - S     - SchmittTrigger
+          - DG    - DataGate
+Reg Use   - LATCH - Transparent latch
+          - DFF   - D-flip-flop
+          - DEFF  - D-flip-flop with clock enable
+          - TFF   - T-flip-flop
+          - TDFF  - Dual-edge-triggered T-flip-flop
+          - DDFF  - Dual-edge-triggered flip-flop
+          - DDEFF - Dual-edge-triggered flip-flop with clock enable
+          /S (after any above flop/latch type) indicates initial state is Set
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+              VRF - Vref
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               24/16
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   37/19
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+fpga_timing<6>                1     FB1_1   13   I/O     (b)               
+fpga_timing<5>                1     FB1_2   12   I/O     (b)               
+fpga_timing<1>                4     FB1_3   11   I/O     (b)               
+fpga_timing<0>                4     FB1_4   10   I/O     (b)               
+LEDs<8>                       2     FB1_5   9    I/O     O                 
+LEDs<7>                       2     FB1_6   8    I/O     O                 
+LEDs<6>                       2     FB1_7   7    I/O     O                 
+LEDs<5>                       2     FB1_8   6    I/O     O                 
+LEDs<4>                       2     FB1_9   4    GTS/I/O O                 
+LEDs<3>                       2     FB1_10  3    GTS/I/O O                 
+LEDs<2>                       2     FB1_11  2    GTS/I/O O                 
+LEDs<1>                       2     FB1_12  1    GTS/I/O O                 
+FPGA_prog_B                   7     FB1_13  99   GSR/I/O O                 
+fpga_timing<2>                3     FB1_14  97   I/O     (b)               
+fpga_timing<4>                2     FB1_15  94   I/O     (b)               
+fpga_timing<3>                2     FB1_16  92   I/O     I                 
+
+Signals Used by Logic in Function Block
+  1: FPGA_D<0>.PIN      9: FPGA_INITB        17: fpga_timing<2> 
+  2: FPGA_D<1>.PIN     10: FPGA_done         18: fpga_timing<3> 
+  3: FPGA_D<2>.PIN     11: FPGA_prog_B       19: fpga_timing<4> 
+  4: FPGA_D<3>.PIN     12: N24.PIN           20: fpga_timing<5> 
+  5: FPGA_D<4>.PIN     13: SW_1_hi           21: fpga_timing<6> 
+  6: FPGA_D<5>.PIN     14: SW_2_hi           22: fpga_timing<7> 
+  7: FPGA_D<6>.PIN     15: fpga_timing<0>    23: fpga_timing<8> 
+  8: FPGA_D<7>.PIN     16: fpga_timing<1>    24: usb_rst 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+fpga_timing<6>    ............X.......X................... 2       
+fpga_timing<5>    ............X......X.................... 2       
+fpga_timing<1>    ............X.XXXXXXXXX................. 10      
+fpga_timing<0>    ............X.XXXXXXXXX................. 10      
+LEDs<8>           .......X.X.X............................ 3       
+LEDs<7>           ......X..X.X............................ 3       
+LEDs<6>           .....X...X.X............................ 3       
+LEDs<5>           ....X....X.............X................ 3       
+LEDs<4>           ...X....XX.............................. 3       
+LEDs<3>           ..X......X...X.......................... 3       
+LEDs<2>           .X.......X..X........................... 3       
+LEDs<1>           X........X.............X................ 3       
+FPGA_prog_B       ..........X.X.XXXXXXXXX................. 11      
+fpga_timing<2>    ............X.XXXXXXXXX................. 10      
+fpga_timing<4>    ............X.XXXXXXXXX................. 10      
+fpga_timing<3>    ............X.XXXXXXXXX................. 10      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB2  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               18/22
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   25/31
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+usb_rst                       1     FB2_1   14   I/O     O                 
+fpga_timing<7>                1     FB2_2   15   I/O     (b)               
+usb_dry                       1     FB2_3   16   I/O     (b)               
+previous_usb_dry              1     FB2_4   17   I/O     (b)               
+previous                      1     FB2_5   18   I/O     (b)               
+usb_timing<8>                 1     FB2_6   19   I/O     (b)               
+usb_timing<7>                 1     FB2_7   22   GCK/I/O GCK               
+usb_timing<6>                 1     FB2_8   23   GCK/I/O (b)               
+usb_timing<5>                 1     FB2_9   24   I/O     (b)               
+FPGA_cclk                     2     FB2_10  27   GCK/I/O O                 
+usb_timing<4>                 1     FB2_11  28   I/O     I                 
+N24                           1     FB2_12  29   I/O     I/O                +  
+usb_timing<3>                 1     FB2_13  30   I/O     (b)               
+usb_timing<0>                 5     FB2_14  32   I/O     (b)               
+usb_timing<2>                 3     FB2_15  33   I/O     (b)               
+usb_timing<1>                 3     FB2_16  34   I/O     (b)               
+
+Signals Used by Logic in Function Block
+  1: FPGA_cclk          7: previous_usb_dry  13: usb_timing<3> 
+  2: SW<0>              8: usb_dry           14: usb_timing<4> 
+  3: SW_1_hi            9: usb_rx            15: usb_timing<5> 
+  4: SW_2_hi           10: usb_timing<0>     16: usb_timing<6> 
+  5: fpga_timing<7>    11: usb_timing<1>     17: usb_timing<7> 
+  6: previous          12: usb_timing<2>     18: usb_timing<8> 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+usb_rst           .X...................................... 1       
+fpga_timing<7>    ..X.X................................... 2       
+usb_dry           ........X............................... 1       
+previous_usb_dry  .....X.................................. 1       
+previous          .......X................................ 1       
+usb_timing<8>     ......XX.........X...................... 3       
+usb_timing<7>     ......XX........X....................... 3       
+usb_timing<6>     ......XX.......X........................ 3       
+usb_timing<5>     ......XX......X......................... 3       
+FPGA_cclk         X........XXXXXXXXX...................... 10      
+usb_timing<4>     ......XX.....X.......................... 3       
+N24               ...X.................................... 1       
+usb_timing<3>     ......XX....X........................... 3       
+usb_timing<0>     ......XX.XXXXXXXXX...................... 11      
+usb_timing<2>     ......XX.XXXXXXXXX...................... 11      
+usb_timing<1>     ......XX.XXXXXXXXX...................... 11      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB3  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               8/32
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   7/49
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB3_1   91   I/O           
+FPGA_MOSI                     0     FB3_2   90   I/O     O                 
+FPGA_D<7>                     2     FB3_3   89   I/O     I/O                +  
+FPGA_D<6>                     2     FB3_4   81   I/O     I/O                +  
+FPGA_D<5>                     2     FB3_5   79   I/O     I/O                +  
+FPGA_D<4>                     2     FB3_6   78   I/O     I/O                +  
+FPGA_D<3>                     2     FB3_7   77   I/O     I/O                +  
+(unused)                      0     FB3_8   76   I/O           
+SW_2_hi                       0     FB3_9   74   I/O     I                 
+SW_1_hi                       0     FB3_10  72   I/O     I                 
+(unused)                      0     FB3_11  71   I/O     I     
+mclk_ce                       0     FB3_12  70   I/O     O                 
+(unused)                      0     FB3_13  68   I/O     I     
+(unused)                      0     FB3_14  67   I/O           
+(unused)                      0     FB3_15  64   I/O     I     
+fpga_timing<8>                1     FB3_16  61   I/O     I                 
+
+Signals Used by Logic in Function Block
+  1: FPGA_done          4: data<4>            7: data<7> 
+  2: SW_1_hi            5: data<5>            8: fpga_timing<8> 
+  3: data<3>            6: data<6>          
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+FPGA_MOSI         ........................................ 0       
+FPGA_D<7>         X.....X................................. 2       
+FPGA_D<6>         X....X.................................. 2       
+FPGA_D<5>         X...X................................... 2       
+FPGA_D<4>         X..X.................................... 2       
+FPGA_D<3>         X.X..................................... 2       
+mclk_ce           ........................................ 0       
+fpga_timing<8>    .X.....X................................ 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB4  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               14/26
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   6/50
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+FPGA_D<0>                     2     FB4_1   35   I/O     I/O                +  
+Mode<0>                       0     FB4_2   36   I/O     O                 
+(unused)                      0     FB4_3   37   I/O           
+Mode<1>                       0     FB4_4   39   I/O     O                 
+FPGA_D<1>                     2     FB4_5   40   I/O     I/O                +  
+FPGA_D<2>                     2     FB4_6   41   I/O     I/O                +  
+Mode<2>                       0     FB4_7   42   I/O     O                 
+(unused)                      0     FB4_8   43   I/O           
+(unused)                      0     FB4_9   49   I/O           
+usb_rd                        2     FB4_10  50   I/O     O                 
+(unused)                      0     FB4_11  52   I/O     I     
+(unused)                      0     FB4_12  53   I/O     I     
+(unused)                      0     FB4_13  55   I/O     I     
+(unused)                      0     FB4_14  56   I/O     I     
+(unused)                      0     FB4_15  58   I/O     I     
+(unused)                      0     FB4_16  60   I/O     I     
+
+Signals Used by Logic in Function Block
+  1: FPGA_done          6: usb_timing<0>     11: usb_timing<5> 
+  2: data<0>            7: usb_timing<1>     12: usb_timing<6> 
+  3: data<1>            8: usb_timing<2>     13: usb_timing<7> 
+  4: data<2>            9: usb_timing<3>     14: usb_timing<8> 
+  5: usb_rd            10: usb_timing<4>    
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+FPGA_D<0>         XX...................................... 2       
+Mode<0>           ........................................ 0       
+Mode<1>           ........................................ 0       
+FPGA_D<1>         X.X..................................... 2       
+FPGA_D<2>         X..X.................................... 2       
+Mode<2>           ........................................ 0       
+usb_rd            ....XXXXXXXXXX.......................... 10      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+FDCPE_FPGA_D0: FDCPE port map (FPGA_D_I(0),data(0),mclk,'0','0','1');
+FPGA_D(0) <= FPGA_D_I(0) when FPGA_D_OE(0) = '1' else 'Z';
+FPGA_D_OE(0) <= NOT FPGA_done;
+
+FDCPE_FPGA_D1: FDCPE port map (FPGA_D_I(1),data(1),mclk,'0','0','1');
+FPGA_D(1) <= FPGA_D_I(1) when FPGA_D_OE(1) = '1' else 'Z';
+FPGA_D_OE(1) <= NOT FPGA_done;
+
+FDCPE_FPGA_D2: FDCPE port map (FPGA_D_I(2),data(2),mclk,'0','0','1');
+FPGA_D(2) <= FPGA_D_I(2) when FPGA_D_OE(2) = '1' else 'Z';
+FPGA_D_OE(2) <= NOT FPGA_done;
+
+FDCPE_FPGA_D3: FDCPE port map (FPGA_D_I(3),data(3),mclk,'0','0','1');
+FPGA_D(3) <= FPGA_D_I(3) when FPGA_D_OE(3) = '1' else 'Z';
+FPGA_D_OE(3) <= NOT FPGA_done;
+
+FDCPE_FPGA_D4: FDCPE port map (FPGA_D_I(4),data(4),mclk,'0','0','1');
+FPGA_D(4) <= FPGA_D_I(4) when FPGA_D_OE(4) = '1' else 'Z';
+FPGA_D_OE(4) <= NOT FPGA_done;
+
+FDCPE_FPGA_D5: FDCPE port map (FPGA_D_I(5),data(5),mclk,'0','0','1');
+FPGA_D(5) <= FPGA_D_I(5) when FPGA_D_OE(5) = '1' else 'Z';
+FPGA_D_OE(5) <= NOT FPGA_done;
+
+FDCPE_FPGA_D6: FDCPE port map (FPGA_D_I(6),data(6),mclk,'0','0','1');
+FPGA_D(6) <= FPGA_D_I(6) when FPGA_D_OE(6) = '1' else 'Z';
+FPGA_D_OE(6) <= NOT FPGA_done;
+
+FDCPE_FPGA_D7: FDCPE port map (FPGA_D_I(7),data(7),mclk,'0','0','1');
+FPGA_D(7) <= FPGA_D_I(7) when FPGA_D_OE(7) = '1' else 'Z';
+FPGA_D_OE(7) <= NOT FPGA_done;
+
+
+FPGA_MOSI <= '0';
+
+FTCPE_FPGA_cclk: FTCPE port map (FPGA_cclk,FPGA_cclk_T,mclk,'0','0','1');
+FPGA_cclk_T <= ((FPGA_cclk AND NOT usb_timing(0) AND usb_timing(2) AND 
+	NOT usb_timing(1) AND NOT usb_timing(3) AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8))
+	OR (NOT FPGA_cclk AND usb_timing(0) AND NOT usb_timing(2) AND 
+	usb_timing(1) AND NOT usb_timing(3) AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8)));
+
+FTCPE_FPGA_prog_B: FTCPE port map (FPGA_prog_B,FPGA_prog_B_T,mclk,'0','0','1');
+FPGA_prog_B_T <= ((NOT SW_1_hi AND fpga_timing(3) AND NOT fpga_timing(5) AND 
+	NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4) AND 
+	FPGA_prog_B)
+	OR (NOT SW_1_hi AND fpga_timing(2) AND NOT fpga_timing(5) AND 
+	NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4) AND 
+	FPGA_prog_B)
+	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(3) AND 
+	NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+	NOT fpga_timing(8) AND FPGA_prog_B)
+	OR (NOT SW_1_hi AND fpga_timing(1) AND NOT fpga_timing(3) AND 
+	NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+	NOT fpga_timing(8) AND FPGA_prog_B)
+	OR (NOT fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+	NOT fpga_timing(3) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+	NOT fpga_timing(8) AND fpga_timing(4) AND FPGA_prog_B)
+	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+	NOT fpga_timing(3) AND fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+	NOT fpga_timing(7) AND NOT fpga_timing(8) AND fpga_timing(4) AND NOT FPGA_prog_B)
+	OR (NOT fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+	NOT fpga_timing(3) AND NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+	NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4) AND NOT FPGA_prog_B));
+
+
+LEDs(1) <= NOT (((FPGA_done AND FPGA_D(0).PIN)
+	OR (NOT FPGA_done AND NOT usb_rst)));
+
+
+LEDs(2) <= NOT (((FPGA_done AND FPGA_D(1).PIN)
+	OR (NOT FPGA_done AND NOT SW_1_hi)));
+
+
+LEDs(3) <= NOT (((FPGA_done AND FPGA_D(2).PIN)
+	OR (NOT FPGA_done AND NOT SW_2_hi)));
+
+
+LEDs(4) <= NOT (((FPGA_done AND FPGA_D(3).PIN)
+	OR (NOT FPGA_done AND NOT FPGA_INITB)));
+
+
+LEDs(5) <= NOT (((FPGA_done AND FPGA_D(4).PIN)
+	OR (NOT FPGA_done AND NOT usb_rst)));
+
+
+LEDs(6) <= NOT (((FPGA_done AND FPGA_D(5).PIN)
+	OR (NOT FPGA_done AND NOT N24.PIN)));
+
+
+LEDs(7) <= NOT (((FPGA_done AND FPGA_D(6).PIN)
+	OR (NOT FPGA_done AND NOT N24.PIN)));
+
+
+LEDs(8) <= NOT (((FPGA_done AND FPGA_D(7).PIN)
+	OR (NOT FPGA_done AND NOT N24.PIN)));
+
+
+Mode(0) <= '0';
+
+
+Mode(1) <= NOT ('0');
+
+
+Mode(2) <= NOT ('0');
+
+
+N24_I <= NOT ('0');
+N24 <= N24_I when N24_OE = '1' else 'Z';
+N24_OE <= SW_2_hi;
+
+FDCPE_SW_1_hi: FDCPE port map (SW_1_hi,SW(1),mclk,'0','0','1');
+
+FDCPE_SW_2_hi: FDCPE port map (SW_2_hi,SW(2),mclk,'0','0','1');
+
+FTCPE_fpga_timing0: FTCPE port map (fpga_timing(0),fpga_timing_T(0),mclk,'0','0','1');
+fpga_timing_T(0) <= ((fpga_timing(0) AND SW_1_hi)
+	OR (NOT SW_1_hi AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+	NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4))
+	OR (NOT SW_1_hi AND NOT fpga_timing(1) AND NOT fpga_timing(3) AND 
+	NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8))
+	OR (NOT SW_1_hi AND NOT fpga_timing(3) AND NOT fpga_timing(2) AND 
+	NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8)));
+
+FTCPE_fpga_timing1: FTCPE port map (fpga_timing(1),fpga_timing_T(1),mclk,'0','0','1');
+fpga_timing_T(1) <= ((SW_1_hi AND fpga_timing(1))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(5) AND 
+	NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND NOT fpga_timing(4))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(1) AND 
+	NOT fpga_timing(3) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+	NOT fpga_timing(8))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND NOT fpga_timing(3) AND 
+	NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+	NOT fpga_timing(8)));
+
+FTCPE_fpga_timing2: FTCPE port map (fpga_timing(2),fpga_timing_T(2),mclk,'0','0','1');
+fpga_timing_T(2) <= ((SW_1_hi AND fpga_timing(2))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+	NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND NOT fpga_timing(8) AND 
+	NOT fpga_timing(4))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+	NOT fpga_timing(3) AND NOT fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+	NOT fpga_timing(7) AND NOT fpga_timing(8)));
+
+FTCPE_fpga_timing3: FTCPE port map (fpga_timing(3),fpga_timing_T(3),mclk,'0','0','1');
+fpga_timing_T(3) <= ((SW_1_hi AND fpga_timing(3))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+	fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND NOT fpga_timing(7) AND 
+	NOT fpga_timing(8) AND NOT fpga_timing(4)));
+
+FDCPE_fpga_timing4: FDCPE port map (fpga_timing(4),fpga_timing_D(4),mclk,'0','0','1');
+fpga_timing_D(4) <= ((NOT SW_1_hi AND fpga_timing(4))
+	OR (fpga_timing(0) AND NOT SW_1_hi AND fpga_timing(1) AND 
+	fpga_timing(3) AND fpga_timing(2) AND NOT fpga_timing(5) AND NOT fpga_timing(6) AND 
+	NOT fpga_timing(7) AND NOT fpga_timing(8)));
+
+FDCPE_fpga_timing5: FDCPE port map (fpga_timing(5),fpga_timing_D(5),mclk,'0','0','1');
+fpga_timing_D(5) <= (NOT SW_1_hi AND fpga_timing(5));
+
+FDCPE_fpga_timing6: FDCPE port map (fpga_timing(6),fpga_timing_D(6),mclk,'0','0','1');
+fpga_timing_D(6) <= (NOT SW_1_hi AND fpga_timing(6));
+
+FDCPE_fpga_timing7: FDCPE port map (fpga_timing(7),fpga_timing_D(7),mclk,'0','0','1');
+fpga_timing_D(7) <= (NOT SW_1_hi AND fpga_timing(7));
+
+FDCPE_fpga_timing8: FDCPE port map (fpga_timing(8),fpga_timing_D(8),mclk,'0','0','1');
+fpga_timing_D(8) <= (NOT SW_1_hi AND fpga_timing(8));
+
+
+mclk_ce <= NOT ('0');
+
+FDCPE_previous: FDCPE port map (previous,usb_dry,mclk,'0','0','1');
+
+FDCPE_previous_usb_dry: FDCPE port map (previous_usb_dry,previous,mclk,'0','0','1');
+
+FDCPE_usb_dry: FDCPE port map (usb_dry,NOT usb_rx,mclk,'0','0','1');
+
+FTCPE_usb_rd: FTCPE port map (usb_rd,usb_rd_T,mclk,'0','0','1');
+usb_rd_T <= ((NOT usb_timing(2) AND NOT usb_timing(3) AND NOT usb_timing(4) AND 
+	NOT usb_timing(5) AND NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8) AND 
+	usb_rd)
+	OR (NOT usb_timing(0) AND usb_timing(2) AND NOT usb_timing(1) AND 
+	NOT usb_timing(3) AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+	NOT usb_timing(7) AND NOT usb_timing(8) AND NOT usb_rd));
+
+FDCPE_usb_rst: FDCPE port map (usb_rst,SW(0),mclk,'0','0','1');
+
+FTCPE_usb_timing0: FTCPE port map (usb_timing(0),usb_timing_T(0),mclk,'0','0','1');
+usb_timing_T(0) <= ((usb_timing(0) AND usb_dry AND NOT previous_usb_dry)
+	OR (NOT usb_timing(2) AND NOT usb_timing(3) AND NOT usb_dry AND 
+	NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND NOT usb_timing(7) AND 
+	NOT usb_timing(8))
+	OR (NOT usb_timing(2) AND NOT usb_timing(3) AND previous_usb_dry AND 
+	NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND NOT usb_timing(7) AND 
+	NOT usb_timing(8))
+	OR (NOT usb_timing(0) AND NOT usb_timing(1) AND NOT usb_timing(3) AND 
+	NOT usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+	NOT usb_timing(7) AND NOT usb_timing(8))
+	OR (NOT usb_timing(0) AND NOT usb_timing(1) AND NOT usb_timing(3) AND 
+	previous_usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+	NOT usb_timing(7) AND NOT usb_timing(8)));
+
+FTCPE_usb_timing1: FTCPE port map (usb_timing(1),usb_timing_T(1),mclk,'0','0','1');
+usb_timing_T(1) <= ((usb_timing(1) AND usb_dry AND NOT previous_usb_dry)
+	OR (usb_timing(0) AND NOT usb_timing(2) AND NOT usb_timing(3) AND 
+	NOT usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+	NOT usb_timing(7) AND NOT usb_timing(8))
+	OR (usb_timing(0) AND NOT usb_timing(2) AND NOT usb_timing(3) AND 
+	previous_usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND NOT usb_timing(6) AND 
+	NOT usb_timing(7) AND NOT usb_timing(8)));
+
+FTCPE_usb_timing2: FTCPE port map (usb_timing(2),usb_timing_T(2),mclk,'0','0','1');
+usb_timing_T(2) <= ((usb_timing(2) AND usb_dry AND NOT previous_usb_dry)
+	OR (usb_timing(0) AND NOT usb_timing(2) AND usb_timing(1) AND 
+	NOT usb_timing(3) AND NOT usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8))
+	OR (usb_timing(0) AND NOT usb_timing(2) AND usb_timing(1) AND 
+	NOT usb_timing(3) AND previous_usb_dry AND NOT usb_timing(4) AND NOT usb_timing(5) AND 
+	NOT usb_timing(6) AND NOT usb_timing(7) AND NOT usb_timing(8)));
+
+FTCPE_usb_timing3: FTCPE port map (usb_timing(3),usb_timing_T(3),mclk,'0','0','1');
+usb_timing_T(3) <= (usb_timing(3) AND usb_dry AND NOT previous_usb_dry);
+
+FTCPE_usb_timing4: FTCPE port map (usb_timing(4),usb_timing_T(4),mclk,'0','0','1');
+usb_timing_T(4) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(4));
+
+FTCPE_usb_timing5: FTCPE port map (usb_timing(5),usb_timing_T(5),mclk,'0','0','1');
+usb_timing_T(5) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(5));
+
+FTCPE_usb_timing6: FTCPE port map (usb_timing(6),usb_timing_T(6),mclk,'0','0','1');
+usb_timing_T(6) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(6));
+
+FTCPE_usb_timing7: FTCPE port map (usb_timing(7),usb_timing_T(7),mclk,'0','0','1');
+usb_timing_T(7) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(7));
+
+FTCPE_usb_timing8: FTCPE port map (usb_timing(8),usb_timing_T(8),mclk,'0','0','1');
+usb_timing_T(8) <= (usb_dry AND NOT previous_usb_dry AND usb_timing(8));
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC2C64A-7-VQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13                XC2C64A-7-VQ100               63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 LEDs<1>                          51 VCCIO-3.3                     
+  2 LEDs<2>                          52 data<3>                       
+  3 LEDs<3>                          53 data<6>                       
+  4 LEDs<4>                          54 NC                            
+  5 VCCAUX                           55 data<5>                       
+  6 LEDs<5>                          56 data<7>                       
+  7 LEDs<6>                          57 VCC                           
+  8 LEDs<7>                          58 data<1>                       
+  9 LEDs<8>                          59 NC                            
+ 10 WPU                              60 data<2>                       
+ 11 WPU                              61 data<4>                       
+ 12 WPU                              62 GND                           
+ 13 WPU                              63 NC                            
+ 14 usb_rst                          64 data<0>                       
+ 15 WPU                              65 NC                            
+ 16 WPU                              66 NC                            
+ 17 WPU                              67 WPU                           
+ 18 WPU                              68 usb_rx                        
+ 19 WPU                              69 GND                           
+ 20 NC                               70 mclk_ce                       
+ 21 GND                              71 SW<0>                         
+ 22 mclk                             72 SW<1>                         
+ 23 WPU                              73 NC                            
+ 24 WPU                              74 SW<2>                         
+ 25 NC                               75 NC                            
+ 26 VCC                              76 WPU                           
+ 27 FPGA_cclk                        77 FPGA_D<3>                     
+ 28 FPGA_done                        78 FPGA_D<4>                     
+ 29 N24                              79 FPGA_D<5>                     
+ 30 WPU                              80 NC                            
+ 31 GND                              81 FPGA_D<6>                     
+ 32 WPU                              82 NC                            
+ 33 WPU                              83 TDO                           
+ 34 WPU                              84 GND                           
+ 35 FPGA_D<0>                        85 NC                            
+ 36 Mode<0>                          86 NC                            
+ 37 WPU                              87 NC                            
+ 38 VCCIO-3.3                        88 VCCIO-3.3                     
+ 39 Mode<1>                          89 FPGA_D<7>                     
+ 40 FPGA_D<1>                        90 FPGA_MOSI                     
+ 41 FPGA_D<2>                        91 WPU                           
+ 42 Mode<2>                          92 FPGA_INITB                    
+ 43 WPU                              93 NC                            
+ 44 NC                               94 WPU                           
+ 45 TDI                              95 NC                            
+ 46 NC                               96 NC                            
+ 47 TMS                              97 WPU                           
+ 48 TCK                              98 VCCIO-3.3                     
+ 49 WPU                              99 FPGA_prog_B                   
+ 50 usb_rd                          100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+        PGND  = Unused I/O configured as additional Ground pin
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         WPU  = Unused I/O with weak pull up (leave unconnected)
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+      VCCAUX  = Power supply for JTAG pins
+   VCCIO-3.3  = I/O supply voltage for LVTTL, LVCMOS33, SSTL3_I
+   VCCIO-2.5  = I/O supply voltage for LVCMOS25, SSTL2_I
+   VCCIO-1.8  = I/O supply voltage for LVCMOS18
+   VCCIO-1.5  = I/O supply voltage for LVCMOS15, HSTL_I
+        VREF  = Reference voltage for indicated input standard
+       *VREF  = Reference voltage pin selected by software
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c64a-7-VQ100
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : PULLUP
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : FLOAT
+Default Voltage Standard for All Outputs    : LVTTL
+Input Limit                                 : 26
+Pterm Limit                                 : 26
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

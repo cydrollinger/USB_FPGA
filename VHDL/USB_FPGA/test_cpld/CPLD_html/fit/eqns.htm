@@ -1,0 +1,539 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "CPLD";
+      var device = "XC2C256";
+      signals = new Array("FPGA_D0_SPECSIG","FPGA_D1_SPECSIG","FPGA_D2_SPECSIG","FPGA_D3_SPECSIG","FPGA_D4_SPECSIG","FPGA_D5_SPECSIG","FPGA_D6_SPECSIG","FPGA_D7_SPECSIG","FPGA_MOSI","FPGA_cclk","FPGA_prog_B","LEDs1_SPECSIG","LEDs2_SPECSIG","LEDs3_SPECSIG","LEDs4_SPECSIG","LEDs5_SPECSIG","LEDs6_SPECSIG","LEDs7_SPECSIG","LEDs8_SPECSIG","Mode0_SPECSIG","Mode1_SPECSIG","Mode2_SPECSIG","N24","SW_1_hi","SW_2_hi","fpga_timing0_SPECSIG","fpga_timing1_SPECSIG","fpga_timing2_SPECSIG","fpga_timing3_SPECSIG","fpga_timing4_SPECSIG","fpga_timing5_SPECSIG","fpga_timing6_SPECSIG","fpga_timing7_SPECSIG","fpga_timing8_SPECSIG","mclk_ce","previous","previous_usb_dry","usb_dry","usb_rd","usb_rst","usb_timing0_SPECSIG","usb_timing1_SPECSIG","usb_timing2_SPECSIG","usb_timing3_SPECSIG","usb_timing4_SPECSIG","usb_timing5_SPECSIG","usb_timing6_SPECSIG","usb_timing7_SPECSIG","usb_timing8_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","ON","ON","ON","ON","ON","OFF","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","","TFF","TFF","","","","","","","","","","","","","DFF","DFF","TFF","TFF","TFF","TFF","DFF","DFF","DFF","DFF","DFF","","DFF","DFF","DFF","TFF","DFF","TFFS_SPECSIG","TFF","TFFS_SPECSIG","TFF","TFF","TFF","TFF","TFF","TFF");
+
+      
+        specSig["data0_SPECSIG"]=new Array("data<0>");
+      
+        specSig["data1_SPECSIG"]=new Array("data<1>");
+      
+        specSig["data2_SPECSIG"]=new Array("data<2>");
+      
+        specSig["data3_SPECSIG"]=new Array("data<3>");
+      
+        specSig["data4_SPECSIG"]=new Array("data<4>");
+      
+        specSig["data5_SPECSIG"]=new Array("data<5>");
+      
+        specSig["data6_SPECSIG"]=new Array("data<6>");
+      
+        specSig["data7_SPECSIG"]=new Array("data<7>");
+      
+        specSig["SW0_SPECSIG"]=new Array("SW<0>");
+      
+        specSig["FPGA_D0PIN_SPECSIG"]=new Array("FPGA_D<0>.PIN");
+      
+        specSig["FPGA_D1PIN_SPECSIG"]=new Array("FPGA_D<1>.PIN");
+      
+        specSig["FPGA_D2PIN_SPECSIG"]=new Array("FPGA_D<2>.PIN");
+      
+        specSig["FPGA_D3PIN_SPECSIG"]=new Array("FPGA_D<3>.PIN");
+      
+        specSig["FPGA_D4PIN_SPECSIG"]=new Array("FPGA_D<4>.PIN");
+      
+        specSig["N24PIN_SPECSIG"]=new Array("N24.PIN");
+      
+        specSig["FPGA_D5PIN_SPECSIG"]=new Array("FPGA_D<5>.PIN");
+      
+        specSig["FPGA_D6PIN_SPECSIG"]=new Array("FPGA_D<6>.PIN");
+      
+        specSig["FPGA_D7PIN_SPECSIG"]=new Array("FPGA_D<7>.PIN");
+      
+        specSig["SW1_SPECSIG"]=new Array("SW<1>");
+      
+        specSig["SW2_SPECSIG"]=new Array("SW<2>");
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["usb_timing2_SPECSIG"]=new Array("usb_timing<2>");
+      
+        specSig["usb_timing1_SPECSIG"]=new Array("usb_timing<1>");
+      
+        specSig["LEDs1_SPECSIG"]=new Array("LEDs<1>");
+      
+        specSig["LEDs2_SPECSIG"]=new Array("LEDs<2>");
+      
+        specSig["LEDs3_SPECSIG"]=new Array("LEDs<3>");
+      
+        specSig["LEDs4_SPECSIG"]=new Array("LEDs<4>");
+      
+        specSig["LEDs5_SPECSIG"]=new Array("LEDs<5>");
+      
+        specSig["LEDs6_SPECSIG"]=new Array("LEDs<6>");
+      
+        specSig["IO_SPECSIG"]=new Array("I/O");
+      
+        specSig["LEDs7_SPECSIG"]=new Array("LEDs<7>");
+      
+        specSig["LEDs8_SPECSIG"]=new Array("LEDs<8>");
+      
+        specSig["FPGA_D0_SPECSIG"]=new Array("FPGA_D<0>");
+      
+        specSig["Mode0_SPECSIG"]=new Array("Mode<0>");
+      
+        specSig["FPGA_D4_SPECSIG"]=new Array("FPGA_D<4>");
+      
+        specSig["FPGA_D5_SPECSIG"]=new Array("FPGA_D<5>");
+      
+        specSig["FPGA_D6_SPECSIG"]=new Array("FPGA_D<6>");
+      
+        specSig["FPGA_D3_SPECSIG"]=new Array("FPGA_D<3>");
+      
+        specSig["FPGA_D7_SPECSIG"]=new Array("FPGA_D<7>");
+      
+        specSig["Mode2_SPECSIG"]=new Array("Mode<2>");
+      
+        specSig["FPGA_D2_SPECSIG"]=new Array("FPGA_D<2>");
+      
+        specSig["FPGA_D1_SPECSIG"]=new Array("FPGA_D<1>");
+      
+        specSig["Mode1_SPECSIG"]=new Array("Mode<1>");
+      
+        specSig["usb_timing3_SPECSIG"]=new Array("usb_timing<3>");
+      
+        specSig["fpga_timing8_SPECSIG"]=new Array("fpga_timing<8>");
+      
+        specSig["fpga_timing7_SPECSIG"]=new Array("fpga_timing<7>");
+      
+        specSig["usb_timing4_SPECSIG"]=new Array("usb_timing<4>");
+      
+        specSig["fpga_timing6_SPECSIG"]=new Array("fpga_timing<6>");
+      
+        specSig["fpga_timing5_SPECSIG"]=new Array("fpga_timing<5>");
+      
+        specSig["fpga_timing1_SPECSIG"]=new Array("fpga_timing<1>");
+      
+        specSig["fpga_timing0_SPECSIG"]=new Array("fpga_timing<0>");
+      
+        specSig["fpga_timing2_SPECSIG"]=new Array("fpga_timing<2>");
+      
+        specSig["usb_timing0_SPECSIG"]=new Array("usb_timing<0>");
+      
+        specSig["fpga_timing4_SPECSIG"]=new Array("fpga_timing<4>");
+      
+        specSig["fpga_timing3_SPECSIG"]=new Array("fpga_timing<3>");
+      
+        specSig["usb_timing5_SPECSIG"]=new Array("usb_timing<5>");
+      
+        specSig["usb_timing6_SPECSIG"]=new Array("usb_timing<6>");
+      
+        specSig["usb_timing7_SPECSIG"]=new Array("usb_timing<7>");
+      
+        specSig["usb_timing8_SPECSIG"]=new Array("usb_timing<8>");
+      
+        specSig["TFFS_SPECSIG"]=new Array("TFF/S");
+      
+            pterms["FB1_0"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing3_SPECSIG","/fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","FPGA_prog_B");
+          
+            pterms["FB1_1"]=new Array("/SW_1_hi","fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","/fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","FPGA_prog_B");
+          
+            pterms["FB1_2"]=new Array("/fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","fpga_timing4_SPECSIG","FPGA_prog_B");
+          
+            pterms["FB1_3"]=new Array("/SW_1_hi","fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG","FPGA_prog_B");
+          
+            pterms["FB1_4"]=new Array("/SW_1_hi","fpga_timing3_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG","FPGA_prog_B");
+          
+            pterms["FB1_5"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","fpga_timing4_SPECSIG","/FPGA_prog_B");
+          
+            pterms["FB1_6"]=new Array("/fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","/fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG","/FPGA_prog_B");
+          
+            pterms["FB1_7"]=new Array("SW_1_hi","fpga_timing3_SPECSIG");
+          
+            pterms["FB1_8"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","fpga_timing1_SPECSIG","fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG");
+          
+            pterms["FB1_9"]=new Array("/SW_1_hi","fpga_timing4_SPECSIG");
+          
+            pterms["FB1_10"]=new Array("usb_timing3_SPECSIG","usb_dry","/previous_usb_dry");
+          
+            pterms["FB1_11"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","fpga_timing1_SPECSIG","fpga_timing3_SPECSIG","fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG");
+          
+            pterms["FB1_12"]=new Array("SW_1_hi","fpga_timing2_SPECSIG");
+          
+            pterms["FB1_13"]=new Array("usb_dry");
+          
+            pterms["FB1_14"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","/fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG");
+          
+            pterms["FB1_15"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","fpga_timing1_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG");
+          
+            pterms["FB1_16"]=new Array("fpga_timing0_SPECSIG","SW_1_hi");
+          
+            pterms["FB1_17"]=new Array("/SW_1_hi","/fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG");
+          
+            pterms["FB1_18"]=new Array("/SW_1_hi","/fpga_timing3_SPECSIG","/fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG");
+          
+            pterms["FB1_19"]=new Array("/SW_1_hi","fpga_timing8_SPECSIG");
+          
+            pterms["FB1_20"]=new Array("/SW_1_hi","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG");
+          
+            pterms["FB1_21"]=new Array("SW_1_hi","fpga_timing1_SPECSIG");
+          
+            pterms["FB1_22"]=new Array("/SW_1_hi","fpga_timing7_SPECSIG");
+          
+            pterms["FB1_23"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing1_SPECSIG","/fpga_timing3_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG");
+          
+            pterms["FB1_24"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing3_SPECSIG","/fpga_timing2_SPECSIG","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG");
+          
+            pterms["FB1_25"]=new Array("usb_dry","/previous_usb_dry","usb_timing4_SPECSIG");
+          
+            pterms["FB1_26"]=new Array("fpga_timing0_SPECSIG","/SW_1_hi","/fpga_timing5_SPECSIG","/fpga_timing6_SPECSIG","/fpga_timing7_SPECSIG","/fpga_timing8_SPECSIG","/fpga_timing4_SPECSIG");
+          
+            pterms["FB1_27"]=new Array("usb_timing0_SPECSIG","/usb_timing2_SPECSIG","/usb_timing3_SPECSIG","/usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_28"]=new Array("/SW_1_hi","fpga_timing6_SPECSIG");
+          
+            pterms["FB1_29"]=new Array("usb_timing0_SPECSIG","/usb_timing2_SPECSIG","/usb_timing3_SPECSIG","previous_usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_30"]=new Array("usb_timing1_SPECSIG","usb_dry","/previous_usb_dry");
+          
+            pterms["FB1_31"]=new Array("/SW_1_hi","fpga_timing5_SPECSIG");
+          
+            pterms["FB1_32"]=new Array("usb_timing0_SPECSIG","/usb_timing2_SPECSIG","usb_timing1_SPECSIG","/usb_timing3_SPECSIG","/usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_33"]=new Array("usb_timing0_SPECSIG","/usb_timing2_SPECSIG","usb_timing1_SPECSIG","/usb_timing3_SPECSIG","previous_usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_34"]=new Array("usb_timing2_SPECSIG","usb_dry","/previous_usb_dry");
+          
+            pterms["FB1_35"]=new Array("/usb_timing2_SPECSIG","/usb_timing3_SPECSIG","/usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_36"]=new Array("/usb_timing0_SPECSIG","/usb_timing1_SPECSIG","/usb_timing3_SPECSIG","/usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_37"]=new Array("/usb_timing2_SPECSIG","/usb_timing3_SPECSIG","previous_usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_38"]=new Array("/usb_timing0_SPECSIG","/usb_timing1_SPECSIG","/usb_timing3_SPECSIG","previous_usb_dry","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB1_39"]=new Array("usb_timing0_SPECSIG","usb_dry","/previous_usb_dry");
+          
+            pterms["FB2_0"]=new Array("/FPGA_done","/usb_rst");
+          
+            pterms["FB2_1"]=new Array("FPGA_done","FPGA_D0PIN_SPECSIG");
+          
+            pterms["FB2_2"]=new Array("FPGA_done","FPGA_D1PIN_SPECSIG");
+          
+            pterms["FB2_3"]=new Array("/FPGA_done","/SW_1_hi");
+          
+            pterms["FB2_4"]=new Array("FPGA_done","FPGA_D2PIN_SPECSIG");
+          
+            pterms["FB2_5"]=new Array("/FPGA_done","/SW_2_hi");
+          
+            pterms["FB2_6"]=new Array("/FPGA_done","/FPGA_INITB");
+          
+            pterms["FB2_7"]=new Array("FPGA_done","FPGA_D3PIN_SPECSIG");
+          
+            pterms["FB2_8"]=new Array("FPGA_done","FPGA_D4PIN_SPECSIG");
+          
+            pterms["FB2_9"]=new Array("/FPGA_done","/N24PIN_SPECSIG");
+          
+            pterms["FB2_10"]=new Array("FPGA_done","FPGA_D5PIN_SPECSIG");
+          
+            pterms["FB2_31"]=new Array("usb_dry","/previous_usb_dry","usb_timing8_SPECSIG");
+          
+            pterms["FB2_34"]=new Array("usb_dry","/previous_usb_dry","usb_timing7_SPECSIG");
+          
+            pterms["FB2_37"]=new Array("usb_dry","/previous_usb_dry","usb_timing6_SPECSIG");
+          
+            pterms["FB2_40"]=new Array("usb_dry","/previous_usb_dry","usb_timing5_SPECSIG");
+          
+            pterms["FB2_46"]=new Array("/usb_rx");
+          
+            pterms["FB2_55"]=new Array("previous");
+          
+            pterms["FB3_7"]=new Array("SW_2_hi");
+          
+            pterms["FB4_0"]=new Array("/FPGA_done","/N24PIN_SPECSIG");
+          
+            pterms["FB4_1"]=new Array("FPGA_done","FPGA_D6PIN_SPECSIG");
+          
+            pterms["FB4_2"]=new Array("FPGA_done","FPGA_D7PIN_SPECSIG");
+          
+            pterms["FB6_0"]=new Array("/FPGA_cclk","usb_timing0_SPECSIG","/usb_timing2_SPECSIG","usb_timing1_SPECSIG","/usb_timing3_SPECSIG","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB6_1"]=new Array("FPGA_cclk","/usb_timing0_SPECSIG","usb_timing2_SPECSIG","/usb_timing1_SPECSIG","/usb_timing3_SPECSIG","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG");
+          
+            pterms["FB7_49"]=new Array("SW0_SPECSIG");
+          
+            pterms["FB8_7"]=new Array("/FPGA_done");
+          
+            pterms["FB8_46"]=new Array("data0_SPECSIG");
+          
+            pterms["FB9_7"]=new Array("/FPGA_done");
+          
+            pterms["FB9_10"]=new Array("data4_SPECSIG");
+          
+            pterms["FB9_13"]=new Array("data5_SPECSIG");
+          
+            pterms["FB9_25"]=new Array("data6_SPECSIG");
+          
+            pterms["FB10_7"]=new Array("/FPGA_done");
+          
+            pterms["FB10_10"]=new Array("data3_SPECSIG");
+          
+            pterms["FB11_7"]=new Array("/FPGA_done");
+          
+            pterms["FB11_49"]=new Array("data7_SPECSIG");
+          
+            pterms["FB14_0"]=new Array("/usb_timing2_SPECSIG","/usb_timing3_SPECSIG","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG","usb_rd");
+          
+            pterms["FB14_1"]=new Array("/usb_timing0_SPECSIG","usb_timing2_SPECSIG","/usb_timing1_SPECSIG","/usb_timing3_SPECSIG","/usb_timing4_SPECSIG","/usb_timing5_SPECSIG","/usb_timing6_SPECSIG","/usb_timing7_SPECSIG","/usb_timing8_SPECSIG","/usb_rd");
+          
+            pterms["FB16_7"]=new Array("/FPGA_done");
+          
+            pterms["FB16_40"]=new Array("data2_SPECSIG");
+          
+            pterms["FB16_43"]=new Array("data1_SPECSIG");
+          
+          d1["usb_timing3_SPECSIG"]=new Array("FB1_10");
+          
+              gblclk["usb_timing3_SPECSIG"]=new Array("mclk");
+            prld["usb_timing3_SPECSIG"]="GND";
+          d1["previous"]=new Array("FB1_13");
+          
+              gblclk["previous"]=new Array("mclk");
+            prld["previous"]="GND";
+          d2["FPGA_prog_B"]=new Array("FB1_4","FB1_3","FB1_0","FB1_1","FB1_2","FB1_5","FB1_6");
+          
+              gblclk["FPGA_prog_B"]=new Array("mclk");
+            prld["FPGA_prog_B"]="GND";
+          d1["fpga_timing8_SPECSIG"]=new Array("FB1_19");
+          
+              gblclk["fpga_timing8_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing8_SPECSIG"]="GND";
+          d1["fpga_timing7_SPECSIG"]=new Array("FB1_22");
+          
+              gblclk["fpga_timing7_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing7_SPECSIG"]="GND";
+          d1["usb_timing4_SPECSIG"]=new Array("FB1_25");
+          
+              gblclk["usb_timing4_SPECSIG"]=new Array("mclk");
+            prld["usb_timing4_SPECSIG"]="GND";
+          d1["fpga_timing6_SPECSIG"]=new Array("FB1_28");
+          
+              gblclk["fpga_timing6_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing6_SPECSIG"]="GND";
+          d1["fpga_timing5_SPECSIG"]=new Array("FB1_31");
+          
+              gblclk["fpga_timing5_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing5_SPECSIG"]="GND";
+          d2["fpga_timing1_SPECSIG"]=new Array("FB1_21","FB1_26","FB1_23","FB1_24");
+          
+              gblclk["fpga_timing1_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing1_SPECSIG"]="GND";
+          d2["fpga_timing0_SPECSIG"]=new Array("FB1_16","FB1_20","FB1_17","FB1_18");
+          
+              gblclk["fpga_timing0_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing0_SPECSIG"]="GND";
+          d2["fpga_timing2_SPECSIG"]=new Array("FB1_12","FB1_15","FB1_14");
+          
+              gblclk["fpga_timing2_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing2_SPECSIG"]="GND";
+          d2["usb_timing0_SPECSIG"]=new Array("FB1_39","FB1_35","FB1_37","FB1_36","FB1_38");
+          
+              gblclk["usb_timing0_SPECSIG"]=new Array("mclk");
+            prld["usb_timing0_SPECSIG"]="VCC";
+          d2["usb_timing2_SPECSIG"]=new Array("FB1_34","FB1_32","FB1_33");
+          
+              gblclk["usb_timing2_SPECSIG"]=new Array("mclk");
+            prld["usb_timing2_SPECSIG"]="VCC";
+          d2["usb_timing1_SPECSIG"]=new Array("FB1_30","FB1_27","FB1_29");
+          
+              gblclk["usb_timing1_SPECSIG"]=new Array("mclk");
+            prld["usb_timing1_SPECSIG"]="GND";
+          d2["fpga_timing4_SPECSIG"]=new Array("FB1_9","FB1_11");
+          
+              gblclk["fpga_timing4_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing4_SPECSIG"]="GND";
+          d2["fpga_timing3_SPECSIG"]=new Array("FB1_7","FB1_8");
+          
+              gblclk["fpga_timing3_SPECSIG"]=new Array("mclk");
+            prld["fpga_timing3_SPECSIG"]="GND";
+          d2["LEDs1_SPECSIG"]=new Array("FB2_1","FB2_0");
+          
+          d2["LEDs2_SPECSIG"]=new Array("FB2_2","FB2_3");
+          
+          d2["LEDs3_SPECSIG"]=new Array("FB2_4","FB2_5");
+          
+          d1["usb_timing8_SPECSIG"]=new Array("FB2_31");
+          
+              gblclk["usb_timing8_SPECSIG"]=new Array("mclk");
+            prld["usb_timing8_SPECSIG"]="GND";
+          d1["usb_timing7_SPECSIG"]=new Array("FB2_34");
+          
+              gblclk["usb_timing7_SPECSIG"]=new Array("mclk");
+            prld["usb_timing7_SPECSIG"]="GND";
+          d1["usb_timing6_SPECSIG"]=new Array("FB2_37");
+          
+              gblclk["usb_timing6_SPECSIG"]=new Array("mclk");
+            prld["usb_timing6_SPECSIG"]="GND";
+          d1["usb_timing5_SPECSIG"]=new Array("FB2_40");
+          
+              gblclk["usb_timing5_SPECSIG"]=new Array("mclk");
+            prld["usb_timing5_SPECSIG"]="GND";
+          d2["LEDs4_SPECSIG"]=new Array("FB2_7","FB2_6");
+          
+          d1["usb_dry"]=new Array("FB2_46");
+          
+              gblclk["usb_dry"]=new Array("mclk");
+            prld["usb_dry"]="GND";
+          d2["LEDs5_SPECSIG"]=new Array("FB2_8","FB2_0");
+          
+          d2["LEDs6_SPECSIG"]=new Array("FB2_10","FB2_9");
+          
+          d1["previous_usb_dry"]=new Array("FB2_55");
+          
+              gblclk["previous_usb_dry"]=new Array("mclk");
+            prld["previous_usb_dry"]="GND";
+          d2["N24"]=new Array("GND");
+          
+              trst["N24"]=new Array("FB3_7");
+              
+          d2["FPGA_MOSI"]=new Array("GND");
+          
+          d2["LEDs7_SPECSIG"]=new Array("FB4_1","FB4_0");
+          
+          d2["LEDs8_SPECSIG"]=new Array("FB4_2","FB4_0");
+          
+          d2["FPGA_cclk"]=new Array("FB6_1","FB6_0");
+          
+              gblclk["FPGA_cclk"]=new Array("mclk");
+            prld["FPGA_cclk"]="GND";
+          d1["usb_rst"]=new Array("FB7_49");
+          
+              gblclk["usb_rst"]=new Array("mclk");
+            prld["usb_rst"]="GND";
+          d1["FPGA_D0_SPECSIG"]=new Array("FB8_46");
+          
+              gblclk["FPGA_D0_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D0_SPECSIG"]=new Array("FB8_7");
+              prld["FPGA_D0_SPECSIG"]="GND";
+          d2["Mode0_SPECSIG"]=new Array("GND");
+          
+          d1["FPGA_D4_SPECSIG"]=new Array("FB9_10");
+          
+              gblclk["FPGA_D4_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D4_SPECSIG"]=new Array("FB9_7");
+              prld["FPGA_D4_SPECSIG"]="GND";
+          d1["FPGA_D5_SPECSIG"]=new Array("FB9_13");
+          
+              gblclk["FPGA_D5_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D5_SPECSIG"]=new Array("FB9_7");
+              prld["FPGA_D5_SPECSIG"]="GND";
+          d1["FPGA_D6_SPECSIG"]=new Array("FB9_25");
+          
+              gblclk["FPGA_D6_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D6_SPECSIG"]=new Array("FB9_7");
+              prld["FPGA_D6_SPECSIG"]="GND";
+          d1["FPGA_D3_SPECSIG"]=new Array("FB10_10");
+          
+              gblclk["FPGA_D3_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D3_SPECSIG"]=new Array("FB10_7");
+              prld["FPGA_D3_SPECSIG"]="GND";
+              gblclk["SW_1_hi"]=new Array("mclk");
+            prld["SW_1_hi"]="GND";
+          inreg["SW_1_hi"]=new Array("SW1_SPECSIG");
+        
+              gblclk["SW_2_hi"]=new Array("mclk");
+            prld["SW_2_hi"]="GND";
+          inreg["SW_2_hi"]=new Array("SW2_SPECSIG");
+        
+          d2["mclk_ce"]=new Array("GND");
+          
+          d1["FPGA_D7_SPECSIG"]=new Array("FB11_49");
+          
+              gblclk["FPGA_D7_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D7_SPECSIG"]=new Array("FB11_7");
+              prld["FPGA_D7_SPECSIG"]="GND";
+          d2["usb_rd"]=new Array("FB14_0","FB14_1");
+          
+              gblclk["usb_rd"]=new Array("mclk");
+            prld["usb_rd"]="GND";
+          d2["Mode2_SPECSIG"]=new Array("GND");
+          
+          d1["FPGA_D2_SPECSIG"]=new Array("FB16_40");
+          
+              gblclk["FPGA_D2_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D2_SPECSIG"]=new Array("FB16_7");
+              prld["FPGA_D2_SPECSIG"]="GND";
+          d1["FPGA_D1_SPECSIG"]=new Array("FB16_43");
+          
+              gblclk["FPGA_D1_SPECSIG"]=new Array("mclk");
+            
+              trst["FPGA_D1_SPECSIG"]=new Array("FB16_7");
+              prld["FPGA_D1_SPECSIG"]="GND";
+          d2["Mode1_SPECSIG"]=new Array("GND");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

@@ -1,0 +1,63 @@
+Pin Freeze File:  version I.31
+
+2C256100 XC2C256-6-VQ100
+FPGA_D<0> S:PIN35
+FPGA_D<1> S:PIN40
+FPGA_D<2> S:PIN41
+FPGA_D<3> S:PIN77
+FPGA_D<4> S:PIN78
+FPGA_D<5> S:PIN79
+FPGA_D<6> S:PIN81
+FPGA_D<7> S:PIN89
+FPGA_MOSI S:PIN50
+FPGA_cclk S:PIN97
+LEDs<1> S:PIN99
+LEDs<2> S:PIN96
+LEDs<3> S:PIN95
+LEDs<4> S:PIN94
+LEDs<5> S:PIN1
+LEDs<6> S:PIN2
+LEDs<7> S:PIN3
+LEDs<8> S:PIN4
+Mode<0> S:PIN36
+Mode<1> S:PIN39
+Mode<2> S:PIN42
+Variant<0> S:PIN30
+Variant<1> S:PIN33
+Variant<2> S:PIN34
+mclk_ce S:PIN70
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_3 LEDs<1>
+PARTITION FB1_6 FPGA_cclk
+PARTITION FB1_12 LEDs<2> LEDs<3> LEDs<4>
+
+PARTITION FB2_1 LEDs<5>
+PARTITION FB2_3 LEDs<6>
+PARTITION FB2_5 LEDs<7>
+PARTITION FB2_12 LEDs<8>
+
+
+
+
+PARTITION FB6_16 Variant<0>
+
+PARTITION FB8_11 Variant<1> Variant<2>
+PARTITION FB8_14 Mode<0>
+
+
+PARTITION FB10_12 mclk_ce
+
+
+
+
+PARTITION FB14_3 FPGA_MOSI
+
+
+PARTITION FB16_6 Mode<2>
+PARTITION FB16_13 Mode<1>
+
+

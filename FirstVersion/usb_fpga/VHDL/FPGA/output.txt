@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+16M
+FF
+fpga
+C:/Documents and Settings/FPGA
+
+MCS
+No

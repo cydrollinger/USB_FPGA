@@ -1,0 +1,7 @@
+Storage Target: SPI Flash Single FPGA
+Auto Select Storage Device
+FF
+testii
+C:/work/USB_FPGA/VHDL/USB_FPGA/FPGA
+
+MCS

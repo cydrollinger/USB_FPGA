@@ -1,0 +1,139 @@
+MDF Database:  version 1.0
+MDF_INFO | CPLD | XC2C256-6-VQ100
+MACROCELL | 13 | 2 | FPGA_MOSI_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 2 | 
+   FPGA_MOSI = Gnd;	// (0 pt, 0 inp)
+    FPGA_MOSI.OE = Gnd;	// PTB	(1 pt, 1 inp)
+
+MACROCELL | 0 | 5 | FPGA_cclk_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 2 | 
+   FPGA_cclk = Gnd;	// (0 pt, 0 inp)
+    FPGA_cclk.OE = Gnd;	// PTB	(1 pt, 1 inp)
+
+MACROCELL | 0 | 2 | LEDs<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<0>
+INPUTP | 1 | 77
+EQ | 1 | 
+   LEDs<1> = !FPGA_D<0>;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 11 | LEDs<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<1>
+INPUTP | 1 | 87
+EQ | 1 | 
+   LEDs<2> = !FPGA_D<1>;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 12 | LEDs<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<2>
+INPUTP | 1 | 88
+EQ | 1 | 
+   LEDs<3> = !FPGA_D<2>;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 13 | LEDs<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<3>
+INPUTP | 1 | 167
+EQ | 1 | 
+   LEDs<4> = !FPGA_D<3>;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 0 | LEDs<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<4>
+INPUTP | 1 | 168
+EQ | 1 | 
+   LEDs<5> = !FPGA_D<4>;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 2 | LEDs<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<5>
+INPUTP | 1 | 169
+EQ | 1 | 
+   LEDs<6> = !FPGA_D<5>;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 4 | LEDs<7>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<6>
+INPUTP | 1 | 173
+EQ | 1 | 
+   LEDs<7> = !FPGA_D<6>;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 11 | LEDs<8>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | FPGA_D<7>
+INPUTP | 1 | 194
+EQ | 1 | 
+   LEDs<8> = !FPGA_D<7>;	// (1 pt, 1 inp)
+
+MACROCELL | 7 | 13 | Mode<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !Mode<0> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 15 | 12 | Mode<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   Mode<1> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 15 | 5 | Mode<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   Mode<2> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 5 | 15 | Variant<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !Variant<0> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 7 | 10 | Variant<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !Variant<1> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 7 | 11 | Variant<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !Variant<2> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 9 | 11 | mclk_ce_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !mclk_ce = Gnd;	// (0 pt, 0 inp)
+
+PIN | FPGA_D<0> | 64 | 16 | LVCMOS18 | 77 | 1 | 0 | 2
+PIN | FPGA_D<1> | 64 | 16 | LVCMOS18 | 87 | 1 | 0 | 11
+PIN | FPGA_D<2> | 64 | 16 | LVCMOS18 | 88 | 1 | 0 | 12
+PIN | FPGA_D<3> | 64 | 16 | LVCMOS18 | 167 | 1 | 0 | 13
+PIN | FPGA_D<4> | 64 | 16 | LVCMOS18 | 168 | 1 | 1 | 0
+PIN | FPGA_D<5> | 64 | 16 | LVCMOS18 | 169 | 1 | 1 | 2
+PIN | FPGA_D<6> | 64 | 16 | LVCMOS18 | 173 | 1 | 1 | 4
+PIN | FPGA_D<7> | 64 | 16 | LVCMOS18 | 194 | 1 | 1 | 11
+PIN | FPGA_MOSI | 536871040 | 16 | LVCMOS18 | 108
+PIN | FPGA_cclk | 536871040 | 16 | LVCMOS18 | 214
+PIN | LEDs<1> | 536871040 | 0 | LVCMOS18 | 218
+PIN | LEDs<2> | 536871040 | 0 | LVCMOS18 | 213
+PIN | LEDs<3> | 536871040 | 0 | LVCMOS18 | 212
+PIN | LEDs<4> | 536871040 | 0 | LVCMOS18 | 211
+PIN | LEDs<5> | 536871040 | 0 | LVCMOS18 | 1
+PIN | LEDs<6> | 536871040 | 0 | LVCMOS18 | 3
+PIN | LEDs<7> | 536871040 | 0 | LVCMOS18 | 5
+PIN | LEDs<8> | 536871040 | 0 | LVCMOS18 | 7
+PIN | Mode<0> | 536871040 | 0 | LVCMOS18 | 78
+PIN | Mode<1> | 536871040 | 0 | LVCMOS18 | 86
+PIN | Mode<2> | 536871040 | 0 | LVCMOS18 | 89
+PIN | Variant<0> | 536871040 | 0 | LVCMOS18 | 67
+PIN | Variant<1> | 536871040 | 0 | LVCMOS18 | 75
+PIN | Variant<2> | 536871040 | 0 | LVCMOS18 | 76
+PIN | mclk_ce | 536871040 | 0 | LVCMOS18 | 158

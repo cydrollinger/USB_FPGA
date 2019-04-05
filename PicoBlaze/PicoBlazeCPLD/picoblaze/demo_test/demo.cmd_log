@@ -1,0 +1,16 @@
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+ngdbuild -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -dd _ngo -uc "C:/Documents and Settings/Cy Drollinger/USB_FPGA/USB_FPGA_CPLD/cpld.ucf" -p xbr "demo.ngc" demo.ngd
+ngdbuild -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -dd _ngo -uc "C:/Documents and Settings/Cy Drollinger/USB_FPGA/USB_FPGA_CPLD/cpld.ucf" -p xbr "demo.ngc" demo.ngd
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+ngdbuild -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -dd _ngo -uc "C:/Documents and Settings/Cy Drollinger/USB_FPGA/USB_FPGA_CPLD/cpld.ucf" -p xbr "demo.ngc" demo.ngd
+ngdbuild -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -dd _ngo -uc "C:/Documents and Settings/Cy Drollinger/USB_FPGA/USB_FPGA_CPLD/cpld.ucf" -p xbr "demo.ngc" demo.ngd
+cpldfit -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -p xc2c64a-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 demo.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" demo_build.xml
+xst -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -ifn demo.xst -ofn demo.syr
+ngdbuild -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -dd _ngo -uc "C:/Documents and Settings/Cy Drollinger/USB_FPGA/USB_FPGA_CPLD/cpld.ucf" -p xbr "demo.ngc" demo.ngd
+cpldfit -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" -intstyle ise -p xc2c64a-5-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 demo.ngd
+XSLTProcess -ise "C:/work/USB_FPGA/PicoBlaze/PicoBlazeCPLD/picoblaze/demo_test/demo_test.ise" demo_build.xml

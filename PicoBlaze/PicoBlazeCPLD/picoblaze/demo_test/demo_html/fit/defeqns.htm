@@ -1,0 +1,784 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** UnMapped Logic **********
+</td></tr><tr><td>
+** Outputs **
+</td></tr><tr><td>
+</td></tr><tr><td>
+clk_enable <= NOT ('0');
+</td></tr><tr><td>
+FDCPE_output0: FDCPE port map (output(0),output_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(0) <= NOT (((NOT N_PZ_733 AND NOT output(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[0].data_register_bit/rambit(7) AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0) AND instruction(0) AND NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(10) AND write_strobe)));
+</td></tr><tr><td>
+FDCPE_output1: FDCPE port map (output(1),output_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(1) <= NOT (((NOT N_PZ_733 AND NOT output(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(7) AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0) AND N_PZ_733)));
+</td></tr><tr><td>
+FDCPE_output2: FDCPE port map (output(2),output_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(2) <= NOT (((NOT N_PZ_828 AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_733 AND NOT output(2))));
+</td></tr><tr><td>
+FDCPE_output3: FDCPE port map (output(3),output_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(3) <= NOT (((N_PZ_872 AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_733 AND NOT output(3))));
+</td></tr><tr><td>
+FDCPE_output4: FDCPE port map (output(4),output_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(4) <= NOT (((N_PZ_844 AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_733 AND NOT output(4))));
+</td></tr><tr><td>
+FDCPE_output5: FDCPE port map (output(5),output_D(5),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(5) <= NOT (((NOT N_PZ_733 AND NOT output(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND N_PZ_733)));
+</td></tr><tr><td>
+FDCPE_output6: FDCPE port map (output(6),output_D(6),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(6) <= NOT (((N_PZ_877 AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_733 AND NOT output(6))));
+</td></tr><tr><td>
+FDCPE_output7: FDCPE port map (output(7),output_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_D(7) <= NOT (((NOT N_PZ_733 AND NOT output(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10) AND N_PZ_733)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10) AND N_PZ_733)));
+</td></tr><tr><td>
+** Buried Nodes **
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_725 <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0) AND instruction(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(0) AND NOT instruction(12)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_730 <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0) AND NOT instruction(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[0].data_register_bit/rambit(7)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_731 <= (processor/T_state AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/reg_and_flag_enables/register_write_valid);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_732 <= (processor/T_state AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/reg_and_flag_enables/register_write_valid);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_733 <= (N_PZ_725 AND write_strobe);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_734 <= ((processor/internal_reset)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT processor/carry_flag AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/T_state AND instruction(15) AND instruction(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT processor/T_state AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	instruction(15) AND instruction(12) AND NOT instruction(10)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_800 <= ((N_PZ_730 AND N_PZ_846)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND N_PZ_725 AND NOT N_PZ_846)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND NOT N_PZ_725 AND NOT N_PZ_846));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_828 <= ((instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_831 <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_838 <= ((instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_844 <= ((instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_846 <= N_PZ_725
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (processor/carry_flag AND instruction(11));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_847 <= (address(2) AND address(3) AND N_PZ_879 AND address(4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_872 <= ((instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_877 <= ((instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_879 <= (address(0) AND NOT processor/T_state AND address(1));
+</td></tr><tr><td>
+FDCPE_address0: FDCPE port map (address(0),address_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_D(0) <= ((address(0) AND NOT N_PZ_734 AND processor/T_state)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT address(0) AND NOT N_PZ_734 AND NOT processor/T_state)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT processor/internal_reset AND instruction(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_734));
+</td></tr><tr><td>
+FDCPE_address1: FDCPE port map (address(1),address_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_D(1) <= ((NOT N_PZ_734 AND NOT N_PZ_879 AND address(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (address(0) AND NOT N_PZ_734 AND NOT processor/T_state AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_879));
+</td></tr><tr><td>
+FDCPE_address2: FDCPE port map (address(2),address_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_D(2) <= ((address(2) AND NOT N_PZ_734 AND NOT N_PZ_879)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT address(2) AND NOT N_PZ_734 AND N_PZ_879));
+</td></tr><tr><td>
+FTCPE_address3: FTCPE port map (address(3),address_T(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_T(3) <= ((N_PZ_734 AND address(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (address(2) AND NOT N_PZ_734 AND N_PZ_879));
+</td></tr><tr><td>
+FDCPE_address4: FDCPE port map (address(4),address_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_D(4) <= ((NOT N_PZ_734 AND address(4) AND NOT N_PZ_847)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (address(2) AND NOT N_PZ_734 AND address(3) AND N_PZ_879 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_847));
+</td></tr><tr><td>
+FDCPE_address5: FDCPE port map (address(5),address_D(5),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_D(5) <= ((NOT N_PZ_734 AND N_PZ_847 AND NOT address(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_734 AND NOT N_PZ_847 AND address(5)));
+</td></tr><tr><td>
+FTCPE_address6: FTCPE port map (address(6),address_T(6),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_T(6) <= ((N_PZ_734 AND address(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_734 AND N_PZ_847 AND address(5)));
+</td></tr><tr><td>
+FTCPE_address7: FTCPE port map (address(7),address_T(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address_T(7) <= ((N_PZ_734 AND address(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_734 AND N_PZ_847 AND address(5) AND address(6)));
+</td></tr><tr><td>
+FDCPE_instruction0: FDCPE port map (instruction(0),instruction_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction_D(0) <= ((address(0) AND NOT address(2) AND NOT address(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(4) AND NOT address(5) AND NOT address(6) AND NOT address(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT address(2) AND NOT address(3) AND NOT address(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(4) AND NOT address(5) AND NOT address(6) AND NOT address(7)));
+</td></tr><tr><td>
+FDCPE_instruction10: FDCPE port map (instruction(10),instruction_D(10),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction_D(10) <= ((NOT address(0) AND NOT address(2) AND NOT address(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(4) AND NOT address(5) AND NOT address(6) AND NOT address(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT address(2) AND NOT address(3) AND NOT address(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(4) AND NOT address(5) AND NOT address(6) AND NOT address(7)));
+</td></tr><tr><td>
+FDCPE_instruction11: FDCPE port map (instruction(11),instruction_D(11),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction_D(11) <= (address(0) AND NOT address(2) AND NOT address(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(1) AND NOT address(4) AND NOT address(5) AND NOT address(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(7));
+</td></tr><tr><td>
+FDCPE_instruction12: FDCPE port map (instruction(12),instruction_D(12),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction_D(12) <= (address(0) AND NOT address(2) AND NOT address(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	address(1) AND NOT address(4) AND NOT address(5) AND NOT address(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(7));
+</td></tr><tr><td>
+FDCPE_instruction13: FDCPE port map (instruction(13),instruction_D(13),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction_D(13) <= (NOT address(0) AND NOT address(2) AND NOT address(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	address(1) AND NOT address(4) AND NOT address(5) AND NOT address(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(7));
+</td></tr><tr><td>
+FDCPE_instruction15: FDCPE port map (instruction(15),instruction_D(15),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction_D(15) <= ((address(0) AND NOT address(2) AND NOT address(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(4) AND NOT address(5) AND NOT address(6) AND NOT address(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT address(2) AND NOT address(3) AND address(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT address(4) AND NOT address(5) AND NOT address(6) AND NOT address(7)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+processor/ALU_result(7) <= ((instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(7)));
+</td></tr><tr><td>
+FDCPE_processor/T_state: FDCPE port map (processor/T_state,processor/T_state_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/T_state_D <= (NOT processor/internal_reset AND NOT processor/T_state);
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_carry: FDCPE port map (processor/arithmetic_carry,processor/arithmetic_carry_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_carry_D <= ((instruction(12) AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND N_PZ_838)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND N_PZ_838)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND instruction(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10) AND NOT N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10) AND NOT N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(5)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+processor/arithmetic_group/add_sub_module/carry_chain(1) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/half_addsub(1) AND N_PZ_800)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/half_addsub(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/half_addsub(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+processor/arithmetic_group/add_sub_module/carry_chain(3) <= ((instruction(12) AND NOT instruction(10) AND NOT N_PZ_800)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_872 AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(12) AND NOT N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_828)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(12) AND NOT N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(10) AND NOT N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0) AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0) AND NOT N_PZ_831)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1) AND NOT N_PZ_831));
+</td></tr><tr><td>
+</td></tr><tr><td>
+processor/arithmetic_group/add_sub_module/carry_chain(5) <= ((instruction(12) AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND NOT N_PZ_844 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND NOT N_PZ_844 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND NOT N_PZ_844 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+processor/arithmetic_group/add_sub_module/half_addsub(1) <= (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result0: FDCPE port map (processor/arithmetic_result(0),processor/arithmetic_result_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(0) <= ((N_PZ_730 AND N_PZ_846)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_730 AND NOT N_PZ_846));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result1: FDCPE port map (processor/arithmetic_result(1),processor/arithmetic_result_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(1) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/half_addsub(1) AND NOT N_PZ_800)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/half_addsub(1) AND N_PZ_800));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result2: FDCPE port map (processor/arithmetic_result(2),processor/arithmetic_result_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(2) <= processor/arithmetic_group/add_sub_module/carry_chain(1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((instruction(13) AND NOT instruction(12) AND N_PZ_828)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(12) AND NOT N_PZ_828)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result3: FDCPE port map (processor/arithmetic_result(3),processor/arithmetic_result_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(3) <= (NOT instruction(12) AND N_PZ_872)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT instruction(13) AND NOT instruction(12) AND NOT N_PZ_828)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND NOT N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0) AND N_PZ_831)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0) AND NOT N_PZ_831)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(1) AND NOT N_PZ_831)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0) AND NOT N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0) AND NOT N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(1) AND NOT N_PZ_831)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1) AND N_PZ_831)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0) AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT N_PZ_872 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0) AND N_PZ_828 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(1)));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result4: FDCPE port map (processor/arithmetic_result(4),processor/arithmetic_result_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(4) <= NOT (processor/arithmetic_group/add_sub_module/carry_chain(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT instruction(12) AND N_PZ_844)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_844 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND NOT N_PZ_844 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result5: FDCPE port map (processor/arithmetic_result(5),processor/arithmetic_result_D(5),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(5) <= ((instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_844 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(3)));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result6: FDCPE port map (processor/arithmetic_result(6),processor/arithmetic_result_D(6),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(6) <= processor/arithmetic_group/add_sub_module/carry_chain(5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND instruction(10) AND NOT N_PZ_877)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND NOT N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(5)));
+</td></tr><tr><td>
+FDCPE_processor/arithmetic_result7: FDCPE port map (processor/arithmetic_result(7),processor/arithmetic_result_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/arithmetic_result_D(7) <= ((instruction(12) AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND N_PZ_838)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND N_PZ_838)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10) AND N_PZ_877)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10) AND N_PZ_877)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND instruction(10) AND NOT N_PZ_838)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND instruction(10) AND NOT N_PZ_838)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10) AND NOT N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10) AND NOT N_PZ_877 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/carry_chain(5)));
+</td></tr><tr><td>
+FDCPE_processor/basic_control/reset_delay1: FDCPE port map (processor/basic_control/reset_delay1,reset,clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_processor/carry_flag: FDCPE port map (processor/carry_flag,processor/carry_flag_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/carry_flag_D <= ((NOT processor/internal_reset AND processor/carry_flag AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/T_state)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT processor/internal_reset AND processor/carry_flag AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/reg_and_flag_enables/arith_or_logical_valid AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/reg_and_flag_enables/returni_or_shift_valid)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT processor/internal_reset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/T_state AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/reg_and_flag_enables/arith_or_logical_valid AND NOT instruction(15) AND processor/arithmetic_carry)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT processor/internal_reset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/T_state AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/reg_and_flag_enables/returni_or_shift_valid AND processor/arithmetic_carry)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT processor/internal_reset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/T_state AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/reg_and_flag_enables/arith_or_logical_valid AND instruction(15) AND NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(11) AND processor/shift_and_rotate_carry)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT processor/internal_reset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/T_state AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/reg_and_flag_enables/returni_or_shift_valid AND NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_carry));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[0].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[0].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[0].data_register_bit/rambit_D(0) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0) AND NOT N_PZ_731)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(0)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[0].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[0].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[0].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[0].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[0].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(0) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(0)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[1].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[1].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[1].data_register_bit/rambit_D(0) <= ((NOT N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(1)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[1].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[1].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[1].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[1].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[1].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(1) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(1) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[2].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[2].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[2].data_register_bit/rambit_D(0) <= ((NOT N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(2)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[2].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[2].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[2].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[2].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(2) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(2) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[3].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[3].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[3].data_register_bit/rambit_D(0) <= ((NOT N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(3)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[3].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[3].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[3].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[3].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(3) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(3) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[4].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[4].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[4].data_register_bit/rambit_D(0) <= ((NOT N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(4)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[4].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[4].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[4].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(4) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(4) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[5].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[5].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[5].data_register_bit/rambit_D(0) <= ((NOT N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(5)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[5].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[5].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[5].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(5) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(5) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[6].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[6].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[6].data_register_bit/rambit_D(0) <= ((NOT N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND N_PZ_731 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(6)));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[6].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[6].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[6].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(15) AND N_PZ_732 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_result(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(13) AND NOT instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/logical_result(6) AND N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/shift_and_rotate_result(6) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[7].data_register_bit/rambit0: FDCPE port map (processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0),processor/data_registers/bus_width_loop[7].data_register_bit/rambit_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[7].data_register_bit/rambit_D(0) <= ((processor/ALU_result(7) AND N_PZ_731)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT N_PZ_731));
+</td></tr><tr><td>
+FDCPE_processor/data_registers/bus_width_loop[7].data_register_bit/rambit7: FDCPE port map (processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7),processor/data_registers/bus_width_loop[7].data_register_bit/rambit_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/data_registers/bus_width_loop[7].data_register_bit/rambit_D(7) <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND NOT N_PZ_732)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (processor/ALU_result(7) AND N_PZ_732));
+</td></tr><tr><td>
+FDCPE_processor/internal_reset: FDCPE port map (processor/internal_reset,processor/internal_reset_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/internal_reset_D <= NOT ((NOT reset AND NOT processor/basic_control/reset_delay1));
+</td></tr><tr><td>
+FDCPE_processor/logical_result0: FDCPE port map (processor/logical_result(0),processor/logical_result_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(0) <= ((NOT instruction(11) AND N_PZ_725)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(0) AND NOT instruction(12) AND NOT N_PZ_730)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0) AND instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[0].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[0].data_register_bit/rambit(0) AND instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[0].data_register_bit/rambit(7)));
+</td></tr><tr><td>
+FDCPE_processor/logical_result1: FDCPE port map (processor/logical_result(1),processor/logical_result_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(1) <= ((instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/arithmetic_group/add_sub_module/half_addsub(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/logical_result2: FDCPE port map (processor/logical_result(2),processor/logical_result_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(2) <= ((instruction(13) AND NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND NOT instruction(12) AND N_PZ_828)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[2].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[2].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/logical_result3: FDCPE port map (processor/logical_result(3),processor/logical_result_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(3) <= ((instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[3].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND N_PZ_831));
+</td></tr><tr><td>
+FDCPE_processor/logical_result4: FDCPE port map (processor/logical_result(4),processor/logical_result_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(4) <= ((instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[4].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[4].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/logical_result5: FDCPE port map (processor/logical_result(5),processor/logical_result_D(5),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(5) <= ((instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/logical_result6: FDCPE port map (processor/logical_result(6),processor/logical_result_D(6),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(6) <= ((instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[6].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[6].data_register_bit/rambit(0)));
+</td></tr><tr><td>
+FDCPE_processor/logical_result7: FDCPE port map (processor/logical_result(7),processor/logical_result_D(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/logical_result_D(7) <= ((instruction(12) AND NOT instruction(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND instruction(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND instruction(10)));
+</td></tr><tr><td>
+FDCPE_processor/reg_and_flag_enables/arith_or_logical_valid: FDCPE port map (processor/reg_and_flag_enables/arith_or_logical_valid,NOT instruction(15),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_processor/reg_and_flag_enables/register_write_valid: FDCPE port map (processor/reg_and_flag_enables/register_write_valid,processor/reg_and_flag_enables/register_write_valid_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/reg_and_flag_enables/register_write_valid_D <= NOT (((instruction(15) AND instruction(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(15) AND instruction(11))));
+</td></tr><tr><td>
+FDCPE_processor/reg_and_flag_enables/returni_or_shift_valid: FDCPE port map (processor/reg_and_flag_enables/returni_or_shift_valid,processor/reg_and_flag_enables/returni_or_shift_valid_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/reg_and_flag_enables/returni_or_shift_valid_D <= (instruction(13) AND instruction(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT instruction(12) AND NOT instruction(11));
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_carry: FDCPE port map (processor/shift_and_rotate_carry,processor/shift_and_rotate_carry_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/shift_and_rotate_carry_D <= NOT (((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10))));
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result0: FDCPE port map (processor/shift_and_rotate_result(0),processor/shift_and_rotate_result_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/shift_and_rotate_result_D(0) <= NOT (((NOT instruction(13) AND NOT processor/carry_flag)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(7) AND instruction(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (instruction(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[7].data_register_bit/rambit(0) AND NOT instruction(10))));
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result1: FDCPE port map (processor/shift_and_rotate_result(1),NOT N_PZ_730,clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result2: FDCPE port map (processor/shift_and_rotate_result(2),processor/shift_and_rotate_result_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/shift_and_rotate_result_D(2) <= NOT (((instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[1].data_register_bit/rambit(0))));
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result3: FDCPE port map (processor/shift_and_rotate_result(3),N_PZ_828,clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result4: FDCPE port map (processor/shift_and_rotate_result(4),NOT N_PZ_872,clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result5: FDCPE port map (processor/shift_and_rotate_result(5),NOT N_PZ_844,clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result6: FDCPE port map (processor/shift_and_rotate_result(6),processor/shift_and_rotate_result_D(6),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processor/shift_and_rotate_result_D(6) <= NOT (((instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT instruction(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/data_registers/bus_width_loop[5].data_register_bit/rambit(0))));
+</td></tr><tr><td>
+FDCPE_processor/shift_and_rotate_result7: FDCPE port map (processor/shift_and_rotate_result(7),NOT N_PZ_877,clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_write_strobe: FDCPE port map (write_strobe,write_strobe_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;write_strobe_D <= (NOT instruction(13) AND NOT processor/internal_reset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT processor/T_state AND instruction(15) AND NOT instruction(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	instruction(11));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

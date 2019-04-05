@@ -1,0 +1,56 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+INT_PI <= INT_1V8;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(1) <= DIR;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(2) <= SCL_PI;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(3) <= SDA_1V8.PIN;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(4) <= SDA_PI.PIN;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(5) <= SCL_PI;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LEDs(6) <= INT_1V8;
+</td></tr><tr><td>
+</td></tr><tr><td>
+SCL_1V8 <= SCL_PI;
+</td></tr><tr><td>
+</td></tr><tr><td>
+SDA_1V8_I <= SDA_PI.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDA_1V8 <= SDA_1V8_I when SDA_1V8_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDA_1V8_OE <= NOT DIR;
+</td></tr><tr><td>
+</td></tr><tr><td>
+SDA_PI_I <= SDA_1V8.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDA_PI <= SDA_PI_I when SDA_PI_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDA_PI_OE <= DIR;
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

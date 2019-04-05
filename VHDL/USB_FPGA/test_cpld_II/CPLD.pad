@@ -1,0 +1,129 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 4-16-2018  7:26PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  CPLD.ngd
+output file: CPLD.pad
+Part type:   xc2c256
+Speed grade: -7
+Package:     vq100
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|LEDs<1>|O|I/O/GTS2|OUTPUT|LVTTL|2||FAST||||
+P2|LEDs<2>|O|I/O/GTS3|OUTPUT|LVTTL|2||FAST||||
+P3|LEDs<3>|O|I/O/GTS0|OUTPUT|LVTTL|2||FAST||||
+P4|LEDs<4>|O|I/O/GTS1|OUTPUT|LVTTL|2||FAST||||
+P5||VCCAUX|VAUX||||||||||
+P6|LEDs<5>|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P7|LEDs<6>|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P8|LEDs<7>|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P9|LEDs<8>|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P10|FPGA_RDWR|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P11|WPU||I/O|||2|||||||
+P12|WPU||I/O|||2|||||||
+P13|WPU||I/O|||2|||||||
+P14|usb_rst|O|I/O|OUTPUT|LVTTL|1||FAST||||
+P15|WPU||I/O|||1|||||||
+P16|WPU||I/O|||1|||||||
+P17|WPU||I/O|||1|||||||
+P18|WPU||I/O|||1|||||||
+P19|WPU||I/O|||1|||||||
+P20||VCCIO-3.3|VCCIO|||1|||||||
+P21|GND||GND||||||||||
+P22|mclk|GCK|I/O/GCK0||LVTTL|1||FAST||||
+P23|WPU||I/O/GCK1|||1|||||||
+P24|WPU||I/O/CDR|||1|||||||
+P25|GND||GND||||||||||
+P26||VCC|VCC||||||||||
+P27|FPGA_cclk|O|I/O/GCK2|OUTPUT|LVTTL|1||FAST||||
+P28|FPGA_done|I|I/O/DGE0|INPUT|LVTTL|1||FAST||||
+P29|N24|I/O|I/O|BIDIR|LVTTL|1||FAST||||
+P30|WPU||I/O|||1|||||||
+P31|GND||GND||||||||||
+P32|WPU||I/O|||1|||||||
+P33|WPU||I/O|||1|||||||
+P34|WPU||I/O|||1|||||||
+P35|FPGA_D<0>|I/O|I/O|BIDIR|LVTTL|1||FAST||||
+P36|Mode<0>|O|I/O|OUTPUT|LVTTL|1||FAST||||
+P37|WPU||I/O|||1|||||||
+P38||VCCIO-3.3|VCCIO|||1|||||||
+P39|Mode<1>|O|I/O|OUTPUT|LVTTL|1||FAST||||
+P40|FPGA_D<1>|I/O|I/O|BIDIR|LVTTL|1||FAST||||
+P41|FPGA_D<2>|I/O|I/O|BIDIR|LVTTL|1||FAST||||
+P42|Mode<2>|O|I/O|OUTPUT|LVTTL|1||FAST||||
+P43|WPU||I/O|||1|||||||
+P44|WPU||I/O|||1|||||||
+P45|TDI||TDI||||||||||
+P46|WPU||I/O|||1|||||||
+P47|TMS||TMS||||||||||
+P48|TCK||TCK||||||||||
+P49|WPU||I/O|||1|||||||
+P50|usb_rd|O|I/O|OUTPUT|LVTTL|1||FAST||||
+P51||VCCIO-3.3|VCCIO|||1|||||||
+P52|data<3>|I|I/O|INPUT|LVTTL|1||FAST||||
+P53|data<6>|I|I/O|INPUT|LVTTL|1||FAST||||
+P54|WPU||I/O|||1|||||||
+P55|data<5>|I|I/O|INPUT|LVTTL|1||FAST||||
+P56|data<7>|I|I/O|INPUT|LVTTL|1||FAST||||
+P57||VCC|VCC||||||||||
+P58|data<1>|I|I/O|INPUT|LVTTL|1||FAST||||
+P59|WPU||I/O|||1|||||||
+P60|data<2>|I|I/O|INPUT|LVTTL|1||FAST||||
+P61|data<4>|I|I/O|INPUT|LVTTL|1||FAST||||
+P62|GND||GND||||||||||
+P63|WPU||I/O|||1|||||||
+P64|data<0>|I|I/O|INPUT|LVTTL|1||FAST||||
+P65|WPU||I/O|||2|||||||
+P66|WPU||I/O|||2|||||||
+P67|WPU||I/O|||2|||||||
+P68|usb_rx|I|I/O|INPUT|LVTTL|2||FAST||||
+P69|GND||GND||||||||||
+P70|mclk_ce|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P71|SW<0>|I|I/O|INPUT|LVTTL|2||FAST||||
+P72|SW<1>|I|I/O|INPUT|LVTTL|2||FAST||||
+P73|WPU||I/O|||2|||||||
+P74|SW<2>|I|I/O|INPUT|LVTTL|2||FAST||||
+P75|GND||GND||||||||||
+P76|WPU||I/O|||2|||||||
+P77|FPGA_D<3>|I/O|I/O|BIDIR|LVTTL|2||FAST||||
+P78|FPGA_D<4>|I/O|I/O|BIDIR|LVTTL|2||FAST||||
+P79|FPGA_D<5>|I/O|I/O|BIDIR|LVTTL|2||FAST||||
+P80|WPU||I/O|||2|||||||
+P81|FPGA_D<6>|I/O|I/O|BIDIR|LVTTL|2||FAST||||
+P82|WPU||I/O|||2|||||||
+P83|TDO||TDO||||||||||
+P84|GND||GND||||||||||
+P85|WPU||I/O/DGE1|||2|||||||
+P86|WPU||I/O|||2|||||||
+P87|WPU||I/O|||2|||||||
+P88||VCCIO-3.3|VCCIO|||2|||||||
+P89|FPGA_D<7>|I/O|I/O|BIDIR|LVTTL|2||FAST||||
+P90|FPGA_MOSI|O|I/O|OUTPUT|LVTTL|2||FAST||||
+P91|WPU||I/O|||2|||||||
+P92|FPGA_INITB|I|I/O|INPUT|LVTTL|2||FAST||||
+P93|WPU||I/O|||2|||||||
+P94|WPU||I/O|||2|||||||
+P95|WPU||I/O|||2|||||||
+P96|WPU||I/O|||2|||||||
+P97|WPU||I/O|||2|||||||
+P98||VCCIO-3.3|VCCIO|||2|||||||
+P99|FPGA_prog_B|O|I/O/GSR|OUTPUT|LVTTL|2||FAST||||
+P100|GND||GND||||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

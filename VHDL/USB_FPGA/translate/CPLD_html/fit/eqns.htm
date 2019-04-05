@@ -1,0 +1,151 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "CPLD";
+      var device = "XC2C64A";
+      signals = new Array("INT_PI","LEDs1_SPECSIG","LEDs2_SPECSIG","LEDs3_SPECSIG","LEDs4_SPECSIG","LEDs5_SPECSIG","LEDs6_SPECSIG","SCL_1V8","SDA_1V8","SDA_PI");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","","","","","","","");
+
+      
+           iostyle["INT_1V8"]=new Array("KPR");
+        
+           iostyle["SDA_1V8"]=new Array("KPR");
+        
+           iostyle["SCL_PI"]=new Array("KPR");
+        
+           iostyle["SDA_PI"]=new Array("KPR");
+        
+           iostyle["DIR"]=new Array("KPR");
+        
+        specSig["SDA_1V8PIN_SPECSIG"]=new Array("SDA_1V8.PIN");
+      
+        specSig["SDA_PIPIN_SPECSIG"]=new Array("SDA_PI.PIN");
+      
+        specSig["IO_SPECSIG"]=new Array("I/O");
+      
+        specSig["LEDs6_SPECSIG"]=new Array("LEDs<6>");
+      
+        specSig["LEDs5_SPECSIG"]=new Array("LEDs<5>");
+      
+        specSig["LEDs4_SPECSIG"]=new Array("LEDs<4>");
+      
+        specSig["LEDs3_SPECSIG"]=new Array("LEDs<3>");
+      
+        specSig["LEDs2_SPECSIG"]=new Array("LEDs<2>");
+      
+        specSig["LEDs1_SPECSIG"]=new Array("LEDs<1>");
+      
+            pterms["FB1_7"]=new Array("/DIR");
+          
+            pterms["FB1_13"]=new Array("SDA_PIPIN_SPECSIG");
+          
+            pterms["FB1_16"]=new Array("SCL_PI");
+          
+            pterms["FB1_28"]=new Array("INT_1V8");
+          
+            pterms["FB1_31"]=new Array("SCL_PI");
+          
+            pterms["FB1_34"]=new Array("SDA_PIPIN_SPECSIG");
+          
+            pterms["FB1_37"]=new Array("SDA_1V8PIN_SPECSIG");
+          
+            pterms["FB1_40"]=new Array("SCL_PI");
+          
+            pterms["FB1_43"]=new Array("DIR");
+          
+            pterms["FB2_7"]=new Array("DIR");
+          
+            pterms["FB2_16"]=new Array("SDA_1V8PIN_SPECSIG");
+          
+            pterms["FB2_19"]=new Array("INT_1V8");
+          
+          d1["SDA_1V8"]=new Array("FB1_13");
+          
+              trst["SDA_1V8"]=new Array("FB1_7");
+              
+          d1["SCL_1V8"]=new Array("FB1_16");
+          
+          d1["LEDs6_SPECSIG"]=new Array("FB1_28");
+          
+          d1["LEDs5_SPECSIG"]=new Array("FB1_16");
+          
+          d1["LEDs4_SPECSIG"]=new Array("FB1_13");
+          
+          d1["LEDs3_SPECSIG"]=new Array("FB1_37");
+          
+          d1["LEDs2_SPECSIG"]=new Array("FB1_16");
+          
+          d1["LEDs1_SPECSIG"]=new Array("FB1_43");
+          
+          d1["SDA_PI"]=new Array("FB2_16");
+          
+              trst["SDA_PI"]=new Array("FB2_7");
+              
+          d1["INT_PI"]=new Array("FB2_19");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

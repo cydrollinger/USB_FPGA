@@ -1,0 +1,57 @@
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 5 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 5 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 5 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 5 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 5 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-5 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 5 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -ifn "C:/Documents and Settings/FPGA/FPGA.xst" -ofn "C:/Documents and Settings/FPGA/FPGA.syr" 
+ngdbuild -ise "FPGA.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-4 FPGA.ngc FPGA.ngd  
+map -ise "FPGA.ise" -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -ise "FPGA.ise" -w -intstyle ise -ol std -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -ise "C:/Documents and Settings/FPGA/FPGA.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -ise "FPGA.ise" -intstyle ise -f FPGA.ut FPGA.ncd 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/FPGA/FPGA.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/FPGA/FPGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga.ucf -p xc3s250e-vq100-4 FPGA.ngc FPGA.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o FPGA_map.ncd FPGA.ngd FPGA.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_map.ncd FPGA.ncd FPGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA.twx FPGA.ncd -o FPGA.twr FPGA.pcf -ucf fpga.ucf 
+bitgen -intstyle ise -f FPGA.ut FPGA.ncd 

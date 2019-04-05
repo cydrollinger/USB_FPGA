@@ -1,0 +1,83 @@
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+taengine -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 
+xst -intstyle ise -ifn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.xst" -ofn "C:/work/USB_FPGA/VHDL/USB_FPGA/translate/CPLD.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld.ucf -p xc2c64a-VQ100-7 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -i CPLD 

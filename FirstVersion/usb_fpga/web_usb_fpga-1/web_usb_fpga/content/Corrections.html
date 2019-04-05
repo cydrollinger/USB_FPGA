@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20091008;19515000">
+	<META NAME="CHANGED" CONTENT="20091009;8563900">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=RIGHT STYLE="font-weight: normal"><FONT SIZE=3>October 7,
+2009</FONT></P>
+<P><FONT SIZE=5 STYLE="font-size: 20pt"><B>CORRECTED DESIGN</B></FONT></P>
+<OL>
+	<LI><P ALIGN=JUSTIFY>Inductor Package incorrect</P>
+	<P ALIGN=JUSTIFY>Solution: shoe horned them onto the board 9/18/09</P>
+	<P ALIGN=JUSTIFY>PCB: Changed the package in the library.</P>
+	<LI><P ALIGN=JUSTIFY>No ground on the spi flash thermal pad</P>
+	<P ALIGN=JUSTIFY>Solution: none necessary</P>
+	<P ALIGN=JUSTIFY>PCB: wired it 9/18/09</P>
+	<LI><P ALIGN=JUSTIFY>GND analog and digital from usb to ltc3544</P>
+	<P ALIGN=JUSTIFY>Solution: Placed short 0 ohm jumper between analog
+	and digital.</P>
+	<LI><P ALIGN=JUSTIFY>Pins 4 and 5 are reversed pin 5 is gnd for usb
+	B</P>
+	<P ALIGN=JUSTIFY>Solution: short circuit 4 and 5</P>
+	<P ALIGN=JUSTIFY>PCB: switch pins 5 to gnd and leave pin 4 open(?)
+	9/18/09</P>
+	<LI><P ALIGN=JUSTIFY>The feedback circuits for 200a and 200b are
+	switched pins one and two</P>
+	<P ALIGN=JUSTIFY>Solution: Cut the traces to R23 and R24 and hand
+	wired the traces.</P>
+	<P ALIGN=JUSTIFY>PCB: switch traces to pins one and two on the
+	LTC3544 9/18/09</P>
+	<LI><P ALIGN=JUSTIFY>The VREF on the JTAG chain needs to be wired to
+	2.5V or VCCAUX</P>
+	<P ALIGN=JUSTIFY>Solution: Jumped VREF on JTAG to VCCAUX on the
+	voltage regulator LTC3544, bottom side.</P>
+	<P ALIGN=JUSTIFY>PCB: Wired it 9/18/09</P>
+	<LI><P ALIGN=JUSTIFY>The RDWR pin ,#38, needs to be incorporated
+	into the cpld. (<FONT COLOR="#ff0000">Not done yet</FONT>)</P>
+	<P ALIGN=JUSTIFY>Solution: have shorted to grnd pin #39 to pin #38
+	on fpga. 9/18/09</P>
+	<P ALIGN=JUSTIFY>PCB: Not done yet</P>
+	<LI><P ALIGN=JUSTIFY>Switchs require a pullup resistor9/18/09</P>
+	<P ALIGN=JUSTIFY>Solution: Used pullup with the CPLD</P>
+	<P ALIGN=JUSTIFY>PCB: Wired it. 
+	</P>
+</OL>
+<P><FONT SIZE=4 STYLE="font-size: 16pt"><B>DESIGN CHANGE
+CONSIDERATIONS</B></FONT></P>
+<P>USB &ndash; JTAG Chain with FT2232R (FTDI) possibly eliminating
+CPLD?</P>
+<P>	Software- OpenOCD</P>
+<P>Redesign the board connects for a cheaper solution. 
+</P>
+<P>	BGA, a standard 2.54mm grid, and of card edge in PCB.</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

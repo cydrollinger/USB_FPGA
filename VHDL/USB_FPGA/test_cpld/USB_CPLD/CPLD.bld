@@ -1,0 +1,65 @@
+Release 8.2i ngdbuild I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\bin\nt\ngdbuild.exe -ise
+C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/USB_CPLD.ise -intstyle ise -dd
+_ngo -uc C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf -p xbr CPLD.ngc
+CPLD.ngd
+
+Reading NGO file 'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/USB_CPLD/CPLD.ngc'
+...
+
+Applying constraints in "C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf" to
+the design...
+INFO:NgdBuild:738 - A case sensitive search for the INST, PAD, or NET element
+   referred to by a constraint entry in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf' that accompanies this
+   design has failed, while a case insensitive search is in progress. The result
+   of the case insensitive search will be used, but messages will accompany each
+   and every use of a case insensitive result. Constraints are case sensitive
+   with respect to user-specified identifiers, which includes names of logic
+   elements in a design.
+INFO:NgdBuild:740 - Line 3 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'VARIANT<0>'. NET is 'Variant<0>'.
+INFO:NgdBuild:740 - Line 4 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'VARIANT<1>'. NET is 'Variant<1>'.
+INFO:NgdBuild:740 - Line 5 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'VARIANT<2>'. NET is 'Variant<2>'.
+INFO:NgdBuild:740 - Line 6 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'MODE<0>'. NET is 'Mode<0>'.
+INFO:NgdBuild:740 - Line 7 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'MODE<1>'. NET is 'Mode<1>'.
+INFO:NgdBuild:740 - Line 8 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'MODE<2>'. NET is 'Mode<2>'.
+INFO:NgdBuild:740 - Line 27 in
+   'C:/work/USB_FPGA/VHDL/USB_FPGA/test_cpld/cpld.ucf': Found case insensitive
+   match for NET name 'FPGA_prog_b'. NET is 'FPGA_prog_B'.
+
+Checking timing specifications ...
+Checking Partitions ...
+Checking expanded design ...
+WARNING:NgdBuild:470 - bidirect pad net 'FPGA_prog_B' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'FPGA_CSO_B' has no legal driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   2
+
+Total memory usage is 65652 kilobytes
+
+Writing NGD file "CPLD.ngd" ...
+
+Writing NGDBUILD log file "CPLD.bld"...

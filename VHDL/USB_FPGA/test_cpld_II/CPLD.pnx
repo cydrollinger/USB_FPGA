@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (LVTTL|SSTL3_I|LVCMOS33|LVCMOS25|SSTL2_I|LVCMOS18|LVCMOS15|HSTL_I|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xbr" device="XC2C256" pkg="VQ100" spg="-7"/><pin dir="input" iostd="LVTTL" nm="data&lt;0&gt;" no="64"/><pin dir="input" iostd="LVTTL" nm="mclk" no="22"/><pin dir="input" iostd="LVTTL" nm="FPGA_done" no="28"/><pin dir="input" iostd="LVTTL" nm="data&lt;1&gt;" no="58"/><pin dir="input" iostd="LVTTL" nm="data&lt;2&gt;" no="60"/><pin dir="input" iostd="LVTTL" nm="data&lt;3&gt;" no="52"/><pin dir="input" iostd="LVTTL" nm="data&lt;4&gt;" no="61"/><pin dir="input" iostd="LVTTL" nm="data&lt;5&gt;" no="55"/><pin dir="input" iostd="LVTTL" nm="data&lt;6&gt;" no="53"/><pin dir="input" iostd="LVTTL" nm="data&lt;7&gt;" no="56"/><pin dir="input" iostd="LVTTL" nm="FPGA_INITB" no="92"/><pin dir="input" iostd="LVTTL" nm="usb_rx" no="68"/><pin dir="input" iostd="LVTTL" nm="SW&lt;0&gt;" no="71"/><pin dir="input" iostd="LVTTL" nm="SW&lt;1&gt;" no="72"/><pin dir="input" iostd="LVTTL" nm="SW&lt;2&gt;" no="74"/><pin dir="output" iostd="LVTTL" nm="FPGA_MOSI" no="90" sr="fast"/><pin dir="output" iostd="LVTTL" nm="FPGA_RDWR" no="10" sr="fast"/><pin dir="output" iostd="LVTTL" nm="FPGA_cclk" no="27" sr="fast"/><pin dir="output" iostd="LVTTL" nm="FPGA_prog_B" no="99" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;1&gt;" no="1" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;2&gt;" no="2" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;3&gt;" no="3" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;4&gt;" no="4" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;5&gt;" no="6" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;6&gt;" no="7" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;7&gt;" no="8" sr="fast"/><pin dir="output" iostd="LVTTL" nm="LEDs&lt;8&gt;" no="9" sr="fast"/><pin dir="output" iostd="LVTTL" nm="Mode&lt;0&gt;" no="36" sr="fast"/><pin dir="output" iostd="LVTTL" nm="Mode&lt;1&gt;" no="39" sr="fast"/><pin dir="output" iostd="LVTTL" nm="Mode&lt;2&gt;" no="42" sr="fast"/><pin dir="output" iostd="LVTTL" nm="mclk_ce" no="70" sr="fast"/><pin dir="output" iostd="LVTTL" nm="usb_rd" no="50" sr="fast"/><pin dir="output" iostd="LVTTL" nm="usb_rst" no="14" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;0&gt;" no="35" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;1&gt;" no="40" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;2&gt;" no="41" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;3&gt;" no="77" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;4&gt;" no="78" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;5&gt;" no="79" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;6&gt;" no="81" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="FPGA_D&lt;7&gt;" no="89" sr="fast"/><pin dir="bidir" iostd="LVTTL" nm="N24" no="29" sr="fast"/></ibis>

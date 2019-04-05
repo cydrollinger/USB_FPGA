@@ -1,0 +1,941 @@
+# XPLAOPT Version 9.99.99.99
+# XPLAOPT -run s -it b -i demo.blx -dev XC2C64A-5VQ100 -reg -xor a -mode 1 -th 
+#         28 -fi 32 -bfi 38 -pre keep -unused keeper -terminate keeper -no_output_files 
+#$ MODULE demo
+#$ PINS 5 "clk":22 "clk_enable":70 "output<0>":1 "output<1>":2 "output<2>":3 
+#$ PINS 4 "output<3>":4 "output<4>":6 "output<5>":7 "output<6>":8 
+#$ PINS 2 "output<7>":9 "reset" 
+#$ NODES 4 "N_PZ_725"'co' "N_PZ_730"'co' "N_PZ_731"'co' "N_PZ_732"'co' 
+#$ NODES 4 "N_PZ_733"'co' "N_PZ_734"'co' "N_PZ_800"'co' "N_PZ_828"'co' 
+#$ NODES 4 "N_PZ_831"'co' "N_PZ_838"'co' "N_PZ_844"'co' "N_PZ_846"'co' 
+#$ NODES 4 "N_PZ_847"'co' "N_PZ_872"'co' "N_PZ_877"'co' "N_PZ_879"'co' 
+#$ NODES 5 "address<0>" "address<1>" "address<2>" "address<3>" "address<4>" 
+#$ NODES 4 "address<5>" "address<6>" "address<7>" "instruction<0>" 
+#$ NODES 3 "instruction<10>" "instruction<11>" "instruction<12>" 
+#$ NODES 3 "instruction<13>" "instruction<15>" "processor/ALU_result<7>" 
+#$ NODES 2 "processor/T_state" "processor/arithmetic_carry" 
+#$ NODES 1 "processor/arithmetic_group/add_sub_module/carry_chain<1>" 
+#$ NODES 1 "processor/arithmetic_group/add_sub_module/carry_chain<3>" 
+#$ NODES 1 "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+#$ NODES 1 "processor/arithmetic_group/add_sub_module/half_addsub<1>" 
+#$ NODES 2 "processor/arithmetic_result<0>" "processor/arithmetic_result<1>" 
+#$ NODES 2 "processor/arithmetic_result<2>" "processor/arithmetic_result<3>" 
+#$ NODES 2 "processor/arithmetic_result<4>" "processor/arithmetic_result<5>" 
+#$ NODES 2 "processor/arithmetic_result<6>" "processor/arithmetic_result<7>" 
+#$ NODES 2 "processor/basic_control/reset_delay1" "processor/carry_flag" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>" 
+#$ NODES 1 "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>" 
+#$ NODES 2 "processor/internal_reset" "processor/logical_result<0>" 
+#$ NODES 2 "processor/logical_result<1>" "processor/logical_result<2>" 
+#$ NODES 2 "processor/logical_result<3>" "processor/logical_result<4>" 
+#$ NODES 2 "processor/logical_result<5>" "processor/logical_result<6>" 
+#$ NODES 1 "processor/logical_result<7>" 
+#$ NODES 1 "processor/reg_and_flag_enables/arith_or_logical_valid" 
+#$ NODES 1 "processor/reg_and_flag_enables/register_write_valid" 
+#$ NODES 1 "processor/reg_and_flag_enables/returni_or_shift_valid" 
+#$ NODES 1 "processor/shift_and_rotate_carry" 
+#$ NODES 1 "processor/shift_and_rotate_result<0>" 
+#$ NODES 1 "processor/shift_and_rotate_result<1>" 
+#$ NODES 1 "processor/shift_and_rotate_result<2>" 
+#$ NODES 1 "processor/shift_and_rotate_result<3>" 
+#$ NODES 1 "processor/shift_and_rotate_result<4>" 
+#$ NODES 1 "processor/shift_and_rotate_result<5>" 
+#$ NODES 1 "processor/shift_and_rotate_result<6>" 
+#$ NODES 2 "processor/shift_and_rotate_result<7>" "write_strobe" 
+#$ PROPERTY xpla USER_SLEW_RATE clk_enable output<0> output<1> 
+#$ PROPERTY xpla USER_SLEW_RATE output<2> output<3> output<4> 
+#$ PROPERTY xpla USER_SLEW_RATE output<5> output<6> output<7>  
+#$ PROPERTY xpla unused_keeper 
+#$ PROPERTY xpla IOSTD clk 2 -1
+#$ PROPERTY xpla IOSTD clk_enable 2 -1
+#$ PROPERTY xpla IOSTD output<0> 2 -1
+#$ PROPERTY xpla IOSTD output<1> 2 -1
+#$ PROPERTY xpla IOSTD output<2> 2 -1
+#$ PROPERTY xpla IOSTD output<3> 2 -1
+#$ PROPERTY xpla IOSTD output<4> 2 -1
+#$ PROPERTY xpla IOSTD output<5> 2 -1
+#$ PROPERTY xpla IOSTD output<6> 2 -1
+#$ PROPERTY xpla IOSTD output<7> 2 -1
+#$ PROPERTY xpla IOSTD reset 2 -1
+.model demo
+.inputs  "clk" "reset" "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q 
+         "address<4>".Q "address<5>".Q "address<6>".Q "address<7>".Q 
+         "processor/carry_flag".Q 
+         "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+         "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".Q 
+         "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+         "instruction<10>".Q "instruction<12>".Q "processor/T_state".Q 
+         "instruction<11>".Q "processor/internal_reset".Q "instruction<13>".Q 
+         "instruction<15>".Q "instruction<0>".Q 
+         "processor/basic_control/reset_delay1".Q "processor/logical_result<0>".Q 
+         "processor/logical_result<1>".Q "processor/logical_result<2>".Q 
+         "processor/logical_result<3>".Q "processor/logical_result<4>".Q 
+         "processor/logical_result<5>".Q "processor/logical_result<6>".Q 
+         "processor/logical_result<7>".Q 
+         "processor/reg_and_flag_enables/arith_or_logical_valid".Q 
+         "processor/reg_and_flag_enables/register_write_valid".Q 
+         "processor/reg_and_flag_enables/returni_or_shift_valid".Q 
+         "processor/shift_and_rotate_carry".Q "processor/shift_and_rotate_result<0>".Q 
+         "processor/shift_and_rotate_result<1>".Q 
+         "processor/shift_and_rotate_result<2>".Q 
+         "processor/shift_and_rotate_result<3>".Q 
+         "processor/shift_and_rotate_result<4>".Q 
+         "processor/shift_and_rotate_result<5>".Q 
+         "processor/shift_and_rotate_result<6>".Q 
+         "processor/shift_and_rotate_result<7>".Q "write_strobe".Q 
+         "processor/arithmetic_carry".Q "processor/arithmetic_result<0>".Q 
+         "processor/arithmetic_result<1>".Q "processor/arithmetic_result<2>".Q 
+         "processor/arithmetic_result<3>".Q "processor/arithmetic_result<4>".Q 
+         "processor/arithmetic_result<5>".Q "processor/arithmetic_result<6>".Q 
+         "processor/arithmetic_result<7>".Q "output<0>".Q "output<1>".Q "output<2>".Q 
+         "output<3>".Q "output<4>".Q "output<5>".Q "output<6>".Q "output<7>".Q 
+         "processor/arithmetic_group/add_sub_module/half_addsub<1>" "N_PZ_846"
+.outputs "processor/arithmetic_group/add_sub_module/half_addsub<1>".X1 
+         "processor/arithmetic_group/add_sub_module/half_addsub<1>".X2 "address<0>".D 
+         "address<0>".CLK "address<1>".D "address<1>".CLK "address<2>".CLK 
+         "address<3>".CLK "address<4>".D "address<4>".CLK "address<5>".CLK 
+         "address<6>".CLK "address<7>".CLK "processor/carry_flag".D 
+         "processor/carry_flag".CLK 
+         "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".CLK 
+         "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".CLK 
+         "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".CLK 
+         "output<0>".CLK "output<1>".CLK "output<2>".CLK "output<3>".CLK 
+         "output<4>".CLK "output<5>".CLK "output<6>".CLK "output<7>".CLK 
+         "instruction<10>".D "instruction<10>".CLK "instruction<12>".D 
+         "instruction<12>".CLK "processor/T_state".D "processor/T_state".CLK 
+         "instruction<11>".D "instruction<11>".CLK "processor/internal_reset".D 
+         "processor/internal_reset".CLK "instruction<13>".D "instruction<13>".CLK 
+         "instruction<15>".D "instruction<15>".CLK "instruction<0>".D 
+         "instruction<0>".CLK "processor/arithmetic_carry".CLK 
+         "processor/arithmetic_result<0>".CLK "processor/arithmetic_result<1>".CLK 
+         "processor/arithmetic_result<2>".CLK "processor/arithmetic_result<3>".CLK 
+         "processor/arithmetic_result<4>".CLK "processor/arithmetic_result<5>".CLK 
+         "processor/arithmetic_result<6>".CLK "processor/arithmetic_result<7>".CLK 
+         "processor/basic_control/reset_delay1".D 
+         "processor/basic_control/reset_delay1".CLK "processor/logical_result<0>".D 
+         "processor/logical_result<0>".CLK "processor/logical_result<1>".D 
+         "processor/logical_result<1>".CLK "processor/logical_result<2>".D 
+         "processor/logical_result<2>".CLK "processor/logical_result<3>".D 
+         "processor/logical_result<3>".CLK "processor/logical_result<4>".D 
+         "processor/logical_result<4>".CLK "processor/logical_result<5>".D 
+         "processor/logical_result<5>".CLK "processor/logical_result<6>".D 
+         "processor/logical_result<6>".CLK "processor/logical_result<7>".D 
+         "processor/logical_result<7>".CLK 
+         "processor/reg_and_flag_enables/arith_or_logical_valid".D 
+         "processor/reg_and_flag_enables/arith_or_logical_valid".CLK 
+         "processor/reg_and_flag_enables/register_write_valid".D 
+         "processor/reg_and_flag_enables/register_write_valid".CLK 
+         "processor/reg_and_flag_enables/returni_or_shift_valid".D 
+         "processor/reg_and_flag_enables/returni_or_shift_valid".CLK 
+         "processor/shift_and_rotate_carry".D "processor/shift_and_rotate_carry".CLK 
+         "processor/shift_and_rotate_result<0>".D 
+         "processor/shift_and_rotate_result<0>".CLK 
+         "processor/shift_and_rotate_result<1>".D 
+         "processor/shift_and_rotate_result<1>".CLK 
+         "processor/shift_and_rotate_result<2>".D 
+         "processor/shift_and_rotate_result<2>".CLK 
+         "processor/shift_and_rotate_result<3>".D 
+         "processor/shift_and_rotate_result<3>".CLK 
+         "processor/shift_and_rotate_result<4>".D 
+         "processor/shift_and_rotate_result<4>".CLK 
+         "processor/shift_and_rotate_result<5>".D 
+         "processor/shift_and_rotate_result<5>".CLK 
+         "processor/shift_and_rotate_result<6>".D 
+         "processor/shift_and_rotate_result<6>".CLK 
+         "processor/shift_and_rotate_result<7>".D 
+         "processor/shift_and_rotate_result<7>".CLK "write_strobe".D "write_strobe".CLK 
+         "clk_enable" "processor/arithmetic_carry".D "processor/arithmetic_result<0>".D 
+         "processor/arithmetic_result<1>".D "processor/arithmetic_result<2>".D.X1 
+         "processor/arithmetic_result<2>".D.X2 "processor/arithmetic_result<3>".D.X1 
+         "processor/arithmetic_result<3>".D.X2 "processor/arithmetic_result<4>".D.X1 
+         "processor/arithmetic_result<4>".D.X2 "processor/arithmetic_result<5>".D 
+         "processor/arithmetic_result<6>".D.X1 "processor/arithmetic_result<6>".D.X2 
+         "processor/arithmetic_result<7>".D 
+         "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".D 
+         "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".D 
+         "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".D 
+         "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".D 
+         "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".D 
+         "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".D 
+         "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".D 
+         "output<0>".D "output<1>".D "output<2>".D "output<3>".D "output<4>".D 
+         "output<5>".D "output<6>".D "output<7>".D "N_PZ_846".X1 "N_PZ_846".X2 
+         "address<3>".T "address<6>".T "address<7>".T 
+         "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".D 
+         "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".D 
+         "address<2>".D "address<5>".D
+.names "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q 
+        "processor/arithmetic_group/add_sub_module/half_addsub<1>".X1
+01 1
+.names "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+       "instruction<10>".Q "instruction<12>".Q 
+        "processor/arithmetic_group/add_sub_module/half_addsub<1>".X2
+011 1
+000 1
+.names "processor/arithmetic_group/add_sub_module/half_addsub<1>" 
+       "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "N_PZ_800" 
+        "processor/arithmetic_group/add_sub_module/carry_chain<1>"
+0---1 1
+1-01- 1
+10-0- 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<1>" 
+       "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<13>".Q "N_PZ_800" 
+       "N_PZ_828" "N_PZ_831" "N_PZ_872" 
+        "processor/arithmetic_group/add_sub_module/carry_chain<3>"
+---01-0--- 1
+--0-1----0 1
+0------1-0 1
+0-0-1--1-- 1
+-0--1--10- 1
+0--0-1---0 1
+0---01---0 1
+----01-1-0 1
+00-11---0- 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<3>" 
+       "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "N_PZ_844" 
+        "processor/arithmetic_group/add_sub_module/carry_chain<5>"
+1----01- 1
+--0-111- 1
+1---11-0 1
+1-1--0-0 1
+100--11- 1
+1-01-11- 1
+10--111- 1
+-0-1111- 1
+-00--110 1
+.names "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<7>".Q "processor/shift_and_rotate_result<7>".Q 
+       "processor/arithmetic_result<7>".Q  "processor/ALU_result<7>"
+--001-- 1
+--10--1 1
+0011-1- 1
+.names "address<0>".Q "processor/T_state".Q "processor/internal_reset".Q 
+       "instruction<0>".Q "N_PZ_734"  "address<0>".D
+--011 1
+11--0 1
+00--0 1
+.names "clk"  "address<0>".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "processor/T_state".Q "N_PZ_734" "N_PZ_879" 
+        "address<1>".D
+-1-00 1
+1-000 1
+.names "clk"  "address<1>".CLK
+1 1
+.names "clk"  "address<2>".CLK
+1 1
+.names "clk"  "address<3>".CLK
+1 1
+.names "address<2>".Q "address<3>".Q "address<4>".Q "N_PZ_734" "N_PZ_847" "N_PZ_879" 
+        "address<4>".D
+--100- 1
+11-001 1
+.names "clk"  "address<4>".CLK
+1 1
+.names "clk"  "address<5>".CLK
+1 1
+.names "clk"  "address<6>".CLK
+1 1
+.names "clk"  "address<7>".CLK
+1 1
+.names "processor/carry_flag".Q "instruction<12>".Q "processor/T_state".Q 
+       "instruction<11>".Q "processor/internal_reset".Q "instruction<13>".Q 
+       "instruction<15>".Q "processor/reg_and_flag_enables/arith_or_logical_valid".Q 
+       "processor/reg_and_flag_enables/returni_or_shift_valid".Q 
+       "processor/shift_and_rotate_carry".Q "processor/arithmetic_carry".Q 
+        "processor/carry_flag".D
+1-0-0------ 1
+1---0--00-- 1
+--1-0101--1 1
+--1-010-1-1 1
+-0100111-1- 1
+-010011-11- 1
+.names "clk"  "processor/carry_flag".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk" 
+        "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".CLK
+1 1
+.names "clk"  "output<0>".CLK
+1 1
+.names "clk"  "output<1>".CLK
+1 1
+.names "clk"  "output<2>".CLK
+1 1
+.names "clk"  "output<3>".CLK
+1 1
+.names "clk"  "output<4>".CLK
+1 1
+.names "clk"  "output<5>".CLK
+1 1
+.names "clk"  "output<6>".CLK
+1 1
+.names "clk"  "output<7>".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q "address<4>".Q 
+       "address<5>".Q "address<6>".Q "address<7>".Q  "instruction<10>".D
+0-000000 1
+-0000000 1
+.names "clk"  "instruction<10>".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q "address<4>".Q 
+       "address<5>".Q "address<6>".Q "address<7>".Q  "instruction<12>".D
+11000000 1
+.names "clk"  "instruction<12>".CLK
+1 1
+.names "processor/T_state".Q "processor/internal_reset".Q  "processor/T_state".D
+00 1
+.names "clk"  "processor/T_state".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q "address<4>".Q 
+       "address<5>".Q "address<6>".Q "address<7>".Q  "instruction<11>".D
+10000000 1
+.names "clk"  "instruction<11>".CLK
+1 1
+.names "reset" "processor/basic_control/reset_delay1".Q  "processor/internal_reset".D-
+00 1
+.names "clk"  "processor/internal_reset".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q "address<4>".Q 
+       "address<5>".Q "address<6>".Q "address<7>".Q  "instruction<13>".D
+01000000 1
+.names "clk"  "instruction<13>".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q "address<4>".Q 
+       "address<5>".Q "address<6>".Q "address<7>".Q  "instruction<15>".D
+1-000000 1
+-1000000 1
+.names "clk"  "instruction<15>".CLK
+1 1
+.names "address<0>".Q "address<1>".Q "address<2>".Q "address<3>".Q "address<4>".Q 
+       "address<5>".Q "address<6>".Q "address<7>".Q  "instruction<0>".D
+1-000000 1
+-0000000 1
+.names "clk"  "instruction<0>".CLK
+1 1
+.names "clk"  "processor/arithmetic_carry".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<0>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<1>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<2>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<3>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<4>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<5>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<6>".CLK
+1 1
+.names "clk"  "processor/arithmetic_result<7>".CLK
+1 1
+.names "reset"  "processor/basic_control/reset_delay1".D
+1 1
+.names "clk"  "processor/basic_control/reset_delay1".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q "instruction<0>".Q 
+       "N_PZ_725" "N_PZ_730"  "processor/logical_result<0>".D
+----0-1- 1
+---0-1-0 1
+0111---- 1
+1011---- 1
+.names "clk"  "processor/logical_result<0>".CLK
+1 1
+.names "processor/arithmetic_group/add_sub_module/half_addsub<1>" 
+       "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q  "processor/logical_result<1>".D
+1-1- 1
+-110 1
+.names "clk"  "processor/logical_result<1>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q 
+       "N_PZ_828"  "processor/logical_result<2>".D
+1--10-- 1
+---001- 1
+---0-11 1
+0111--- 1
+1011--- 1
+.names "clk"  "processor/logical_result<2>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q "N_PZ_831" 
+        "processor/logical_result<3>".D
+1-10- 1
+-11-1 1
+.names "clk"  "processor/logical_result<3>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q 
+        "processor/logical_result<4>".D
+1--10 1
+0111- 1
+1011- 1
+.names "clk"  "processor/logical_result<4>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q 
+        "processor/logical_result<5>".D
+1--10 1
+0111- 1
+1011- 1
+.names "clk"  "processor/logical_result<5>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q 
+        "processor/logical_result<6>".D
+1--10 1
+0111- 1
+1011- 1
+.names "clk"  "processor/logical_result<6>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<11>".Q 
+        "processor/logical_result<7>".D
+1--10 1
+0111- 1
+1011- 1
+.names "clk"  "processor/logical_result<7>".CLK
+1 1
+.names "instruction<15>".Q  "processor/reg_and_flag_enables/arith_or_logical_valid".D
+0 1
+.names "clk"  "processor/reg_and_flag_enables/arith_or_logical_valid".CLK
+1 1
+.names "instruction<12>".Q "instruction<11>".Q "instruction<15>".Q 
+        "processor/reg_and_flag_enables/register_write_valid".D-
+1-1 1
+-11 1
+.names "clk"  "processor/reg_and_flag_enables/register_write_valid".CLK
+1 1
+.names "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+        "processor/reg_and_flag_enables/returni_or_shift_valid".D
+0011 1
+.names "clk"  "processor/reg_and_flag_enables/returni_or_shift_valid".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "processor/shift_and_rotate_carry".D-
+-01 1
+0-0 1
+.names "clk"  "processor/shift_and_rotate_carry".CLK
+1 1
+.names "processor/carry_flag".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<13>".Q 
+        "processor/shift_and_rotate_result<0>".D-
+0---0 1
+--011 1
+-0-01 1
+.names "clk"  "processor/shift_and_rotate_result<0>".CLK
+1 1
+.names "N_PZ_730"  "processor/shift_and_rotate_result<1>".D-
+1 1
+.names "clk"  "processor/shift_and_rotate_result<1>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "processor/shift_and_rotate_result<2>".D-
+-01 1
+0-0 1
+.names "clk"  "processor/shift_and_rotate_result<2>".CLK
+1 1
+.names "N_PZ_828"  "processor/shift_and_rotate_result<3>".D
+1 1
+.names "clk"  "processor/shift_and_rotate_result<3>".CLK
+1 1
+.names "N_PZ_872"  "processor/shift_and_rotate_result<4>".D-
+1 1
+.names "clk"  "processor/shift_and_rotate_result<4>".CLK
+1 1
+.names "N_PZ_844"  "processor/shift_and_rotate_result<5>".D-
+1 1
+.names "clk"  "processor/shift_and_rotate_result<5>".CLK
+1 1
+.names "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "processor/shift_and_rotate_result<6>".D-
+-01 1
+0-0 1
+.names "clk"  "processor/shift_and_rotate_result<6>".CLK
+1 1
+.names "N_PZ_877"  "processor/shift_and_rotate_result<7>".D-
+1 1
+.names "clk"  "processor/shift_and_rotate_result<7>".CLK
+1 1
+.names "instruction<12>".Q "processor/T_state".Q "instruction<11>".Q 
+       "processor/internal_reset".Q "instruction<13>".Q "instruction<15>".Q 
+        "write_strobe".D
+001001 1
+.names "clk"  "write_strobe".CLK
+1 1
+.names  "clk_enable"
+1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "N_PZ_838" "N_PZ_877" 
+        "processor/arithmetic_carry".D
+0--01-- 1
+-11--1- 1
+-00--1- 1
+-1011-- 1
+1-110-0 1
+11-00-0 1
+.names "N_PZ_730" "N_PZ_846"  "processor/arithmetic_result<0>".D
+11 1
+00 1
+.names "processor/arithmetic_group/add_sub_module/half_addsub<1>" "N_PZ_800" 
+        "processor/arithmetic_result<1>".D
+01 1
+10 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<1>" 
+        "processor/arithmetic_result<2>".D.X1
+1 1
+.names "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<13>".Q "N_PZ_828" 
+        "processor/arithmetic_result<2>".D.X2
+01-1 1
+-011 1
+11-0 1
+-000 1
+.names "instruction<12>".Q "N_PZ_872"  "processor/arithmetic_result<3>".D.X1
+01 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<1>" 
+       "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<13>".Q "N_PZ_828" 
+       "N_PZ_831" "N_PZ_872"  "processor/arithmetic_result<3>".D.X2
+00-11--1- 1
+1-0---00- 1
+0-1-1-1-1 1
+0-0-1-1-0 1
+-0--1-11- 1
+-1--1-00- 1
+11--1--0- 1
+----000-- 1
+1---00--- 1
+1-1---0-0 1
+1---0-0-- 1
+1--01---- 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<3>" 
+        "processor/arithmetic_result<4>".D.X1
+1 1
+.names "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+       "instruction<10>".Q "instruction<12>".Q "N_PZ_844" 
+        "processor/arithmetic_result<4>".D.X2-
+1--1 1
+--01 1
+0110 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<3>" 
+       "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+       "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "N_PZ_844" 
+        "processor/arithmetic_result<5>".D
+-0---11-- 1
+-0-1--0-- 1
+-0-0---1- 1
+10------0 1
+100----1- 1
+-00-1--1- 1
+1-00-111- 1
+1--01111- 1
+--001111- 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+        "processor/arithmetic_result<6>".D.X1
+1 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+       "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".Q 
+       "instruction<10>".Q "instruction<12>".Q "N_PZ_877" 
+        "processor/arithmetic_result<6>".D.X2
+-0-11 1
+--100 1
+1-0-0 1
+-1--0 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "N_PZ_838" "N_PZ_877" 
+        "processor/arithmetic_result<7>".D
+01-0--- 1
+0--01-- 1
+-11--1- 1
+-00--1- 1
+0-110-- 1
+--110-1 1
+-1-00-1 1
+-01110- 1
+-10110- 1
+1-010-0 1
+10-00-0 1
+.names "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<0>".Q "processor/shift_and_rotate_result<0>".Q 
+       "processor/arithmetic_result<0>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<1>".Q "processor/shift_and_rotate_result<1>".Q 
+       "processor/arithmetic_result<1>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<2>".Q "processor/shift_and_rotate_result<2>".Q 
+       "processor/arithmetic_result<2>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<3>".Q "processor/shift_and_rotate_result<3>".Q 
+       "processor/arithmetic_result<3>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<4>".Q "processor/shift_and_rotate_result<4>".Q 
+       "processor/arithmetic_result<4>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<5>".Q "processor/shift_and_rotate_result<5>".Q 
+       "processor/arithmetic_result<5>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<6>".Q "processor/shift_and_rotate_result<6>".Q 
+       "processor/arithmetic_result<6>".Q "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<0>".Q "processor/shift_and_rotate_result<0>".Q 
+       "processor/arithmetic_result<0>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<1>".Q "processor/shift_and_rotate_result<1>".Q 
+       "processor/arithmetic_result<1>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<2>".Q "processor/shift_and_rotate_result<2>".Q 
+       "processor/arithmetic_result<2>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<3>".Q "processor/shift_and_rotate_result<3>".Q 
+       "processor/arithmetic_result<3>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<4>".Q "processor/shift_and_rotate_result<4>".Q 
+       "processor/arithmetic_result<4>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<5>".Q "processor/shift_and_rotate_result<5>".Q 
+       "processor/arithmetic_result<5>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".Q 
+       "instruction<12>".Q "instruction<11>".Q "instruction<13>".Q "instruction<15>".Q 
+       "processor/logical_result<6>".Q "processor/shift_and_rotate_result<6>".Q 
+       "processor/arithmetic_result<6>".Q "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".D
+1-------0 1
+---001--1 1
+---10--11 1
+-0011-1-1 1
+.names "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q "instruction<0>".Q "write_strobe".Q 
+       "output<0>".Q "N_PZ_733"  "output<0>".D-
+------00 1
+-01----1 1
+0-0011-- 1
+.names "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[1].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "output<1>".Q "N_PZ_733"  "output<1>".D-
+---00 1
+-01-1 1
+0-0-1 1
+.names "output<2>".Q "N_PZ_733" "N_PZ_828"  "output<2>".D-
+00- 1
+-10 1
+.names "output<3>".Q "N_PZ_733" "N_PZ_872"  "output<3>".D-
+00- 1
+-11 1
+.names "output<4>".Q "N_PZ_733" "N_PZ_844"  "output<4>".D-
+00- 1
+-11 1
+.names "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[5].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "output<5>".Q "N_PZ_733"  "output<5>".D-
+---00 1
+-01-1 1
+0-0-1 1
+.names "output<6>".Q "N_PZ_733" "N_PZ_877"  "output<6>".D-
+00- 1
+-11 1
+.names "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "output<7>".Q "N_PZ_733"  "output<7>".D-
+---00 1
+-01-1 1
+0-0-1 1
+.names "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".Q 
+       "instruction<12>".Q "instruction<0>".Q  "N_PZ_725"
+11- 1
+-01 1
+.names "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[0].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "N_PZ_730"
+-01 1
+0-0 1
+.names "instruction<10>".Q "processor/T_state".Q 
+       "processor/reg_and_flag_enables/register_write_valid".Q  "N_PZ_731"
+011 1
+.names "instruction<10>".Q "processor/T_state".Q 
+       "processor/reg_and_flag_enables/register_write_valid".Q  "N_PZ_732"
+111 1
+.names "write_strobe".Q "N_PZ_725"  "N_PZ_733"
+11 1
+.names "processor/carry_flag".Q "instruction<10>".Q "instruction<12>".Q 
+       "processor/T_state".Q "processor/internal_reset".Q "instruction<13>".Q 
+       "instruction<15>".Q  "N_PZ_734"
+----1-- 1
+0-10-01 1
+-010-01 1
+.names "instruction<12>".Q "N_PZ_725" "N_PZ_730" "N_PZ_846"  "N_PZ_800"
+--11 1
+11-0 1
+00-0 1
+.names "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[2].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "N_PZ_828"
+-11 1
+1-0 1
+.names "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".Q 
+        "N_PZ_831"
+01 1
+10 1
+.names "processor/arithmetic_group/add_sub_module/carry_chain<5>" 
+       "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q "instruction<12>".Q  "N_PZ_838"
+01--1 1
+0-0-1 1
+-1011 1
+.names "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[4].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "N_PZ_844"
+-01 1
+0-0 1
+.names "N_PZ_725"  "N_PZ_846".X1
+1 1
+.names "processor/carry_flag".Q "instruction<11>".Q  "N_PZ_846".X2
+11 1
+.names "address<2>".Q "address<3>".Q "address<4>".Q "N_PZ_879"  "N_PZ_847"
+1111 1
+.names "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[3].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "N_PZ_872"
+-01 1
+0-0 1
+.names "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<0>".Q 
+       "processor/data_registers/bus_width_loop[6].data_register_bit/rambit<7>".Q 
+       "instruction<10>".Q  "N_PZ_877"
+-01 1
+0-0 1
+.names "address<0>".Q "address<1>".Q "processor/T_state".Q  "N_PZ_879"
+110 1
+.names "address<2>".Q "address<3>".Q "N_PZ_734" "N_PZ_879"  "address<3>".T
+-11- 1
+1-01 1
+.names "address<5>".Q "address<6>".Q "N_PZ_734" "N_PZ_847"  "address<6>".T
+-11- 1
+1-01 1
+.names "address<5>".Q "address<6>".Q "address<7>".Q "N_PZ_734" "N_PZ_847" 
+        "address<7>".T
+--11- 1
+11-01 1
+.names "processor/ALU_result<7>" 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".Q 
+       "N_PZ_731" 
+        "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<0>".D
+1-1 1
+-10 1
+.names "processor/ALU_result<7>" 
+       "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".Q 
+       "N_PZ_732" 
+        "processor/data_registers/bus_width_loop[7].data_register_bit/rambit<7>".D
+1-1 1
+-10 1
+.names "address<2>".Q "N_PZ_734" "N_PZ_879"  "address<2>".D
+001 1
+100 1
+.names "address<5>".Q "N_PZ_734" "N_PZ_847"  "address<5>".D
+001 1
+100 1
+.end

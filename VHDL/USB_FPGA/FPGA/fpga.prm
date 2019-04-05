@@ -1,0 +1,14 @@
+PROMGEN: Xilinx Prom Generator L.33
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p bin -o fpga.bin -u 0 fpga.bit 
+
+PROM fpga.prm map: Fri Jul 17 11:55:54 2009
+
+Format        Bin
+Size          128K
+PROM start    00000000
+PROM end      0001ffff
+
+        Addr1        Addr2                     Date File(s)
+     00000000     00011bdb     Jul 17 11:55:15 2009 fpga.bit

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\work\USB_FPGA\FirstVersion\usb_fpga\VHDL\test_cpld\impact.xsl
+OUTFILE=C:\work\USB_FPGA\FirstVersion\usb_fpga\VHDL\test_cpld\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\work\USB_FPGA\FirstVersion\usb_fpga\VHDL\test_cpld
+LICENSE=iMPACT
+USER_INFO=iMPACT

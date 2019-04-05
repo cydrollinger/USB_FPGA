@@ -1,0 +1,224 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GCLK0: 2=mclk.p
+----------------- B l o c k 0 ------------------
+PLApt(40/56), Fanin(22/38), Clk(1/3), Bct(0/4), Pin(3/5), Mcell(16/16)
+PLApts[40/40] 71 72 73 74 75 76 77 33 49 35 65 40 32 52 45 48 30 41 43 39 46 31 38 42 44 66 47 54 37 59 64 36 55 60 63 53 56 58 61 62
+Fanins[22] FPGA_prog_B.n SW_1_hi.n fpga_timing<0>.n fpga_timing<1>.n fpga_timing<2>.n fpga_timing<3>.n fpga_timing<4>.n fpga_timing<5>.n fpga_timing<6>.n fpga_timing<7>.n fpga_timing<8>.n previous_usb_dry.n usb_dry.n usb_timing<0>.n usb_timing<1>.n usb_timing<2>.n usb_timing<3>.n usb_timing<4>.n usb_timing<5>.n usb_timing<6>.n usb_timing<7>.n usb_timing<8>.n
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[18] [FPGA_prog_B(103),FPGA_prog_B(99)] [data<2>(97)] [data<6>(96)] [fpga_timing<3>(116)]  
+           [fpga_timing<4>(115)] [fpga_timing<2>(111)] [fpga_timing<0>(110)] [fpga_timing<1>(109)]  
+           [fpga_timing<5>(108)] [fpga_timing<6>(107)] [fpga_timing<7>(105)] [fpga_timing<8>(104)]  
+           [previous(102)] [usb_timing<3>(101)] [usb_timing<1>(114)] [usb_timing<2>(113)]  
+           [usb_timing<0>(112)] [usb_timing<4>(106)] 
+Signal[18] [ 0: usb_timing<3>(101)  ][ 1: previous(102)  ][ 2: FPGA_prog_B(103) FPGA_prog_B(99)  ][ 3:  
+           fpga_timing<8>(104)  ][ 4: fpga_timing<7>(105)  ][ 5: usb_timing<4>(106) data<2>(97)  ][ 6:  
+           fpga_timing<6>(107)  ][ 7: fpga_timing<5>(108)  ][ 8: fpga_timing<1>(109)  ][ 9:  
+           fpga_timing<0>(110)  ][ 10: fpga_timing<2>(111)  ][ 11: usb_timing<0>(112) data<6>(96)  ][ 12:  
+           usb_timing<2>(113) (95)  ][ 13: usb_timing<1>(114) (94)  ][ 14: fpga_timing<4>(115)  ][ 15:  
+           fpga_timing<3>(116)  ]
+----------------- B l o c k 1 ------------------
+PLApt(17/56), Fanin(20/38), Clk(1/3), Bct(0/4), Pin(6/6), Mcell(12/16)
+PLApts[17/56] 15 16 17 34 18 51 19 20 21 22 23 () () () () () () () () () () () () () () () () () () () () 70 () () 69 () () 68 () () 67 () () () () () 14 () () () () () () () () 57
+Fanins[20] usb_rst.n SW_1_hi.n SW_2_hi.n previous.n previous_usb_dry.n usb_dry.n usb_timing<5>.n usb_timing<6>.n usb_timing<7>.n usb_timing<8>.n FPGA_D<0>.p FPGA_D<1>.p FPGA_D<2>.p FPGA_D<3>.p FPGA_D<4>.p FPGA_D<5>.p FPGA_INITB.p FPGA_done.p N24.p usb_rx.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[12] [LEDs<1>(117),LEDs<1>(1)] [LEDs<2>(119),LEDs<2>(2)] [LEDs<3>(121),LEDs<3>(3)]  
+           [LEDs<4>(128),LEDs<4>(4)] [LEDs<5>(130),LEDs<5>(6)] [LEDs<6>(131),LEDs<6>(7)]  
+           [previous_usb_dry(132)] [usb_dry(129)] [usb_timing<5>(127)] [usb_timing<6>(126)]  
+           [usb_timing<7>(125)] [usb_timing<8>(124)] 
+Signal[12] [ 0: LEDs<1>(117) LEDs<1>(1)  ][ 1:  ][ 2: LEDs<2>(119) LEDs<2>(2)  ][ 3:  ][ 4: LEDs<3>(121)  
+           LEDs<3>(3)  ][ 5:  ][ 6:  ][ 7: usb_timing<8>(124)  ][ 8: usb_timing<7>(125)  ][ 9:  
+           usb_timing<6>(126)  ][ 10: usb_timing<5>(127)  ][ 11: LEDs<4>(128) LEDs<4>(4)  ][ 12:  
+           usb_dry(129)  ][ 13: LEDs<5>(130) LEDs<5>(6)  ][ 14: LEDs<6>(131) LEDs<6>(7)  ][ 15:  
+           previous_usb_dry(132)  ]
+----------------- B l o c k 2 ------------------
+PLApt(1/56), Fanin(1/38), Clk(0/3), Bct(1/4), Pin(2/4), Mcell(2/16)
+PLApts[1/8] () () () () () () () 50
+Fanins[ 1] SW_2_hi.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=50) SW_2_hi ;
+vref: [0]
+Signal[ 2] [FPGA_MOSI(148),FPGA_MOSI(90)] [N24(137),N24(93)] 
+Signal[ 2] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: N24(137) N24(93)  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ] 
+           [ 11: (92)  ][ 12:  ][ 13: (91)  ][ 14:  ][ 15: FPGA_MOSI(148) FPGA_MOSI(90)  ]
+----------------- B l o c k 3 ------------------
+PLApt(3/56), Fanin(4/38), Clk(0/3), Bct(0/4), Pin(2/6), Mcell(2/16)
+PLApts[3/3] 22 24 25
+Fanins[ 4] FPGA_D<6>.p FPGA_D<7>.p FPGA_done.p N24.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 2] [LEDs<7>(149),LEDs<7>(8)] [LEDs<8>(150),LEDs<8>(9)] 
+Signal[ 2] [ 0: LEDs<7>(149) LEDs<7>(8)  ][ 1: LEDs<8>(150) LEDs<8>(9)  ][ 2: (10)  ][ 3:  ][ 4: (11)  ][ 5:  
+           (12)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11:  ][ 12: (13)  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 4 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/2), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [mclk(22)] 
+Signal[ 1] [ 0:  ][ 1:  ][ 2:  ][ 3: (23)  ][ 4:  ][ 5: mclk(22)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11:  
+            ][ 12:  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 5 ------------------
+PLApt(2/56), Fanin(10/38), Clk(1/3), Bct(0/4), Pin(2/5), Mcell(1/16)
+PLApts[2/2] 27 28
+Fanins[10] FPGA_cclk.n usb_timing<0>.n usb_timing<1>.n usb_timing<2>.n usb_timing<3>.n usb_timing<4>.n usb_timing<5>.n usb_timing<6>.n usb_timing<7>.n usb_timing<8>.n
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 2] [FPGA_cclk(184),FPGA_cclk(27)] [FPGA_done(28)] 
+Signal[ 2] [ 0:  ][ 1: (24)  ][ 2:  ][ 3: FPGA_cclk(184) FPGA_cclk(27)  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ] 
+           [ 9:  ][ 10:  ][ 11: FPGA_done(28)  ][ 12:  ][ 13: (29)  ][ 14:  ][ 15: (30)  ]
+----------------- B l o c k 6 ------------------
+PLApt(1/56), Fanin(1/38), Clk(1/3), Bct(0/4), Pin(1/6), Mcell(1/16)
+PLApts[1/50] () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 11
+Fanins[ 1] SW<0>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [usb_rst(210),usb_rst(14)] 
+Signal[ 1] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: (19)  ][ 5: (18)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: (17)  ] 
+           [ 11: (16)  ][ 12: (15)  ][ 13: usb_rst(210) usb_rst(14)  ][ 14:  ][ 15:  ]
+----------------- B l o c k 7 ------------------
+PLApt(2/56), Fanin(2/38), Clk(1/3), Bct(1/4), Pin(3/6), Mcell(2/16)
+PLApts[2/47] () () () () () () () 3 () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 1
+Fanins[ 2] FPGA_done.p data<0>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[ 3] [FPGA_D<0>(225),FPGA_D<0>(35)] [Mode<0>(226),Mode<0>(36)] [data<0>(32)] 
+Signal[ 3] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4:  ][ 5: data<0>(32)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: (33)  ] 
+           [ 11: (34)  ][ 12: FPGA_D<0>(225) FPGA_D<0>(35)  ][ 13: Mode<0>(226) Mode<0>(36)  ][ 14: (37)  ] 
+           [ 15:  ]
+----------------- B l o c k 8 ------------------
+PLApt(4/56), Fanin(4/38), Clk(1/3), Bct(1/4), Pin(5/5), Mcell(3/16)
+PLApts[4/26] () () () () () () () 3 () () 7 () () 8 () () () () () () () () () () () 9
+Fanins[ 4] FPGA_done.p data<4>.p data<5>.p data<6>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[ 5] [FPGA_D<4>(229),FPGA_D<4>(78)] [FPGA_D<5>(230),FPGA_D<5>(79)] [FPGA_D<6>(234),FPGA_D<6>(81)]  
+           [data<4>(80)] [data<5>(82)] 
+Signal[ 5] [ 0: FPGA_D<4>(229) FPGA_D<4>(78)  ][ 1: FPGA_D<5>(230) FPGA_D<5>(79)  ][ 2:  ][ 3: data<4>(80)  ] 
+           [ 4:  ][ 5: FPGA_D<6>(234) FPGA_D<6>(81)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: data<5>(82)  
+            ][ 12:  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 9 ------------------
+PLApt(2/56), Fanin(2/38), Clk(1/3), Bct(1/4), Pin(6/7), Mcell(4/16)
+PLApts[2/11] () () () () () () () 3 () () 6
+Fanins[ 2] FPGA_done.p data<3>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[ 8] [FPGA_D<3>(245),FPGA_D<3>(77)] [mclk_ce(256),mclk_ce(70)] [SW<0>(74)] [data<3>(76)]  
+           [SW_1_hi,SW<1>(72)] [SW_2_hi,SW<2>(71)] 
+Signal[ 8] [ 0: FPGA_D<3>(245) FPGA_D<3>(77)  ][ 1: data<3>(76)  ][ 2: SW<0>(74)  ][ 3: (73)  ][ 4:  
+           SW_1_hi(249) SW<1>(72)  ][ 5: SW_2_hi(250) SW<2>(71)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11:  
+           mclk_ce(256) mclk_ce(70)  ][ 12:  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 10 ------------------
+PLApt(2/56), Fanin(2/38), Clk(1/3), Bct(1/4), Pin(2/4), Mcell(1/16)
+PLApts[2/50] () () () () () () () 3 () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 10
+Fanins[ 2] FPGA_done.p data<7>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[ 2] [FPGA_D<7>(274),FPGA_D<7>(89)] [data<7>(85)] 
+Signal[ 2] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: data<7>(85)  ][ 11:  
+           (86)  ][ 12: (87)  ][ 13: FPGA_D<7>(274) FPGA_D<7>(89)  ][ 14:  ][ 15:  ]
+----------------- B l o c k 11 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/4), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [usb_rx(68)] 
+Signal[ 1] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: usb_rx(68)  ][ 11:  ] 
+           [ 12: (67)  ][ 13: (66)  ][ 14: (65)  ][ 15:  ]
+----------------- B l o c k 12 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/4), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [FPGA_INITB(53)] 
+Signal[ 1] [ 0:  ][ 1: FPGA_INITB(53)  ][ 2:  ][ 3: (54)  ][ 4:  ][ 5: (55)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ] 
+           [ 10:  ][ 11:  ][ 12: (56)  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 13 ------------------
+PLApt(2/56), Fanin(10/38), Clk(1/3), Bct(0/4), Pin(1/5), Mcell(1/16)
+PLApts[2/2] 26 29
+Fanins[10] usb_rd.n usb_timing<0>.n usb_timing<1>.n usb_timing<2>.n usb_timing<3>.n usb_timing<4>.n usb_timing<5>.n usb_timing<6>.n usb_timing<7>.n usb_timing<8>.n
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [usb_rd(311),usb_rd(50)] 
+Signal[ 1] [ 0: (52)  ][ 1:  ][ 2: usb_rd(311) usb_rd(50)  ][ 3:  ][ 4: (49)  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ] 
+           [ 9:  ][ 10:  ][ 11:  ][ 12:  ][ 13: (46)  ][ 14: (44)  ][ 15:  ]
+----------------- B l o c k 14 ------------------
+----------------- B l o c k 15 ------------------
+PLApt(3/56), Fanin(3/38), Clk(1/3), Bct(1/4), Pin(5/5), Mcell(4/16)
+PLApts[3/44] () () () () () () () 3 () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 5 () () 4
+Fanins[ 3] FPGA_done.p data<1>.p data<2>.p
+clk[1] mclk 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=3) FPGA_done' ;
+vref: [0]
+Signal[ 5] [FPGA_D<1>(352),FPGA_D<1>(40)] [FPGA_D<2>(351),FPGA_D<2>(41)] [Mode<1>(353),Mode<1>(39)]  
+           [Mode<2>(346),Mode<2>(42)] [data<1>(43)] 
+Signal[ 5] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: data<1>(43)  ][ 5: Mode<2>(346) Mode<2>(42)  ][ 6:  ][ 7:  ][ 8:  
+            ][ 9:  ][ 10: FPGA_D<2>(351) FPGA_D<2>(41)  ][ 11: FPGA_D<1>(352) FPGA_D<1>(40)  ][ 12:  
+           Mode<1>(353) Mode<1>(39)  ][ 13:  ][ 14:  ][ 15:  ]

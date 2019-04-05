@@ -1,0 +1,7 @@
+ERROR:Cpld:1063 - Design requires at least 94 macrocells, exceeds device limit
+   64.
+ERROR:Cpld:1062 - Design contains 261 unique product terms, exceeds device limit
+   224.
+ERROR:Cpld:1064 - Design rules checking error. Fitting process stopped.
+ERROR:Cpld:868 - Cannot fit the design into any of the specified devices with
+   the selected implementation options.
