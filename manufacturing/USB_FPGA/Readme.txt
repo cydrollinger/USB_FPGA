@@ -18,7 +18,7 @@ FOLDERS:
 	
 	MANUFACTURING
 		BOARD ASSEMBLY - files for mounting of the components by automation
-		GERBER - board house files that are available at http://batchpcb.com/index.php/Products/88736
+		GERBER - board house files that are available at https://oshpark.com/shared_projects/XIW354rK
 		PARTS  - order documents for digikey to make a kit for order
 	
 	These file contain the sum total of the design output, which are necessary to manufacture in quantity.

@@ -6,8 +6,8 @@
 * Engineer: Cy Drollinger								   *
 * Date: June 26th, 2012								           *
 * Email: cy@elec-real.com								   *
-* Address: 313 W. mendenhall #5 Bozeman, MT 59715					   *
-* Phone: 406-586-5502									   *
+* Address: 2023 Stadium Dr Suite 2B #210 Bozeman, MT 59715				   *
+* Phone: 406-539-8117									   *
 ********************************************************************************************
 
 *******************************************
