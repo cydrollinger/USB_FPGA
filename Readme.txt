@@ -51,7 +51,7 @@ FOLDERS:
 		TAPR_Ope_Hardware_License_v1.0.txt
 	MANUFACTURING/USB_FPGA:
 		BOARD ASSEMBLY - files for mounting of the components by automation
-		GERBER - board house files that are available at http://batchpcb.com/index.php/Products/88736
+		GERBER - board house files that are available at https://oshpark.com/shared_projects/XIW354rK
 		PARTS  - order documents for digikey to make a kit for order
 	VHDL/USB_FPGA:
 		FPGA - project files for a 32 bit counter with an upper level 8 bits connected to the LEDS
