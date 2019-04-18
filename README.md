@@ -25,7 +25,7 @@ a uSD card for GB storage, fatfs. The design files were created with Eagle Cadso
 two layer board. Free Eagle version would be capable of viewing, and editing these files for redesign. 
 >**File Arcitecture with a terse description**
 
-FOLDERS:
+* FOLDERS:
 	* CDM 2.04.16 WHQL Certified (FTDI.com)
 		* WINXP drivers necessary to implement USB configuration of the FPGA (older)
 	* CDM 2.04.16 WHQL Certified (FTDI.com)
