@@ -17,7 +17,7 @@
  welcome to improve this design and repository, but, be advised ER is a professional design house and
  monetary compensation is required for additional work toward this design enabling your success.			   
 	 
-![USB_FPGA](/IMG_0864.JPG)
+![USB_FPGA](/Renderings/7_7_9_usb_fpga002.jpg)
 
 **PURPOSE:**
 
