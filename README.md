@@ -13,7 +13,7 @@
 **NOTE:**
  This design has been tested and functions as specified. The design is provided gratis, so, please 
  think critically while utilizing and or redesigning. Open electronic circuitry can be dangerous due 
- to easily shorting circuits which generates immediate and intense heat resulting in fire. Conversation is
+ to easily shorting circuits which can generate immediate and intense heat resulting in fire. Conversation is
  welcome to improve this design and repository, but, be advised ER is a professional design house and
  monetary compensation is required for additional work toward this design enabling your success.			   
 	 
