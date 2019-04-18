@@ -60,7 +60,8 @@
 		* TAPR_Ope_Hardware_License_v1.0.txt
 	* MANUFACTURING/USB_FPGA:
 		* BOARD ASSEMBLY - files for mounting of the components by automation
-		* GERBER - board house files that are available at https://oshpark.com/shared_projects/*XIW354rK
+		* GERBER - board house files 
+		* <a href="https://oshpark.com/shared_projects/XIW354rK"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 		* PARTS  - order documents for digikey to make a kit for order
 	* VHDL/USB_FPGA:
 		* FPGA - project files for a 32 bit counter with an upper level 8 bits connected to the LEDS
