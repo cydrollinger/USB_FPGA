@@ -1,4 +1,4 @@
-<a href="https://elec-real.com"><img src="/Docs/github.png" ></img></a>
+<a href="https://elec-real.com/case-studies/usb-fpga/"><img src="/Docs/github.png" ></img></a>
 
 > Electronic Realization L.L.C.								  
 > Design: Open Hardware Source   USB Configurable Field Programmable Gate Array  	  
